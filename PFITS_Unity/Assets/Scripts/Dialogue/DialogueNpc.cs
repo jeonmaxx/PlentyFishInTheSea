@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DialogueNpc : PlayerNear
+public class DialogueNpc : MonoBehaviour
 {
     public DialogueTrigger trigger;
 
@@ -17,18 +17,12 @@ public class DialogueNpc : PlayerNear
 
     private void Update()
     {
-        CalcDistance();
         action.started += _ => OnInteract();
     }
 
     public void OnInteract()
     {
-        if (isPlayerNear)
-        {
-            trigger.StartDialogue();
-            Debug.Log(trigger.messages.Length);
-        }
-    }
-
-    
+        trigger.StartDialogue();
+        Debug.Log(trigger.messages.Length);
+    }    
 }
