@@ -5,17 +5,31 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
+    public DialogueSo[] dialogueSo;
     private DialogueManager dialogue;
     public bool useSpecialSound;
     public AudioClip[] specialSound;
     private AudioClip nOpenSound;
     private AudioClip nCloseSound;
+    public int currentAffinity;
 
     private void Start()
     {
         dialogue = FindObjectOfType<DialogueManager>();
         nOpenSound = dialogue.openSound;
-        nCloseSound = dialogue.closeSound;        
+        nCloseSound = dialogue.closeSound;   
+    }
+
+    private void Update()
+    {
+        for (int i = 0; i < dialogueSo.Length; i++)
+        {
+            if (dialogueSo[i].affinity == currentAffinity)
+            {
+                messages = dialogueSo[i].messages;
+                actors = dialogueSo[i].actors;
+            }
+        }
     }
 
     public void StartDialogue()
