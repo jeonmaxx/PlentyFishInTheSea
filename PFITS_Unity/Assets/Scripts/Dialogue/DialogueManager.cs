@@ -12,9 +12,10 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI messageText;
 
     [HideInInspector] public Message[] currentMessages;
-    private Actor[] currentActors;
+    [HideInInspector] public Actor[] currentActors;
     [HideInInspector] public int activeMessage = 0;
     public bool isActive = false;
+    [HideInInspector] public Answer[] currentAnswers;
 
     public InputActionReference inputAction;
     private InputAction action;
@@ -23,6 +24,11 @@ public class DialogueManager : MonoBehaviour
     public AudioClip closeSound;
 
     private AudioSource source;
+
+    public GameObject buttonSpawner;
+    public GameObject buttonPrefab;
+
+    private bool inAnswerScreen = false;
 
     public void Start()
     {
@@ -43,7 +49,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue(Message[] messages, Actor[] actors, Answer[] answers)
     {
         if (!isActive)
         {
@@ -51,6 +57,7 @@ public class DialogueManager : MonoBehaviour
             //source.Play();
             currentMessages = messages;
             currentActors = actors;
+            currentAnswers = answers;
             activeMessage = 0;                    
             DisplayMessage();
             StartCoroutine(StartDialogue());
@@ -70,12 +77,17 @@ public class DialogueManager : MonoBehaviour
 
     public void NextMessage()
     {
-        if (isActive)
+        if (isActive && !inAnswerScreen)
         {
             activeMessage++;
             if (activeMessage < currentMessages.Length)
             {
                 DisplayMessage();
+                if(activeMessage == currentMessages.Length-1 && currentAnswers.Length > 0)
+                {
+                    MakeAnswerButtons();
+                    inAnswerScreen = true;
+                }
             }
             else
             {
@@ -86,6 +98,31 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
+
+    public void MakeAnswerButtons()
+    {
+        for(int i = 0; i < currentAnswers.Length; i++)
+        {
+            GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
+            currentButton.GetComponentInChildren<TextMeshProUGUI>().text = currentAnswers[i].answerText;
+            currentButton.GetComponent<AnswerButton>().answer = currentAnswers[i];
+        }
+    }
+
+    public void AnswerButton(Message[] messages, Actor[] actors, Answer[] answers)
+    {
+        inAnswerScreen = false;
+        currentMessages = messages;
+        currentActors = actors;
+        currentAnswers = answers;
+        activeMessage = 0;
+        foreach (Transform child in buttonSpawner.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        DisplayMessage();
+        StartCoroutine(StartDialogue());
+    }
    
 
     private IEnumerator EndDialogue()
@@ -93,6 +130,10 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         transform.transform.localScale = Vector3.zero;
         isActive = false;
+        foreach(Transform child in buttonSpawner.transform)
+        {
+            Destroy(child.gameObject);
+        }
         StopCoroutine(EndDialogue());
     }
 

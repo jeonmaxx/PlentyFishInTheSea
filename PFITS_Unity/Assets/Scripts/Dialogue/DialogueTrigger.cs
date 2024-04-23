@@ -12,6 +12,8 @@ public class DialogueTrigger : MonoBehaviour
     private AudioClip nOpenSound;
     private AudioClip nCloseSound;
     public int currentAffinity;
+    public Answer[] answers;
+ 
 
     private void Start()
     {
@@ -28,6 +30,7 @@ public class DialogueTrigger : MonoBehaviour
             {
                 messages = dialogueSo[i].messages;
                 actors = dialogueSo[i].actors;
+                answers = dialogueSo[i].answers;
             }
         }
     }
@@ -45,7 +48,7 @@ public class DialogueTrigger : MonoBehaviour
         //    dialogue.closeSound = nCloseSound;
         //}
 
-        dialogue.OpenDialogue(messages, actors);
+        dialogue.OpenDialogue(messages, actors, answers);
     }
 }
 
@@ -61,4 +64,11 @@ public class Actor
 {
     public string name;
     public Sprite sprite;
+}
+
+[System.Serializable]
+public class Answer
+{
+    public string answerText;
+    public DialogueSo nextDialogue;
 }

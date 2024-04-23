@@ -8,4 +8,5 @@ public class DialogueSo : ScriptableObject
     public int affinity;
     public Actor[] actors;
     public Message[] messages;
+    public Answer[] answers;
 }
