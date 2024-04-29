@@ -1,17 +1,18 @@
 using System.Collections;
 using UnityEngine;
+public enum Emotions { Neutral, Happy, Angry, Sad}
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Message[] messages;
-    public Actor[] actors;
+    [HideInInspector] public Message[] messages;
+    [HideInInspector] public Actor[] actors;
     public DialogueSo[] dialogueSo;
     private DialogueManager dialogue;
     public bool useSpecialSound;
     public AudioClip[] specialSound;
     private AudioClip nOpenSound;
     private AudioClip nCloseSound;
-    public int currentAffinity;
+    //public int currentAffinity;
     public Answer[] answers;
  
 
@@ -26,10 +27,14 @@ public class DialogueTrigger : MonoBehaviour
     {
         for (int i = 0; i < dialogueSo.Length; i++)
         {
-            if (dialogueSo[i].affinity == currentAffinity)
+            // if (dialogueSo[i].affinity == currentAffinity)
+            if (dialogueSo[i].affinity == dialogueSo[i].characters[0].affinity)
             {
                 messages = dialogueSo[i].messages;
-                actors = dialogueSo[i].actors;
+                for (int j = 0; j < dialogueSo[j].characters.Length; j++)
+                {
+                    actors[j] = dialogueSo[i].characters[j].actor;
+                }
                 answers = dialogueSo[i].answers;
             }
         }
@@ -49,6 +54,7 @@ public class DialogueTrigger : MonoBehaviour
         //}
 
         dialogue.OpenDialogue(messages, actors, answers);
+        dialogue.currentNpc = GetComponent<DialogueTrigger>();
     }
 }
 
@@ -57,6 +63,7 @@ public class Message
 {
     public int actorId;
     public string message;
+    public Emotions emotion;
 }
 
 [System.Serializable]
@@ -64,6 +71,8 @@ public class Actor
 {
     public string name;
     public Sprite sprite;
+    public Sprite happySprite;
+    public Sprite angrySprite;
 }
 
 [System.Serializable]
@@ -71,4 +80,5 @@ public class Answer
 {
     public string answerText;
     public DialogueSo nextDialogue;
+    public int addedAffinity;
 }

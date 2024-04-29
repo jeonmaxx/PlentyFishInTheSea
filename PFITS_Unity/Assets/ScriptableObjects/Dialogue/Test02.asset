@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Test02
   m_EditorClassIdentifier: 
   affinity: 1
-  actors:
-  - name: Chicky
-    sprite: {fileID: 21300000, guid: 8c9f7f2d7c8c0314e83019b18e87eaa7, type: 3}
+  day: 0
+  characters:
+  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
   - actorId: 0
     message: Wow affinity 1
+    emotion: 0
   - actorId: 0
     message: supi dupi
+    emotion: 0
+  answers: []

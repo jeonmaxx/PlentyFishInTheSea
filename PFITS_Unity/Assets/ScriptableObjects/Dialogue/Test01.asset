@@ -13,16 +13,20 @@ MonoBehaviour:
   m_Name: Test01
   m_EditorClassIdentifier: 
   affinity: 0
-  actors:
-  - name: Chicky
-    sprite: {fileID: 21300000, guid: 8c9f7f2d7c8c0314e83019b18e87eaa7, type: 3}
+  day: 0
+  characters:
+  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
   - actorId: 0
     message: yo dat funktioniert
+    emotion: 0
   - actorId: 0
     message: wie nice
+    emotion: 0
   answers:
   - answerText: Good Answer
     nextDialogue: {fileID: 11400000, guid: 6cb5db55a4bdf504cb6dcb73c153edfd, type: 2}
+    addedAffinity: 1
   - answerText: Bad Answer
     nextDialogue: {fileID: 11400000, guid: ea387e536ca8ba441a6f2ea94c5b7897, type: 2}
+    addedAffinity: 0

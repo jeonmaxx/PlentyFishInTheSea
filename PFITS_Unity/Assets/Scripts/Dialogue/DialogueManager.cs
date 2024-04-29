@@ -10,12 +10,15 @@ public class DialogueManager : MonoBehaviour
     public Image actorImage;
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
+    public int currentDay;
+    public TextMeshProUGUI dayText;
 
     [HideInInspector] public Message[] currentMessages;
     [HideInInspector] public Actor[] currentActors;
     [HideInInspector] public int activeMessage = 0;
     public bool isActive = false;
     [HideInInspector] public Answer[] currentAnswers;
+    public DialogueTrigger currentNpc;
 
     public InputActionReference inputAction;
     private InputAction action;
@@ -39,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     public void Update()
     {
         action.started += _ => OnSkip();
+        dayText.text = "Day: " + currentDay;
     }
 
     public void OnSkip()
@@ -71,8 +75,18 @@ public class DialogueManager : MonoBehaviour
 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
-        actorImage.sprite = actorToDisplay.sprite;
-
+        if (messageToDisplay.emotion == Emotions.Neutral)
+        {
+            actorImage.sprite = actorToDisplay.sprite;
+        }
+        else if(messageToDisplay.emotion == Emotions.Angry)
+        {
+            actorImage.sprite = actorToDisplay.angrySprite;
+        }
+        else if(messageToDisplay.emotion == Emotions.Happy)
+        {
+            actorImage.sprite = actorToDisplay.happySprite;
+        }
     }
 
     public void NextMessage()
@@ -128,7 +142,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator EndDialogue()
     {
         yield return new WaitForEndOfFrame();
-        transform.transform.localScale = Vector3.zero;
+        transform.localScale = Vector3.zero;
         isActive = false;
         foreach(Transform child in buttonSpawner.transform)
         {

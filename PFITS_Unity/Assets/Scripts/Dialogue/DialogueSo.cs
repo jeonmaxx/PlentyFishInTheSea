@@ -6,7 +6,8 @@ using UnityEngine;
 public class DialogueSo : ScriptableObject
 {
     public int affinity;
-    public Actor[] actors;
+    public int day;
+    public CharacterSo[] characters;
     public Message[] messages;
     public Answer[] answers;
 }

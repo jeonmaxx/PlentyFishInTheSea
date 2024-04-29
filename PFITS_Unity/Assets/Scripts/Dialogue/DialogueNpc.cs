@@ -22,7 +22,10 @@ public class DialogueNpc : MonoBehaviour
 
     public void OnInteract()
     {
-        trigger.StartDialogue();
-        Debug.Log(trigger.messages.Length);
+        if (trigger.isActiveAndEnabled)
+        {
+            trigger.StartDialogue();
+            Debug.Log(trigger.messages.Length);
+        }
     }    
 }
