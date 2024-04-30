@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class MouseOnInteractable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public Renderer rend;
+    public bool isPerson = true;
     public GameObject dialogueWindow;
     public DialogueTrigger trigger;
 
@@ -24,7 +25,10 @@ public class MouseOnInteractable : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerDown(PointerEventData eventData) 
     {
-        dialogueWindow.transform.localScale = Vector3.one;
-        trigger.StartDialogue();
+        if(isPerson)
+        {
+            dialogueWindow.transform.localScale = Vector3.one;
+            trigger.StartDialogue();
+        }
     }
 }
