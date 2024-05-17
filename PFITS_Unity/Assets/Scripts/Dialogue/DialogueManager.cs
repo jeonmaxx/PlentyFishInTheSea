@@ -10,8 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Image actorImage;
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
-    public int currentDay;
-    public TextMeshProUGUI dayText;
+    public DayManager dayManager;
 
     [HideInInspector] public Message[] currentMessages;
     [HideInInspector] public Actor[] currentActors;
@@ -42,7 +41,6 @@ public class DialogueManager : MonoBehaviour
     public void Update()
     {
         action.started += _ => OnSkip();
-        dayText.text = "Day: " + currentDay;
     }
 
     public void OnSkip()

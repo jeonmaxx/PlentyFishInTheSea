@@ -1,7 +1,6 @@
-using System.Collections;
 using UnityEngine;
-public enum Emotions { Neutral, Happy, Angry, Sad}
 
+public enum Emotions { Neutral, Happy, Angry, Sad}
 public class DialogueTrigger : MonoBehaviour
 {
     [HideInInspector] public Message[] messages;
@@ -56,29 +55,4 @@ public class DialogueTrigger : MonoBehaviour
         dialogue.OpenDialogue(messages, actors, answers);
         dialogue.currentNpc = GetComponent<DialogueTrigger>();
     }
-}
-
-[System.Serializable]
-public class Message
-{
-    public int actorId;
-    public string message;
-    public Emotions emotion;
-}
-
-[System.Serializable]
-public class Actor
-{
-    public string name;
-    public Sprite sprite;
-    public Sprite happySprite;
-    public Sprite angrySprite;
-}
-
-[System.Serializable]
-public class Answer
-{
-    public string answerText;
-    public DialogueSo nextDialogue;
-    public int addedAffinity;
 }
