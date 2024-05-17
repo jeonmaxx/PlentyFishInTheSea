@@ -1,11 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public enum Emotions { Neutral, Happy, Angry, Sad}
 public class DialogueTrigger : MonoBehaviour
 {
     [HideInInspector] public Message[] messages;
     [HideInInspector] public Actor[] actors;
-    public DialogueSo[] dialogueSo;
+    public List<DialogueSo> dialogueSo;
     private DialogueManager dialogue;
     public bool useSpecialSound;
     public AudioClip[] specialSound;
@@ -24,17 +25,17 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < dialogueSo.Length; i++)
+        for (int i = 0; i < dialogueSo.Count; i++)
         {
             // if (dialogueSo[i].affinity == currentAffinity)
             if (dialogueSo[i].affinity == dialogueSo[i].characters[0].affinity)
             {
-                messages = dialogueSo[i].messages;
+                messages = dialogueSo[i].messages.ToArray();
                 for (int j = 0; j < dialogueSo[j].characters.Length; j++)
                 {
                     actors[j] = dialogueSo[i].characters[j].actor;
                 }
-                answers = dialogueSo[i].answers;
+                answers = dialogueSo[i].answers.ToArray();
             }
         }
     }

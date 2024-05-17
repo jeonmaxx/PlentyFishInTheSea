@@ -22,7 +22,8 @@ public class AnswerButton : MonoBehaviour
         {
             nextActors[i] = answer.nextDialogue.characters[i].actor;
         }
-        manager.AnswerButton(answer.nextDialogue.messages, nextActors, answer.nextDialogue.answers);
+        answer.clicked = true;
+        manager.AnswerButton(answer.nextDialogue.messages.ToArray(), nextActors, answer.nextDialogue.answers.ToArray());
         //manager.currentNpc.currentAffinity += answer.addedAffinity;
         answer.nextDialogue.characters[0].affinity += answer.addedAffinity;
     }

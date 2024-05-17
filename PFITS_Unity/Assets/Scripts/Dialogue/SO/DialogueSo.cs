@@ -8,6 +8,6 @@ public class DialogueSo : ScriptableObject
     public int affinity;
     public int day;
     public CharacterSo[] characters;
-    public Message[] messages;
-    public Answer[] answers;
+    public List<Message> messages;
+    public List<Answer> answers;
 }

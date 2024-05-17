@@ -115,9 +115,16 @@ public class DialogueManager : MonoBehaviour
     {
         for(int i = 0; i < currentAnswers.Length; i++)
         {
-            GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
-            currentButton.GetComponentInChildren<TextMeshProUGUI>().text = currentAnswers[i].answerText;
-            currentButton.GetComponent<AnswerButton>().answer = currentAnswers[i];
+            if (!currentAnswers[i].clicked)
+            {
+                GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
+                currentButton.GetComponentInChildren<TextMeshProUGUI>().text = currentAnswers[i].answerText;
+                currentButton.GetComponent<AnswerButton>().answer = currentAnswers[i];
+                if (currentAnswers[i].questAnswer)
+                {
+                    currentButton.GetComponent<Image>().color = Color.yellow;
+                }
+            }
         }
     }
 

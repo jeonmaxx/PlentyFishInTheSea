@@ -149,6 +149,9 @@ MonoBehaviour:
   answer:
     answerText: 
     nextDialogue: {fileID: 0}
+    addedAffinity: 0
+    clicked: 0
+    questAnswer: 0
   manager: {fileID: 0}
 --- !u!1 &6867734530764799817
 GameObject:

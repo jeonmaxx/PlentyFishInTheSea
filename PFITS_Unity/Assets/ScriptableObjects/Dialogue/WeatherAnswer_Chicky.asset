@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: Test01
+  m_Name: WeatherAnswer_Chicky
   m_EditorClassIdentifier: 
   affinity: 0
   day: 0
@@ -18,19 +18,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
   - actorId: 0
-    message: yo dat funktioniert
-    emotion: 0
+    message: Are you blind? Just look outside!
+    emotion: 2
   - actorId: 0
-    message: wie nice
+    message: </i>What are dumb journalist..</i>
     emotion: 0
-  answers:
-  - answerText: Good Answer
-    nextDialogue: {fileID: 11400000, guid: 6cb5db55a4bdf504cb6dcb73c153edfd, type: 2}
-    addedAffinity: 1
-    clicked: 0
-    questAnswer: 0
-  - answerText: Bad Answer
-    nextDialogue: {fileID: 11400000, guid: ea387e536ca8ba441a6f2ea94c5b7897, type: 2}
-    addedAffinity: 0
-    clicked: 0
-    questAnswer: 0
+  answers: []
