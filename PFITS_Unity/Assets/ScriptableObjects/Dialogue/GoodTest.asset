@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: GoodTest
   m_EditorClassIdentifier: 
   affinity: 0
-  day: 0
+  day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
   - actorId: 0
-    message: This is nice!
+    message: You want to know more about me?
+    emotion: 0
+  - actorId: 0
+    message: I am happy to tell you EVERYTHING! [very long monologue]
     emotion: 1
   answers: []

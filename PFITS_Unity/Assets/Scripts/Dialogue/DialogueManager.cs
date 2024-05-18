@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     public Image actorImage;
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
+
+    //noch nicht eingebaut (ToDo)
     public DayManager dayManager;
 
     [HideInInspector] public Message[] currentMessages;
@@ -120,6 +122,7 @@ public class DialogueManager : MonoBehaviour
                 GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
                 currentButton.GetComponentInChildren<TextMeshProUGUI>().text = currentAnswers[i].answerText;
                 currentButton.GetComponent<AnswerButton>().answer = currentAnswers[i];
+                currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
                 if (currentAnswers[i].questAnswer)
                 {
                     currentButton.GetComponent<Image>().color = Color.yellow;

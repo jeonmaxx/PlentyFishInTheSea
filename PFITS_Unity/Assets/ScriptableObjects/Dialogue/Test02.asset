@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Test02
   m_EditorClassIdentifier: 
   affinity: 1
-  day: 0
+  day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
   - actorId: 0
-    message: Wow affinity 1
+    message: You seem like a really nice guy!
     emotion: 0
   - actorId: 0
-    message: supi dupi
-    emotion: 0
+    message: Maybe I'll actually read your next article.
+    emotion: 1
   answers: []

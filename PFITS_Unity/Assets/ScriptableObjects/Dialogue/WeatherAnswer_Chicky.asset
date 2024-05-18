@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WeatherAnswer_Chicky
   m_EditorClassIdentifier: 
   affinity: 0
-  day: 0
+  day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
@@ -21,6 +21,6 @@ MonoBehaviour:
     message: Are you blind? Just look outside!
     emotion: 2
   - actorId: 0
-    message: </i>What are dumb journalist..</i>
+    message: <i>What are dumb journalist..</i>
     emotion: 0
   answers: []

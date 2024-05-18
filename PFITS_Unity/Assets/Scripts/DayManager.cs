@@ -1,33 +1,37 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DayManager : MonoBehaviour
 {
     public int currentDay;
     public TextMeshProUGUI dayText;
-    public List<Chore> chores;
+    public List<ChoreSo> chores;
     public GameObject choreHolder;
     public GameObject chorePrefab;
+    public GameObject stillToDoScreen;
+    public GameObject demoEndScreen;
 
     void Start()
     {
         dayText.text = "Day: " + currentDay;
         NpcManager npcManager = GetComponent<NpcManager>();
-        foreach (Chore chore in chores)
+        foreach (ChoreSo chore in chores)
         {
-            GameObject refChore = Instantiate(chorePrefab, choreHolder.transform);
-            refChore.GetComponent<ChoreManager>().toggle.isOn = chore.done;
-            refChore.GetComponent<ChoreManager>().description.text = chore.description;
-            chore.choreHolder = refChore;
-
-            for(int i = 0; i < npcManager.npcObjects.Count; i++)
+            if (chore.day == currentDay)
             {
-                if (npcManager.npcObjects[i].character == chore.interviewNpc)
+                GameObject refChore = Instantiate(chorePrefab, choreHolder.transform);
+                refChore.GetComponent<ChoreManager>().toggle.isOn = chore.done;
+                refChore.GetComponent<ChoreManager>().description.text = chore.description;
+                chore.choreHolder = refChore;
+
+                for (int i = 0; i < npcManager.npcObjects.Count; i++)
                 {
-                    npcManager.npcObjects[i].characterObj.GetComponent<DialogueTrigger>().dialogueSo[0].answers.Add(chore.additionalAnswer);
+                    if (npcManager.npcObjects[i].character == chore.interviewNpc && !chore.done)
+                    {
+                        foreach(DialogueSo dialogueSo in npcManager.npcObjects[i].characterObj.GetComponent<DialogueTrigger>().dialogueSo)
+                            dialogueSo.answers.Add(chore.additionalAnswer);
+                    }
                 }
             }
         }
@@ -35,7 +39,7 @@ public class DayManager : MonoBehaviour
 
     void Update()
     {
-        foreach(Chore chore in chores)
+        foreach(ChoreSo chore in chores)
         {
             chore.choreHolder.GetComponent<ChoreManager>().toggle.isOn = chore.done;
         }
@@ -43,6 +47,26 @@ public class DayManager : MonoBehaviour
 
     public void EndDayButton()
     {
+        List<ChoreSo> choresDone = new List<ChoreSo>();
 
+        foreach(ChoreSo chore in chores)
+        {
+            if(chore.done)
+                choresDone.Add(chore);
+        }
+
+        if(choresDone.Count == chores.Count)
+        {
+            StartNextDay();
+        }
+        else
+        {
+            stillToDoScreen.SetActive(true);
+        }
+    }
+
+    public void StartNextDay()
+    {
+        demoEndScreen.SetActive(true);
     }
 }

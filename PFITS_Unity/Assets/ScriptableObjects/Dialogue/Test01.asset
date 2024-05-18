@@ -13,24 +13,26 @@ MonoBehaviour:
   m_Name: Test01
   m_EditorClassIdentifier: 
   affinity: 0
-  day: 0
+  day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
   - actorId: 0
-    message: yo dat funktioniert
+    message: Hey, you must be the new journalist, right?
     emotion: 0
   - actorId: 0
-    message: wie nice
+    message: What are you doing here?
     emotion: 0
   answers:
-  - answerText: Good Answer
+  - answerText: Ask about them.
     nextDialogue: {fileID: 11400000, guid: 6cb5db55a4bdf504cb6dcb73c153edfd, type: 2}
     addedAffinity: 1
     clicked: 0
     questAnswer: 0
-  - answerText: Bad Answer
+    isChore: {fileID: 0}
+  - answerText: You want chicken wings.
     nextDialogue: {fileID: 11400000, guid: ea387e536ca8ba441a6f2ea94c5b7897, type: 2}
     addedAffinity: 0
     clicked: 0
     questAnswer: 0
+    isChore: {fileID: 0}

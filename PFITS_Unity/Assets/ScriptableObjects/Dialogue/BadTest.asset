@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: BadTest
   m_EditorClassIdentifier: 
   affinity: 0
-  day: 0
+  day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
   messages:
   - actorId: 0
-    message: What the hell are you doing?!
+    message: You want what?! What the ****
     emotion: 2
   answers: []

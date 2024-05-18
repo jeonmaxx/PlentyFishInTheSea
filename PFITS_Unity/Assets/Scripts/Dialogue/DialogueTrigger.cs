@@ -7,6 +7,7 @@ public class DialogueTrigger : MonoBehaviour
     [HideInInspector] public Message[] messages;
     [HideInInspector] public Actor[] actors;
     public List<DialogueSo> dialogueSo;
+    public DialogueSo currentDialogue;
     private DialogueManager dialogue;
     public bool useSpecialSound;
     public AudioClip[] specialSound;
@@ -30,12 +31,13 @@ public class DialogueTrigger : MonoBehaviour
             // if (dialogueSo[i].affinity == currentAffinity)
             if (dialogueSo[i].affinity == dialogueSo[i].characters[0].affinity)
             {
-                messages = dialogueSo[i].messages.ToArray();
+                currentDialogue = dialogueSo[i];
+                messages = currentDialogue.messages.ToArray();
                 for (int j = 0; j < dialogueSo[j].characters.Length; j++)
                 {
-                    actors[j] = dialogueSo[i].characters[j].actor;
+                    actors[j] = currentDialogue.characters[j].actor;
                 }
-                answers = dialogueSo[i].answers.ToArray();
+                answers = currentDialogue.answers.ToArray();
             }
         }
     }

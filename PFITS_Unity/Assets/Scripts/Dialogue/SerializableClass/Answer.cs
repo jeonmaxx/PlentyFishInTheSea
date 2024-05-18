@@ -1,3 +1,5 @@
+using UnityEngine;
+
 [System.Serializable]
 public class Answer
 {
@@ -6,5 +8,7 @@ public class Answer
     public int addedAffinity;
     public bool clicked;
     public bool questAnswer;
+    [Tooltip ("Only if its an chore answer!")]
+    public ChoreSo isChore;
 }
 
