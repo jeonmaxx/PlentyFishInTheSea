@@ -29,12 +29,36 @@ public class DayManager : MonoBehaviour
                 {
                     if (npcManager.npcObjects[i].character == chore.interviewNpc && !chore.done)
                     {
-                        foreach(DialogueSo dialogueSo in npcManager.npcObjects[i].characterObj.GetComponent<DialogueTrigger>().dialogueSo)
-                            dialogueSo.answers.Add(chore.additionalAnswer);
+                        foreach (DialogueSo dialogueSo in npcManager.npcObjects[i].characterObj.GetComponent<DialogueTrigger>().dialogueSo)
+                        {
+                            if (!CheckAnswer(chore.additionalAnswer, dialogueSo.answers))
+                            {
+                                dialogueSo.answers.Add(chore.additionalAnswer);
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+
+    private bool CheckAnswer(Answer checkAnswer, List<Answer> answers)
+    {
+        if(answers.Count == 0)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < answers.Count; i++)
+        {
+            Debug.Log(answers[i]);
+            if (answers[i].nextDialogue == checkAnswer.nextDialogue)
+            {
+                Debug.Log("Answer already there");
+                return true;
+            }
+        }
+        return false;
     }
 
     void Update()
