@@ -33,7 +33,7 @@ public class DialogueTrigger : MonoBehaviour
             {
                 currentDialogue = dialogueSo[i];
                 messages = currentDialogue.messages.ToArray();
-                for (int j = 0; j < dialogueSo[j].characters.Length; j++)
+                for (int j = 0; j < currentDialogue.characters.Length; j++)
                 {
                     actors[j] = currentDialogue.characters[j].actor;
                 }

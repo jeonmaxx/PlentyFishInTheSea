@@ -28,7 +28,6 @@ public class IndexManager : MonoBehaviour
         {
             if (characterSo == newNpc)
                 return true;
-            else return false;
         }
         return false;
     }

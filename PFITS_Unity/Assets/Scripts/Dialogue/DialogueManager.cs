@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     //noch nicht eingebaut (ToDo)
     public DayManager dayManager;
+
     public IndexManager indexManager;
 
     [HideInInspector] public Message[] currentMessages;
@@ -173,6 +174,6 @@ public class DialogueManager : MonoBehaviour
 
     public void LeaveButton()
     {
-        transform.localScale = Vector3.zero;
+        StartCoroutine(EndDialogue());
     }
 }
