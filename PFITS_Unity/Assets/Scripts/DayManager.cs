@@ -51,7 +51,6 @@ public class DayManager : MonoBehaviour
 
         for (int i = 0; i < answers.Count; i++)
         {
-            Debug.Log(answers[i]);
             if (answers[i].nextDialogue == checkAnswer.nextDialogue)
             {
                 Debug.Log("Answer already there");
