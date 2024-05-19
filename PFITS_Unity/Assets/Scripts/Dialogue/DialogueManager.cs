@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     //noch nicht eingebaut (ToDo)
     public DayManager dayManager;
+    public IndexManager indexManager;
 
     [HideInInspector] public Message[] currentMessages;
     [HideInInspector] public Actor[] currentActors;
@@ -65,6 +66,10 @@ public class DialogueManager : MonoBehaviour
             activeMessage = 0;                    
             DisplayMessage();
             StartCoroutine(StartDialogue());
+            foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
+            {
+                indexManager.AddIndex(characterSo);
+            }
         }
     }
 

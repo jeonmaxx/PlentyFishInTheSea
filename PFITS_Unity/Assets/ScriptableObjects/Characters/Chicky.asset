@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor:
     name: Chicky
+    indexSprite: {fileID: 21300000, guid: 8c9f7f2d7c8c0314e83019b18e87eaa7, type: 3}
     sprite: {fileID: 21300000, guid: 8c9f7f2d7c8c0314e83019b18e87eaa7, type: 3}
     happySprite: {fileID: 21300000, guid: 40e0b069e8c510945bebea36f1591b55, type: 3}
     angrySprite: {fileID: 21300000, guid: c6382ccf4e14f1742bea0d0e9e02ccd7, type: 3}
