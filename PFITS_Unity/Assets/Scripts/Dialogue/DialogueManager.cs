@@ -67,10 +67,6 @@ public class DialogueManager : MonoBehaviour
             activeMessage = 0;                    
             DisplayMessage();
             StartCoroutine(StartDialogue());
-            foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
-            {
-                indexManager.AddIndex(characterSo);
-            }
         }
     }
 
@@ -162,12 +158,18 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        currentActors = null;
+        currentMessages = null;
         StopCoroutine(EndDialogue());
     }
 
     private IEnumerator StartDialogue()
     {
         yield return new WaitForEndOfFrame();
+        foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
+        {
+            indexManager.AddIndex(characterSo);
+        }
         isActive = true;
         StopCoroutine(StartDialogue());
     }
