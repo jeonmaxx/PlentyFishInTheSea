@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: WeatherAnswe_Science
+  m_EditorClassIdentifier: 
+  affinity: 0
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
+  messages:
+  - actorId: 0
+    message: "The current underwater conditions are stable. The water temperature
+      is 15\xB0C. The current is flowing at a speed of 2 knots from the northeast..."
+    emotion: 0
+  - actorId: 0
+    message: ...and the visibility is approximately 20 meters. The pH level is 8.1,
+      and there is a moderate amount of plankton present, indicating healthy nutrient
+      levels.
+    emotion: 0
+  answers: []

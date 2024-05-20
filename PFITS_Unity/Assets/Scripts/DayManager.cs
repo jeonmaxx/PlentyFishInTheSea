@@ -64,7 +64,10 @@ public class DayManager : MonoBehaviour
     {
         foreach(ChoreSo chore in chores)
         {
-            chore.choreHolder.GetComponent<ChoreManager>().toggle.isOn = chore.done;
+            if (chore.day == currentDay)
+            {
+                chore.choreHolder.GetComponent<ChoreManager>().toggle.isOn = chore.done;
+            }
         }
     }
 
