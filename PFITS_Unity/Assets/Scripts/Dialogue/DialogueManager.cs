@@ -174,6 +174,7 @@ public class DialogueManager : MonoBehaviour
 
     public void LeaveButton()
     {
+        inAnswerScreen = false;
         StartCoroutine(EndDialogue());
     }
 }
