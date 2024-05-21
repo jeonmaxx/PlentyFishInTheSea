@@ -213,7 +213,6 @@ GameObject:
   - component: {fileID: 56406959}
   - component: {fileID: 56406960}
   - component: {fileID: 56406957}
-  - component: {fileID: 56406956}
   - component: {fileID: 56406955}
   m_Layer: 0
   m_Name: prototype_booklead
@@ -262,20 +261,6 @@ MonoBehaviour:
   useSpecialSound: 0
   specialSound: []
   answers: []
---- !u!114 &56406956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56406953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3001454466bdc1445aa3f3b59592cfdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 56406955}
-  inputAction: {fileID: 4608474467413072670, guid: 70406c8248a5a9e4fac8c720934c346d, type: 3}
 --- !u!114 &56406957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1912,7 +1897,6 @@ GameObject:
   - component: {fileID: 463370832}
   - component: {fileID: 463370831}
   - component: {fileID: 463370830}
-  - component: {fileID: 463370829}
   - component: {fileID: 463370828}
   m_Layer: 0
   m_Name: prototype_sciencelead
@@ -1961,20 +1945,6 @@ MonoBehaviour:
   useSpecialSound: 0
   specialSound: []
   answers: []
---- !u!114 &463370829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463370826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3001454466bdc1445aa3f3b59592cfdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 463370828}
-  inputAction: {fileID: 4608474467413072670, guid: 70406c8248a5a9e4fac8c720934c346d, type: 3}
 --- !u!114 &463370830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4646,6 +4616,7 @@ MonoBehaviour:
   closeSound: {fileID: 0}
   buttonSpawner: {fileID: 726645254}
   buttonPrefab: {fileID: 5565348282681254485, guid: ac8ac9d4e92ace74292c843140b8a3dc, type: 3}
+  npcScale: {x: 1, y: 1, z: 1}
 --- !u!1 &895891864
 GameObject:
   m_ObjectHideFlags: 0
@@ -4680,7 +4651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: 148770.66}
+  m_AnchoredPosition: {x: 5, y: 210196.14}
   m_SizeDelta: {x: 1036, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &895891867
@@ -5637,7 +5608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 139628.75}
+  m_AnchoredPosition: {x: 0, y: 197280.97}
   m_SizeDelta: {x: 1100, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1062781690
@@ -6779,7 +6750,6 @@ GameObject:
   - component: {fileID: 1352329580}
   - component: {fileID: 1352329582}
   - component: {fileID: 1352329583}
-  - component: {fileID: 1352329585}
   - component: {fileID: 1352329584}
   m_Layer: 0
   m_Name: NPC
@@ -6942,20 +6912,6 @@ MonoBehaviour:
   useSpecialSound: 0
   specialSound: []
   answers: []
---- !u!114 &1352329585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352329578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3001454466bdc1445aa3f3b59592cfdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 1352329584}
-  inputAction: {fileID: 4608474467413072670, guid: 70406c8248a5a9e4fac8c720934c346d, type: 3}
 --- !u!1 &1357120910
 GameObject:
   m_ObjectHideFlags: 0
@@ -7267,7 +7223,6 @@ GameObject:
   - component: {fileID: 1509839076}
   - component: {fileID: 1509839075}
   - component: {fileID: 1509839074}
-  - component: {fileID: 1509839073}
   - component: {fileID: 1509839072}
   m_Layer: 0
   m_Name: prototype_artlead
@@ -7316,20 +7271,6 @@ MonoBehaviour:
   useSpecialSound: 0
   specialSound: []
   answers: []
---- !u!114 &1509839073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509839070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3001454466bdc1445aa3f3b59592cfdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 1509839072}
-  inputAction: {fileID: 4608474467413072670, guid: 70406c8248a5a9e4fac8c720934c346d, type: 3}
 --- !u!114 &1509839074
 MonoBehaviour:
   m_ObjectHideFlags: 0

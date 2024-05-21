@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
@@ -35,6 +34,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject buttonPrefab;
 
     private bool inAnswerScreen = false;
+
+    public Vector3 npcScale = Vector3.one;
 
     public void Start()
     {
@@ -153,6 +154,7 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         transform.localScale = Vector3.zero;
+        currentNpc.transform.localScale = npcScale;
         isActive = false;
         foreach(Transform child in buttonSpawner.transform)
         {
@@ -166,6 +168,11 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator StartDialogue()
     {
         yield return new WaitForEndOfFrame();
+        if (currentNpc.transform.localScale.x != 0)
+        {
+            npcScale = currentNpc.transform.localScale;
+            currentNpc.transform.localScale = Vector3.zero;
+        }
         foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
         {
             indexManager.AddIndex(characterSo);
