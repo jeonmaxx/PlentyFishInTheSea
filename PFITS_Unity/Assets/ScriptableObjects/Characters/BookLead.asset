@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BookLead
   m_EditorClassIdentifier: 
   actor:
-    name: Book Club Leader
+    name: Mary <alpha=#80><size=70%>[Book Club Leader]
     indexSprite: {fileID: 21300000, guid: d9c28028131e4d14a8bd434f8f09e8c3, type: 3}
     sprite: {fileID: 21300000, guid: d9c28028131e4d14a8bd434f8f09e8c3, type: 3}
     happySprite: {fileID: 21300000, guid: d9c28028131e4d14a8bd434f8f09e8c3, type: 3}

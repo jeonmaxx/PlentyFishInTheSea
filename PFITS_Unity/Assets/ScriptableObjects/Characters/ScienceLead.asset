@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ScienceLead
   m_EditorClassIdentifier: 
   actor:
-    name: Science Club Leader
+    name: Lary <alpha=#80><size=70%>[Science Club Leader]
     indexSprite: {fileID: 21300000, guid: 27d2ebf0e2385a24d94c54dcfd0397db, type: 3}
     sprite: {fileID: 21300000, guid: 27d2ebf0e2385a24d94c54dcfd0397db, type: 3}
     happySprite: {fileID: 21300000, guid: 27d2ebf0e2385a24d94c54dcfd0397db, type: 3}

@@ -38,6 +38,17 @@
                 },
                 {
                     "name": "",
+                    "id": "7ba11a20-b05c-4500-aa7b-44e8c57f32cf",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "74802954-964c-4e20-83a1-7283b6259c9e",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
