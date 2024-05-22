@@ -6,50 +6,63 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Image actorImage;
-    public TextMeshProUGUI actorName;
-    public TextMeshProUGUI messageText;
+    [Header("General")]
 
-    public float typingSpeed = 0.04f;
+    [SerializeField] private Image actorImage;
+    [SerializeField] private TextMeshProUGUI actorName;
+    [SerializeField] private TextMeshProUGUI messageText;
+    [SerializeField] private GameObject continueIcon;
+    public bool isActive = false;
+    public DialogueTrigger currentNpc;
 
-    //noch nicht eingebaut (ToDo)
-    public DayManager dayManager;
+    [SerializeField] private float typingSpeed = 0.04f;
 
-    public IndexManager indexManager;
+    [SerializeField] private InputActionReference inputAction;
+    private InputAction action;
 
     [HideInInspector] public Message[] currentMessages;
     [HideInInspector] public Actor[] currentActors;
     [HideInInspector] public int activeMessage = 0;
-    public bool isActive = false;
     [HideInInspector] public Answer[] currentAnswers;
-    public DialogueTrigger currentNpc;
 
-    public InputActionReference inputAction;
-    private InputAction action;
+    [Header("Manager")]
+    //noch nicht eingebaut (ToDo)
+    [SerializeField] private DayManager dayManager;
+    [SerializeField] private IndexManager indexManager;
 
-    public AudioClip openSound;
-    public AudioClip closeSound;
+    [Header("Sound")]
+
+    [SerializeField] private bool stopAudio;
+    [SerializeField] private bool makePredictable;
+
+    [HideInInspector] public AudioClip[] nDialogueTypingSounds;
+    [HideInInspector] public int nFrequenzyLevel = 3;
+    [HideInInspector] public float nMinPitch = 0.5f;
+    [HideInInspector] public float nMaxPitch = 3f;
+
+    //public AudioClip openSound;
+    //public AudioClip closeSound;
 
     private AudioSource source;
 
-    public GameObject continueIcon;
-    public GameObject buttonSpawner;
-    public GameObject buttonPrefab;
+    [Header("Answers")]
+    [SerializeField] private GameObject buttonSpawner;
+    [SerializeField] private GameObject buttonPrefab;
 
     private bool inAnswerScreen = false;
 
-    public Vector3 npcScale = Vector3.one;
+    [SerializeField] private Vector3 npcScale = Vector3.one;
 
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
 
     private bool skipToEnd = false;
-    private bool canSkip;
+    private bool canSkip = false;
 
     public void Start()
     {
         action = inputAction.action;
-        //source = GetComponent<AudioSource>();
+        source = this.gameObject.AddComponent<AudioSource>();
     }
 
     public void Update()
@@ -63,7 +76,7 @@ public class DialogueManager : MonoBehaviour
         {
             NextMessage();
             skipToEnd = true;
-        }
+        }     
     }
 
     public void OpenDialogue(Message[] messages, Actor[] actors, Answer[] answers)
@@ -84,14 +97,20 @@ public class DialogueManager : MonoBehaviour
     public void DisplayMessage()
     {
         Message messageToDisplay = currentMessages[activeMessage];
+
+        Actor actorToDisplay = currentActors[messageToDisplay.actorId];
+        actorName.text = actorToDisplay.name;
+        nDialogueTypingSounds = actorToDisplay.dialogueTypingSounds;
+        nFrequenzyLevel = actorToDisplay.frequenzyLevel;
+        nMinPitch = actorToDisplay.minPitch;
+        nMaxPitch = actorToDisplay.maxPitch;
+
         if (displayLineCoroutine != null)
         {
             StopCoroutine(displayLineCoroutine);
         }
         displayLineCoroutine = StartCoroutine(DisplayLine(messageToDisplay.message));
 
-        Actor actorToDisplay = currentActors[messageToDisplay.actorId];
-        actorName.text = actorToDisplay.name;
         if (messageToDisplay.emotion == Emotions.Neutral)
         {
             actorImage.sprite = actorToDisplay.sprite;
@@ -109,6 +128,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator DisplayLine(string line)
     {
         messageText.text = "";
+        int currentCharas = 0;
 
         continueIcon.transform.localScale = Vector3.zero;
         buttonSpawner.transform.localScale = Vector3.zero; 
@@ -126,7 +146,13 @@ public class DialogueManager : MonoBehaviour
                 messageText.text = line;
                 break;
             }
+            else if(!canSkip)
+            {
+                skipToEnd = false;
+            }
+            PlayDiaSound(currentCharas, letter);
             messageText.text += letter;
+            currentCharas++;
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -140,7 +166,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator CanSkip()
     {
         canSkip = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         canSkip = true;
     }
 
@@ -213,6 +239,7 @@ public class DialogueManager : MonoBehaviour
         }
         currentActors = null;
         currentMessages = null;
+        skipToEnd = false;
         StopCoroutine(EndDialogue());
     }
 
@@ -236,5 +263,48 @@ public class DialogueManager : MonoBehaviour
     {
         inAnswerScreen = false;
         StartCoroutine(EndDialogue());
+    }
+
+    private void PlayDiaSound(int currentCharaCount, char currentChara)
+    {
+        if(currentCharaCount % nFrequenzyLevel == 0)
+        {
+            if (stopAudio)
+            {
+                source.Stop();
+            }
+
+            AudioClip soundClip = null;
+            if(makePredictable)
+            {
+                int hashCode = currentChara.GetHashCode();
+                //sound clip
+                int predictableIndex = hashCode % nDialogueTypingSounds.Length;
+                soundClip = nDialogueTypingSounds[predictableIndex];
+                //pitch
+                int minPitchInt = (int)(nMinPitch * 100);
+                int maxPitchInt = (int)(nMaxPitch * 100);
+                int pitchRangeInt = maxPitchInt - minPitchInt;
+
+                if(pitchRangeInt!= 0)
+                {
+                    int predictablePitchInt = (hashCode % pitchRangeInt) + maxPitchInt;
+                    float predictablePitch = predictablePitchInt / 100f;
+                    source.pitch = predictablePitch;
+                }
+                else
+                {
+                    source.pitch = nMinPitch;
+                }
+            }
+            else
+            {
+                int randomIndex = Random.Range(0, nDialogueTypingSounds.Length);
+                soundClip = nDialogueTypingSounds[randomIndex];
+                source.pitch = Random.Range(nMinPitch, nMaxPitch);
+            }
+
+            source.PlayOneShot(soundClip);
+        }
     }
 }

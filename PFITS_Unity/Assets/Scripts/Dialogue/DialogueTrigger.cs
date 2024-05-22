@@ -20,8 +20,8 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         dialogue = FindObjectOfType<DialogueManager>();
-        nOpenSound = dialogue.openSound;
-        nCloseSound = dialogue.closeSound;   
+        //nOpenSound = dialogue.openSound;
+        //nCloseSound = dialogue.closeSound;   
     }
 
     private void Update()

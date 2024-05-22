@@ -7,12 +7,18 @@ public class AnswerButton : MonoBehaviour
     public DialogueManager manager;
     private Actor[] nextActors;
     public DialogueSo currentDialogue;
+    private NpcManager npcManager;
 
     private void Update()
     {
         if(manager == null)
         {
             manager = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>(); 
+        }
+
+        if (npcManager == null)
+        {
+            npcManager = FindObjectOfType<NpcManager>();
         }
     }
 
@@ -28,18 +34,35 @@ public class AnswerButton : MonoBehaviour
         //manager.currentNpc.currentAffinity += answer.addedAffinity;
         answer.nextDialogue.characters[0].affinity += answer.addedAffinity;
 
-        if (answer.questAnswer && answer.isChore != null)
+        if (answer.isChore != null)
         {
-            answer.isChore.done = true;
-            for (int i = 0; i < currentDialogue.answers.Count; i++)
+            SetChoreAsDone(answer);
+        }
+        else
+        {
+            Debug.LogWarning("No chore found!");
+        }
+    }
+
+    private void SetChoreAsDone(Answer answer)
+    {
+        foreach (var npc in npcManager.npcObjects)
+        {
+            if (npc.character == answer.isChore.interviewNpc)
             {
-                if (currentDialogue.answers[i] == answer)
-                {
-                    currentDialogue.answers.Remove(answer);
-                }
+                RemoveAnswerFromDialogue(npc.characterObj, answer);
+                answer.isChore.done = true;
+                break;
             }
         }
-        else if(answer.questAnswer && answer.isChore == null)
-            Debug.LogWarning("No chore found!");
+    }
+
+    private void RemoveAnswerFromDialogue(GameObject characterObj, Answer answer)
+    {
+        var dialogueTrigger = characterObj.GetComponent<DialogueTrigger>();
+        foreach (var dialogue in dialogueTrigger.dialogueSo)
+        {
+            dialogue.answers.RemoveAll(a => a.isChore == answer.isChore);
+        }
     }
 }

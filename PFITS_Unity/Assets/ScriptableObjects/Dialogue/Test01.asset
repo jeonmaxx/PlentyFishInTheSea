@@ -36,9 +36,3 @@ MonoBehaviour:
     clicked: 0
     questAnswer: 0
     isChore: {fileID: 0}
-  - answerText: How is the weather?
-    nextDialogue: {fileID: 11400000, guid: 71f5bbc4a7d625441a6ed9cec8301b4a, type: 2}
-    addedAffinity: 0
-    clicked: 0
-    questAnswer: 1
-    isChore: {fileID: 11400000, guid: 891ea3084a93e57419ad62bb03447e72, type: 2}
