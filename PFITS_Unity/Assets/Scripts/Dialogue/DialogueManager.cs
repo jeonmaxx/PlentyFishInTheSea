@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
 
+    public float typingSpeed = 0.04f;
+
     //noch nicht eingebaut (ToDo)
     public DayManager dayManager;
 
@@ -30,12 +32,19 @@ public class DialogueManager : MonoBehaviour
 
     private AudioSource source;
 
+    public GameObject continueIcon;
     public GameObject buttonSpawner;
     public GameObject buttonPrefab;
 
     private bool inAnswerScreen = false;
 
     public Vector3 npcScale = Vector3.one;
+
+    private Coroutine displayLineCoroutine;
+    private bool canContinueToNextLine = false;
+
+    private bool skipToEnd = false;
+    private bool canSkip;
 
     public void Start()
     {
@@ -50,9 +59,10 @@ public class DialogueManager : MonoBehaviour
 
     public void OnSkip()
     {
-        if (isActive == true)
+        if (isActive)
         {
             NextMessage();
+            skipToEnd = true;
         }
     }
 
@@ -74,7 +84,11 @@ public class DialogueManager : MonoBehaviour
     public void DisplayMessage()
     {
         Message messageToDisplay = currentMessages[activeMessage];
-        messageText.text = messageToDisplay.message;
+        if (displayLineCoroutine != null)
+        {
+            StopCoroutine(displayLineCoroutine);
+        }
+        displayLineCoroutine = StartCoroutine(DisplayLine(messageToDisplay.message));
 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
@@ -92,9 +106,47 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private IEnumerator DisplayLine(string line)
+    {
+        messageText.text = "";
+
+        continueIcon.transform.localScale = Vector3.zero;
+        buttonSpawner.transform.localScale = Vector3.zero; 
+
+        canContinueToNextLine = false;
+        skipToEnd = false;
+
+        StartCoroutine(CanSkip());
+
+        foreach(char letter in line.ToCharArray())
+        {
+            if(canSkip && skipToEnd)
+            {
+                skipToEnd = false;
+                messageText.text = line;
+                break;
+            }
+            messageText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        continueIcon.transform.localScale = Vector3.one;
+        buttonSpawner.transform.localScale = Vector3.one;
+        
+        canContinueToNextLine = true;
+        canSkip = false;
+    }
+
+    private IEnumerator CanSkip()
+    {
+        canSkip = false;
+        yield return new WaitForSeconds(0.5f);
+        canSkip = true;
+    }
+
     public void NextMessage()
     {
-        if (isActive && !inAnswerScreen)
+        if (isActive && !inAnswerScreen && canContinueToNextLine)
         {
             activeMessage++;
             if (activeMessage < currentMessages.Length)
@@ -149,7 +201,6 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(StartDialogue());
     }
    
-
     private IEnumerator EndDialogue()
     {
         yield return new WaitForEndOfFrame();
