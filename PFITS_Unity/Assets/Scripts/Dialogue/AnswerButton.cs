@@ -34,11 +34,11 @@ public class AnswerButton : MonoBehaviour
         //manager.currentNpc.currentAffinity += answer.addedAffinity;
         answer.nextDialogue.characters[0].affinity += answer.addedAffinity;
 
-        if (answer.isChore != null)
+        if (answer.isChore != null && answer.questAnswer)
         {
             SetChoreAsDone(answer);
         }
-        else
+        else if(answer.isChore == null && answer.questAnswer)
         {
             Debug.LogWarning("No chore found!");
         }

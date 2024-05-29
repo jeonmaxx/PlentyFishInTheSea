@@ -22,7 +22,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8c0cffa363b239546ab7de1a424ec554, type: 3}
     - {fileID: 8300000, guid: 990a195820c59f74d93c0b88548fc9ca, type: 3}
     - {fileID: 8300000, guid: 86879bb5072c0214eb28fced2f3d8a2b, type: 3}
-    frequenzyLevel: 3
+    frequenzyLevel: 5
     minPitch: -1.5
     maxPitch: 0.5
   affinity: 0

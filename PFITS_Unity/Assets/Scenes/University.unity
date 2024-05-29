@@ -3647,8 +3647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 440.79834, y: 1.4666}
-  m_SizeDelta: {x: 578.3569, y: 646.6472}
+  m_AnchoredPosition: {x: 434.56396, y: 156.07884}
+  m_SizeDelta: {x: 565.8881, y: 546.8973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726645256
 MonoBehaviour:
@@ -4532,7 +4532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: 683703.4}
+  m_AnchoredPosition: {x: 5, y: 847098.3}
   m_SizeDelta: {x: 1036, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &895891867
@@ -5355,7 +5355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 641703.5}
+  m_AnchoredPosition: {x: 0, y: 795060.7}
   m_SizeDelta: {x: 1100, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1062781690
@@ -8065,6 +8065,7 @@ GameObject:
   - component: {fileID: 1788680137}
   - component: {fileID: 1788680138}
   - component: {fileID: 1788680139}
+  - component: {fileID: 1788680140}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -8198,6 +8199,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneInt: 0
+--- !u!114 &1788680140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788680132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1667cec832cbd488524431119ac34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - {fileID: 11400000, guid: 9d0b7b8e8081f59439dc61d5f8a8e474, type: 2}
+  - {fileID: 11400000, guid: ea387e536ca8ba441a6f2ea94c5b7897, type: 2}
+  - {fileID: 11400000, guid: b7cd74cbad0cca74baba3512afea6951, type: 2}
+  - {fileID: 11400000, guid: 6cb5db55a4bdf504cb6dcb73c153edfd, type: 2}
+  - {fileID: 11400000, guid: a107b324d1b6b0640b9d6e097cc6072a, type: 2}
+  - {fileID: 11400000, guid: 2438836686239474fa84ceafa083f5c8, type: 2}
+  - {fileID: 11400000, guid: ca1aba00a2f5174418ca916f40ed5bbf, type: 2}
+  - {fileID: 11400000, guid: a26075fe02ee2b140be35c1657a07fd2, type: 2}
+  - {fileID: 11400000, guid: 71f5bbc4a7d625441a6ed9cec8301b4a, type: 2}
+  characters:
+  - {fileID: 11400000, guid: f22c26b3f83e4054690ebb45b2311171, type: 2}
+  - {fileID: 11400000, guid: abe4bc5d122135f44bef4da94d886249, type: 2}
+  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
+  - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
+  chores:
+  - {fileID: 11400000, guid: 891ea3084a93e57419ad62bb03447e72, type: 2}
+  - {fileID: 11400000, guid: aff0236d9d24ad94f9b4b1f04476e32a, type: 2}
+  data:
+    saveFileInt: 0
+    fileChosen: 0
+    dialogueDatas: []
+    characterDatas: []
+    choreDatas: []
 --- !u!1 &1840119267
 GameObject:
   m_ObjectHideFlags: 0

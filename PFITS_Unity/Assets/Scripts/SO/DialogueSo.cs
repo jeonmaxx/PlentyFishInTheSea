@@ -10,4 +10,12 @@ public class DialogueSo : ScriptableObject
     public CharacterSo[] characters;
     public List<Message> messages;
     public List<Answer> answers;
+    [HideInInspector] public string id;
+    private void OnEnable()
+    {
+        if (string.IsNullOrEmpty(id))
+        {
+            id = System.Guid.NewGuid().ToString();
+        }
+    }
 }
