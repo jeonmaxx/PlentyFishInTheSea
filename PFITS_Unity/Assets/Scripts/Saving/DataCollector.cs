@@ -33,7 +33,7 @@ public class DataCollector : MonoBehaviour
         }
     }
 
-    private void SaveData()
+    public void SaveData()
     {
         if (data.saveFileInt > 0)
         {
@@ -61,8 +61,7 @@ public class DataCollector : MonoBehaviour
 
     private void LoadData(int saveFileIndex)
     {
-        string filePath = Path.Combine(Application.persistentDataPath, "pfits_" + saveFileIndex + ".json");
-        DataToSave dataToLoad = SaveGameManager.ReadFromJSON<DataToSave>(filePath);
+        DataToSave dataToLoad = SaveGameManager.ReadFromJSON<DataToSave>("pfits_" + saveFileIndex + ".json");
 
         if (dataToLoad == null) return;
 
