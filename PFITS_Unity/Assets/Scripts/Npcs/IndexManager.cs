@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IndexManager : MonoBehaviour
 {
-    private List<CharacterSo> knownNpcs = new List<CharacterSo>();
+    [HideInInspector] public List<CharacterSo> knownNpcs = new List<CharacterSo>();
     public GameObject indexPrefab;
     public Transform indexHolder;
 
@@ -15,8 +15,16 @@ public class IndexManager : MonoBehaviour
             GameObject newIndex = Instantiate(indexPrefab, indexHolder);
             newIndex.GetComponent<NpcIndexCard>().pictureHolder.sprite = newNpc.actor.indexSprite;
             knownNpcs.Add(newNpc);
+        }   
+    }
+
+    public void RefreshIndexes()
+    {
+        foreach (CharacterSo newNpc in knownNpcs)
+        {
+            GameObject newIndex = Instantiate(indexPrefab, indexHolder);
+            newIndex.GetComponent<NpcIndexCard>().pictureHolder.sprite = newNpc.actor.indexSprite;
         }
-            
     }
 
     private bool CheckNewIndex(CharacterSo newNpc)

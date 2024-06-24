@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,8 @@ public class DataCollector : MonoBehaviour
     public List<DialogueSo> dialogues;
     public List<CharacterSo> characters;
     public List<ChoreSo> chores;
+    public List<Clue> clues;
+    public IndexManager indexManager;
 
     [Header("Saved Data")]
     public DataToSave data;
@@ -55,6 +58,10 @@ public class DataCollector : MonoBehaviour
                 answerList = new List<Answer>(dialogue.answers)
             }).ToList();
 
+            data.cluesNoted = clues.Select(clue => clue.clueNoted).ToList();
+
+            data.knownNpcsIds = indexManager.knownNpcs.Select(npc => npc.id).ToList();
+
             SaveGameManager.SaveToJSON<DataToSave>(data, "pfits_" + data.saveFileInt + ".json");
         }
     }
@@ -68,6 +75,8 @@ public class DataCollector : MonoBehaviour
         LoadDialogueData(dataToLoad.dialogueDatas);
         LoadChoreData(dataToLoad.choreDatas);
         LoadCharacterData(dataToLoad.characterDatas);
+        LoadClueData(dataToLoad.cluesNoted);
+        LoadKnownNpcsData(dataToLoad.knownNpcsIds);
     }
 
     private void LoadDialogueData(List<DialogueData> dialogueDatas)
@@ -110,6 +119,32 @@ public class DataCollector : MonoBehaviour
                 character.affinity = loadedCharacter.affinities;
             }
         }
+    }
+
+    private void LoadClueData(List<bool> cluesNoted)
+    {
+        if (cluesNoted == null) return;
+
+        for (int i = 0; i < clues.Count && i < cluesNoted.Count; i++)
+        {
+            clues[i].clueNoted = cluesNoted[i];
+        }
+    }
+
+    private void LoadKnownNpcsData(List<string> knownNpcsIds)
+    {
+        if (knownNpcsIds == null) return;
+
+        indexManager.knownNpcs.Clear();
+        foreach (var npcId in knownNpcsIds)
+        {
+            var character = characters.FirstOrDefault(c => c.id == npcId);
+            if (character != null)
+            {
+                indexManager.knownNpcs.Add(character);
+            }
+        }
+        indexManager.RefreshIndexes();
     }
 
     private int CheckSaveFiles()

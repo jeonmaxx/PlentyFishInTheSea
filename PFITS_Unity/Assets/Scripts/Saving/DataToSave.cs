@@ -6,14 +6,20 @@ public class DataToSave
     public int saveFileInt;
     public bool fileChosen;
 
-    //saving for dialogues
+    //dialogues
     public List<DialogueData> dialogueDatas;
 
-    //saving for characters
+    //characters
     public List<CharacterData> characterDatas;
 
-    //saving for chores
+    //chores
     public List<ChoresData> choreDatas;
+
+    //clues
+    public List<bool> cluesNoted;
+
+    //index
+    public List<string> knownNpcsIds;
 }
 
 [System.Serializable]

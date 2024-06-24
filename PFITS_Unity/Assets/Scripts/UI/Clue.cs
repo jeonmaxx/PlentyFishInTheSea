@@ -12,15 +12,21 @@ public class Clue : MonoBehaviour, IPointerDownHandler
     public GameObject itemImage;
     public string description;
     public bool pickUpItem;
-    private bool clueNoted;
+    public bool clueNoted;
 
     private void Start()
     {
-        //muss noch ins Saving eingebaut werden
+        if(clueNoted)
+        {
+            GameObject newClue = Instantiate(clueText, clueNotebook.transform);
+            newClue.GetComponent<TextMeshProUGUI>().text = description;
+        }
+
         if(pickUpItem && clueNoted)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -30,8 +36,9 @@ public class Clue : MonoBehaviour, IPointerDownHandler
             GameObject newClue = Instantiate(clueText, clueNotebook.transform);
             newClue.GetComponent<TextMeshProUGUI>().text = description;
         }
+
         if (pickUpItem)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         else
         {
             GameObject parentObject = itemImage.transform.parent.gameObject;
