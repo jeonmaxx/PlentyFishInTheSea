@@ -9,8 +9,8 @@ public class DialogueSo : ScriptableObject
     public int day;
     public CharacterSo[] characters;
     public List<Message> messages;
-    public List<Answer> answers;
-    [HideInInspector] public string id;
+    public List<AnswerSo> answers;
+    public string id;
     private void OnEnable()
     {
         if (string.IsNullOrEmpty(id))

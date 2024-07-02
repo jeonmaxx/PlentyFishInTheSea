@@ -12,16 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a0da522df8c6549aacf1f87ce7eead, type: 3}
   m_Name: Weather_Chicky
   m_EditorClassIdentifier: 
+  possibleDays: {fileID: 11400000, guid: 728bf6e9d401bd74db352416d1f97986, type: 2}
   day: 1
   done: 0
   description: Ask <b>Chicky</b> about the weather!
   interviewNpc: {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
-  additionalAnswer:
-    answerText: How is the weather?
-    nextDialogue: {fileID: 11400000, guid: 71f5bbc4a7d625441a6ed9cec8301b4a, type: 2}
-    addedAffinity: 0
-    clicked: 0
-    questAnswer: 1
-    isChore: {fileID: 11400000}
+  additionalAnswer: {fileID: 11400000, guid: 6873acc78ee5b9a4b818860f6698411b, type: 2}
   choreHolder: {fileID: 0}
   id: a56ed75f-a5bf-49d7-baff-bc9ea7ebd96f

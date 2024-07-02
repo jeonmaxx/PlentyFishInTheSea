@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     [HideInInspector] public Message[] messages;
     [HideInInspector] public Actor[] actors;
+    public DayManager dayManager;
     public List<DialogueSo> dialogueSo;
     public DialogueSo currentDialogue;
     private DialogueManager dialogue;
@@ -13,9 +14,9 @@ public class DialogueTrigger : MonoBehaviour
     public AudioClip[] specialSound;
     private AudioClip nOpenSound;
     private AudioClip nCloseSound;
-    //public int currentAffinity;
-    public Answer[] answers;
- 
+    public List<AnswerSo> answers;
+
+
 
     private void Start()
     {
@@ -28,22 +29,22 @@ public class DialogueTrigger : MonoBehaviour
     {
         for (int i = 0; i < dialogueSo.Count; i++)
         {
-            // if (dialogueSo[i].affinity == currentAffinity)
-            if (dialogueSo[i].affinity == dialogueSo[i].characters[0].affinity)
+            if (dialogueSo[i].affinity == dialogueSo[i].characters[0].affinity && dayManager.dayList.days[dayManager.currentDayInt] == dialogueSo[i].day)
             {
                 currentDialogue = dialogueSo[i];
                 messages = currentDialogue.messages.ToArray();
+                actors = new Actor[currentDialogue.characters.Length];
                 for (int j = 0; j < currentDialogue.characters.Length; j++)
                 {
                     actors[j] = currentDialogue.characters[j].actor;
                 }
-                answers = currentDialogue.answers.ToArray();
+                answers = new List<AnswerSo>(currentDialogue.answers);
             }
         }
     }
 
     public void StartDialogue()
-    {        
+    {
         //if (useSpecialSound)
         //{
         //    dialogue.openSound = specialSound[0];

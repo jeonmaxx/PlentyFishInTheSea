@@ -1,7 +1,8 @@
 using UnityEngine;
+using System;
 
-[System.Serializable]
-public class Answer
+[CreateAssetMenu]
+public class AnswerSo : ScriptableObject
 {
     public string answerText;
     public DialogueSo nextDialogue;
@@ -10,5 +11,14 @@ public class Answer
     public bool questAnswer;
     [Tooltip ("Only if its an chore answer!")]
     public ChoreSo isChore;
+    public string id;
+
+    private void OnEnable()
+    {
+        if (string.IsNullOrEmpty(id))
+        {
+            id = Guid.NewGuid().ToString();
+        }
+    }
 }
 

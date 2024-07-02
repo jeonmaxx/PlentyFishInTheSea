@@ -55,7 +55,7 @@ public class DataCollector : MonoBehaviour
             data.dialogueDatas = dialogues.Select(dialogue => new DialogueData
             {
                 dialogueSoId = dialogue.id,
-                answerList = new List<Answer>(dialogue.answers)
+                answerList = new List<AnswerSo>(dialogue.answers)
             }).ToList();
 
             data.cluesNoted = clues.Select(clue => clue.clueNoted).ToList();
@@ -88,7 +88,7 @@ public class DataCollector : MonoBehaviour
             var dialogue = dialogues.FirstOrDefault(d => d.id == loadedDialogue.dialogueSoId);
             if (dialogue != null)
             {
-                dialogue.answers = new List<Answer>(loadedDialogue.answerList);
+                dialogue.answers = new List<AnswerSo>(loadedDialogue.answerList);
             }
         }
     }

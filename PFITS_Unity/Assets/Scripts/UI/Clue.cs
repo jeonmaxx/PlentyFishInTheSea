@@ -7,12 +7,14 @@ using UnityEngine.UI;
 
 public class Clue : MonoBehaviour, IPointerDownHandler
 {
+    public int day;
     public GameObject clueText;
     public GameObject clueNotebook;
     public GameObject itemImage;
     public string description;
     public bool pickUpItem;
     public bool clueNoted;
+    public DayManager dayManager;
 
     private void Start()
     {
@@ -22,10 +24,12 @@ public class Clue : MonoBehaviour, IPointerDownHandler
             newClue.GetComponent<TextMeshProUGUI>().text = description;
         }
 
-        if(pickUpItem && clueNoted)
+        if ((pickUpItem && clueNoted) || dayManager.dayList.days[dayManager.currentDayInt] != day)
         {
-            gameObject.SetActive(false);
+            transform.localScale = Vector3.zero;
         }
+        else
+            transform.localScale = Vector3.one;
 
     }
 

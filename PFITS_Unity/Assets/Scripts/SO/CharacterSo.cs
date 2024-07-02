@@ -7,7 +7,7 @@ public class CharacterSo : ScriptableObject
 {
     public Actor actor;
     public int affinity;
-    [HideInInspector] public string id;
+    public string id;
     private void OnEnable()
     {
         if (string.IsNullOrEmpty(id))

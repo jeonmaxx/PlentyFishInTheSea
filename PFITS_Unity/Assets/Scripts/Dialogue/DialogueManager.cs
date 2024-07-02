@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
+using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public Message[] currentMessages;
     [HideInInspector] public Actor[] currentActors;
     [HideInInspector] public int activeMessage = 0;
-    [HideInInspector] public Answer[] currentAnswers;
+    [HideInInspector] public List<AnswerSo> currentAnswers = new List<AnswerSo>();
 
     [Header("Manager")]
     //noch nicht eingebaut (ToDo)
@@ -79,7 +80,7 @@ public class DialogueManager : MonoBehaviour
         }     
     }
 
-    public void OpenDialogue(Message[] messages, Actor[] actors, Answer[] answers)
+    public void OpenDialogue(Message[] messages, Actor[] actors, List<AnswerSo> answers)
     {
         if (!isActive)
         {
@@ -178,33 +179,33 @@ public class DialogueManager : MonoBehaviour
             if (activeMessage < currentMessages.Length)
             {
                 DisplayMessage();
-                if(activeMessage == currentMessages.Length-1 && currentAnswers.Length > 0)
-                {
-                    MakeAnswerButtons();
-                    inAnswerScreen = true;
-                }
             }
-            else
+
+            if (activeMessage == currentMessages.Length && currentAnswers.Count > 0)
+            {
+                MakeAnswerButtons();
+                inAnswerScreen = true;
+            }
+            else if (activeMessage >= currentMessages.Length)
             {
                 //source.clip = closeSound;
                 //source.Play();
                 StartCoroutine(EndDialogue());
-                Debug.Log("dialogue ended");
             }
         }
     }
 
     public void MakeAnswerButtons()
     {
-        for(int i = 0; i < currentAnswers.Length; i++)
+        foreach (AnswerSo answer in currentAnswers)
         {
-            if (!currentAnswers[i].clicked)
+            if (!answer.clicked)
             {
                 GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
-                currentButton.GetComponentInChildren<TextMeshProUGUI>().text = currentAnswers[i].answerText;
-                currentButton.GetComponent<AnswerButton>().answer = currentAnswers[i];
+                currentButton.GetComponentInChildren<TextMeshProUGUI>().text = answer.answerText;
+                currentButton.GetComponent<AnswerButton>().answer = answer;
                 currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
-                if (currentAnswers[i].questAnswer)
+                if (answer.questAnswer)
                 {
                     currentButton.GetComponent<Image>().color = Color.yellow;
                 }
@@ -212,7 +213,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void AnswerButton(Message[] messages, Actor[] actors, Answer[] answers)
+    public void AnswerButton(Message[] messages, Actor[] actors, List<AnswerSo> answers)
     {
         inAnswerScreen = false;
         currentMessages = messages;

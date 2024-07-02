@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Dia04_Chicky_1
+  m_EditorClassIdentifier: 
+  affinity: 1
+  day: 4
+  characters:
+  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
+  messages:
+  - actorId: 0
+    message: Hello there!
+    emotion: 0
+  - actorId: 0
+    message: ...
+    emotion: 0
+  - actorId: 0
+    message: Okay maybe next time.
+    emotion: 0
+  answers: []
+  id: 

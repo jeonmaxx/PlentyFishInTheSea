@@ -4,13 +4,15 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ChoreSo : ScriptableObject
 {
+    public DaysSo possibleDays;
     public int day;
     public bool done;
     public string description;
     public CharacterSo interviewNpc;
-    public Answer additionalAnswer;
+    public AnswerSo additionalAnswer;
     [HideInInspector] public GameObject choreHolder;
-    [HideInInspector] public string id;
+    public string id;
+
     private void OnEnable()
     {
         if (string.IsNullOrEmpty(id))

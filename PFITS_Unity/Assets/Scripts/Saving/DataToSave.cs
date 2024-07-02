@@ -26,7 +26,7 @@ public class DataToSave
 public class DialogueData
 {
     public string dialogueSoId;
-    public List<Answer> answerList;
+    public List<AnswerSo> answerList;
 }
 
 [System.Serializable]

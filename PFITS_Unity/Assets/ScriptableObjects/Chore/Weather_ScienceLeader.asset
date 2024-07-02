@@ -12,15 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a0da522df8c6549aacf1f87ce7eead, type: 3}
   m_Name: Weather_ScienceLeader
   m_EditorClassIdentifier: 
+  possibleDays: {fileID: 11400000, guid: 728bf6e9d401bd74db352416d1f97986, type: 2}
   day: 1
   done: 0
   description: Ask the <b>Science Club Leader</b> about the weather!
   interviewNpc: {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
-  additionalAnswer:
-    answerText: How is the weather?
-    nextDialogue: {fileID: 11400000, guid: a26075fe02ee2b140be35c1657a07fd2, type: 2}
-    addedAffinity: 0
-    clicked: 0
-    questAnswer: 1
-    isChore: {fileID: 11400000}
+  additionalAnswer: {fileID: 11400000, guid: 306b2c36e12de674195f64ac0d8d12c4, type: 2}
   choreHolder: {fileID: 0}
+  id: 45407090-2ecc-4e29-8047-2e3ce16fbf3a

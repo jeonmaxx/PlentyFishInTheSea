@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AnswerButton : MonoBehaviour
 {
-    public Answer answer;
+    public AnswerSo answer;
     public DialogueManager manager;
     private Actor[] nextActors;
     public DialogueSo currentDialogue;
@@ -30,7 +30,7 @@ public class AnswerButton : MonoBehaviour
             nextActors[i] = answer.nextDialogue.characters[i].actor;
         }
         answer.clicked = true;
-        manager.AnswerButton(answer.nextDialogue.messages.ToArray(), nextActors, answer.nextDialogue.answers.ToArray());
+        manager.AnswerButton(answer.nextDialogue.messages.ToArray(), nextActors, answer.nextDialogue.answers);
         //manager.currentNpc.currentAffinity += answer.addedAffinity;
         answer.nextDialogue.characters[0].affinity += answer.addedAffinity;
 
@@ -44,7 +44,7 @@ public class AnswerButton : MonoBehaviour
         }
     }
 
-    private void SetChoreAsDone(Answer answer)
+    private void SetChoreAsDone(AnswerSo answer)
     {
         foreach (var npc in npcManager.npcObjects)
         {
@@ -57,7 +57,7 @@ public class AnswerButton : MonoBehaviour
         }
     }
 
-    private void RemoveAnswerFromDialogue(GameObject characterObj, Answer answer)
+    private void RemoveAnswerFromDialogue(GameObject characterObj, AnswerSo answer)
     {
         var dialogueTrigger = characterObj.GetComponent<DialogueTrigger>();
         foreach (var dialogue in dialogueTrigger.dialogueSo)

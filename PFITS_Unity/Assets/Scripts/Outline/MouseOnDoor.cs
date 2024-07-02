@@ -7,6 +7,7 @@ public class MouseOnDoor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject nextRoom;
     public Renderer rend;
     public RoomManager roomManager;
+    public Texture2D cursor;
 
     private void Start()
     {
@@ -16,11 +17,13 @@ public class MouseOnDoor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         rend.material.SetInt("_isOn", 1);
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         rend.material.SetInt("_isOn", 0);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     public void OnPointerDown(PointerEventData eventData)
