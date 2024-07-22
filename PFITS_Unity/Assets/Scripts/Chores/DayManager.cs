@@ -20,6 +20,7 @@ public class DayManager : MonoBehaviour
     private NpcManager npcManager;
     public GameObject articleHolder;
     public GameObject articlePrefab;
+    public float fadeDuration = 1;
     public List<Article> articles;
 
     void Start()
@@ -111,7 +112,7 @@ public class DayManager : MonoBehaviour
     {
         if (currentDayInt < dayList.days.Count-1)
         {
-            StartCoroutine(FadeToIntensity(0, 1)); 
+            StartCoroutine(FadeToIntensity(0, fadeDuration)); 
             ShowArticles();
         }
         else
@@ -130,7 +131,7 @@ public class DayManager : MonoBehaviour
         currentDayInt++;
         dayText.text = "Day: " + dayList.days[currentDayInt];
         AddChores();
-        StartCoroutine(FadeToIntensity(1, 1));
+        StartCoroutine(FadeToIntensity(1, fadeDuration));
         foreach(Transform transform in articleHolder.transform)
         {
             Destroy(transform.gameObject);
