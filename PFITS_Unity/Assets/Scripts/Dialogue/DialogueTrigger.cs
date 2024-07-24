@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public enum Emotions { Neutral, Happy, Angry, Sad}
+public enum Emotions { Neutral, Happy, Angry, Sad, Disgust, Fear, Surprise, Evil, Excited }
 public class DialogueTrigger : MonoBehaviour
 {
     [HideInInspector] public Message[] messages;

@@ -112,17 +112,38 @@ public class DialogueManager : MonoBehaviour
         }
         displayLineCoroutine = StartCoroutine(DisplayLine(messageToDisplay.message));
 
-        if (messageToDisplay.emotion == Emotions.Neutral)
+        switch (messageToDisplay.emotion)
         {
-            actorImage.sprite = actorToDisplay.sprite;
-        }
-        else if(messageToDisplay.emotion == Emotions.Angry)
-        {
-            actorImage.sprite = actorToDisplay.angrySprite;
-        }
-        else if(messageToDisplay.emotion == Emotions.Happy)
-        {
-            actorImage.sprite = actorToDisplay.happySprite;
+            case Emotions.Neutral:
+                actorImage.sprite = actorToDisplay.sprite;
+                break;
+            case Emotions.Happy:
+                actorImage.sprite = actorToDisplay.happySprite ?? actorToDisplay.sprite;
+                break;
+            case Emotions.Angry:
+                actorImage.sprite = actorToDisplay.angrySprite ?? actorToDisplay.sprite;
+                break;
+            case Emotions.Sad:
+                actorImage.sprite = actorToDisplay.sadSprite ?? actorToDisplay.sprite;
+                break;
+            case Emotions.Disgust:
+                actorImage.sprite = actorToDisplay.disgustSprite ?? actorToDisplay.sprite;
+                break;
+            case Emotions.Fear:
+                actorImage.sprite = actorToDisplay.fearSprite ?? actorToDisplay.sprite;
+                break;
+            case Emotions.Surprise:
+                actorImage.sprite = actorToDisplay.surpriseSprite ?? actorToDisplay.sprite;
+                break;
+            case Emotions.Evil:
+                actorImage.sprite = actorToDisplay.evilSprite ?? actorToDisplay.sprite;
+                break;
+            case Emotions.Excited:
+                actorImage.sprite = actorToDisplay.excitedSprite ?? actorToDisplay.sprite;
+                break;
+            default:
+                actorImage.sprite = actorToDisplay.sprite;
+                break;
         }
     }
 

@@ -9,6 +9,12 @@ public class Actor
     public Sprite sprite;
     public Sprite happySprite;
     public Sprite angrySprite;
+    public Sprite sadSprite;
+    public Sprite disgustSprite;
+    public Sprite fearSprite;
+    public Sprite surpriseSprite;
+    public Sprite evilSprite;
+    public Sprite excitedSprite;
 
     [Header("Audio")]
     public AudioClip[] dialogueTypingSounds;

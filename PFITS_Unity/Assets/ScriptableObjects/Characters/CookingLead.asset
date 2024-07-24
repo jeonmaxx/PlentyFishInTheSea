@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d64ad22540e1e514b96e57605033cfdd, type: 3}
-  m_Name: BookLead
+  m_Name: CookingLead
   m_EditorClassIdentifier: 
   actor:
-    name: Mary <alpha=#80><size=70%>[Book Club Leader]
-    indexSprite: {fileID: 21300000, guid: d9c28028131e4d14a8bd434f8f09e8c3, type: 3}
-    sprite: {fileID: 21300000, guid: d9c28028131e4d14a8bd434f8f09e8c3, type: 3}
-    happySprite: {fileID: 21300000, guid: d9c28028131e4d14a8bd434f8f09e8c3, type: 3}
-    angrySprite: {fileID: 21300000, guid: d9c28028131e4d14a8bd434f8f09e8c3, type: 3}
+    name: Name <alpha=#80><size=70%>[Cooking Club Leader]
+    indexSprite: {fileID: 21300000, guid: 4329bd1f89a46cc478aecfa9559cb593, type: 3}
+    sprite: {fileID: 21300000, guid: 4329bd1f89a46cc478aecfa9559cb593, type: 3}
+    happySprite: {fileID: 0}
+    angrySprite: {fileID: 0}
     sadSprite: {fileID: 0}
     disgustSprite: {fileID: 0}
     fearSprite: {fileID: 0}
@@ -29,7 +29,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 990a195820c59f74d93c0b88548fc9ca, type: 3}
     - {fileID: 8300000, guid: 86879bb5072c0214eb28fced2f3d8a2b, type: 3}
     frequenzyLevel: 1
-    minPitch: 0.1
-    maxPitch: 1
+    minPitch: -1.5
+    maxPitch: 0.5
   affinity: 0
-  id: 258baee8-d429-4d43-948d-8d19e3ad4ca6
+  id: 1fb938e5-17b1-4620-8e57-c359ce9ae1aa

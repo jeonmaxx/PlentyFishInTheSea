@@ -18,11 +18,17 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 8c9f7f2d7c8c0314e83019b18e87eaa7, type: 3}
     happySprite: {fileID: 21300000, guid: 40e0b069e8c510945bebea36f1591b55, type: 3}
     angrySprite: {fileID: 21300000, guid: c6382ccf4e14f1742bea0d0e9e02ccd7, type: 3}
+    sadSprite: {fileID: 0}
+    disgustSprite: {fileID: 0}
+    fearSprite: {fileID: 0}
+    surpriseSprite: {fileID: 0}
+    evilSprite: {fileID: 0}
+    excitedSprite: {fileID: 0}
     dialogueTypingSounds:
     - {fileID: 8300000, guid: 8c0cffa363b239546ab7de1a424ec554, type: 3}
     - {fileID: 8300000, guid: 990a195820c59f74d93c0b88548fc9ca, type: 3}
     - {fileID: 8300000, guid: 86879bb5072c0214eb28fced2f3d8a2b, type: 3}
-    frequenzyLevel: 5
+    frequenzyLevel: 1
     minPitch: 0.5
     maxPitch: 1
   affinity: 0
