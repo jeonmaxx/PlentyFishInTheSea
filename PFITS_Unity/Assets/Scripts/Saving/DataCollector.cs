@@ -55,10 +55,15 @@ public class DataCollector : MonoBehaviour
             data.dialogueDatas = dialogues.Select(dialogue => new DialogueData
             {
                 dialogueSoId = dialogue.id,
-                answerList = new List<AnswerSo>(dialogue.answers)
+                answerList = new List<AnswerSo>(dialogue.answers),
+                knownNpc = dialogue.knownNpc
             }).ToList();
 
-            data.cluesNoted = clues.Select(clue => clue.clueNoted).ToList();
+            data.clueDatas = clues.Select(clue => new ClueData
+            {
+                clueSoId = clue.clue.id,
+                clueNoted = clue.clue.clueNoted
+            }).ToList();
 
             data.knownNpcsIds = indexManager.knownNpcs.Select(npc => npc.id).ToList();
 
@@ -75,7 +80,7 @@ public class DataCollector : MonoBehaviour
         LoadDialogueData(dataToLoad.dialogueDatas);
         LoadChoreData(dataToLoad.choreDatas);
         LoadCharacterData(dataToLoad.characterDatas);
-        LoadClueData(dataToLoad.cluesNoted);
+        LoadClueData(dataToLoad.clueDatas);
         LoadKnownNpcsData(dataToLoad.knownNpcsIds);
     }
 
@@ -90,6 +95,8 @@ public class DataCollector : MonoBehaviour
             {
                 dialogue.answers = new List<AnswerSo>(loadedDialogue.answerList);
             }
+            dialogue.knownNpc = loadedDialogue.knownNpc;
+
         }
     }
 
@@ -121,13 +128,17 @@ public class DataCollector : MonoBehaviour
         }
     }
 
-    private void LoadClueData(List<bool> cluesNoted)
+    private void LoadClueData(List<ClueData> clueDatas)
     {
-        if (cluesNoted == null) return;
+        if (clueDatas == null) return;
 
-        for (int i = 0; i < clues.Count && i < cluesNoted.Count; i++)
+        foreach (var clueData in clueDatas)
         {
-            clues[i].clueNoted = cluesNoted[i];
+            var clue = clues.FirstOrDefault(c => c.clue.id == clueData.clueSoId);
+            if (clue != null)
+            {
+                clue.clue.clueNoted = clueData.clueNoted;
+            }
         }
     }
 

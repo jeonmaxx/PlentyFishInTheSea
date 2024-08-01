@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Writer_Dia01
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 4658e4331ac2a0a40a2bc13f7463e655, type: 2}
+  messages:
+  - actorId: 0
+    message: "...No\u2026nah\u2026that isn\u2019t right\u2026 it can\u2019t be\u2026.
+      they\u2019re all making a fool of us\u2026"
+    emotion: 0
+  - actorId: 0
+    message: "Huh? Oh, it\u2019s you! Why are you up so early? Is it morning already?"
+    emotion: 0
+  - actorId: 0
+    message: "Damn\u2026 these sleepless nights really start killing me, but I just
+      cannot stop thinking about these theories\u2026"
+    emotion: 0
+  - actorId: 0
+    message: "Oh, almost forgot, today must be Valentine\u2019s Day then! Anyway,
+      guess I should get some rest. "
+    emotion: 0
+  - actorId: 0
+    message: Would you take over the article for today? We could write something
+      about the best pick-up lines of the school.
+    emotion: 0
+  - actorId: 0
+    message: "Why don\u2019t you interview about 10 people and pick your favorites?"
+    emotion: 0
+  answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 1
+  knownNpc: 0
+  neededClue: {fileID: 0}
+  id: 92667c82-fa2b-4be5-9e4d-fa48c26c37f4

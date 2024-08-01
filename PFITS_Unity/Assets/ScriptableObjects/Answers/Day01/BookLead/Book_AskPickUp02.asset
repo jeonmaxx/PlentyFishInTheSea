@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
+  m_Name: Book_AskPickUp02
+  m_EditorClassIdentifier: 
+  answerText: Ask again for pick-up line
+  nextDialogue: {fileID: 11400000, guid: 1b69aa6705c12dd49a396c69f33ed469, type: 2}
+  addedAffinity: -2
+  clicked: 0
+  questAnswer: 0
+  isChore: {fileID: 0}
+  id: cc126c76-6d4a-401d-b67d-235e38cd8b7f

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Test01
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
@@ -26,4 +26,12 @@ MonoBehaviour:
   answers:
   - {fileID: 11400000, guid: bcfec42d0da0b0b44ade37c46e22b8c2, type: 2}
   - {fileID: 11400000, guid: 3b9c97395692cbe428813706c03b48f4, type: 2}
+  - {fileID: 11400000, guid: 6873acc78ee5b9a4b818860f6698411b, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: 4707d256-34f7-498d-8a24-3f4e76f491c2

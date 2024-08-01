@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: CrushAnswer_Art
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 4
   characters:
   - {fileID: 11400000, guid: f22c26b3f83e4054690ebb45b2311171, type: 2}
@@ -24,4 +24,11 @@ MonoBehaviour:
     message: My only love are my paintings.
     emotion: 0
   answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: f4c49150-1808-4f97-bfd5-a9a83e64e467

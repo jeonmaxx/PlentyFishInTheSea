@@ -16,7 +16,7 @@ public class DataToSave
     public List<ChoresData> choreDatas;
 
     //clues
-    public List<bool> cluesNoted;
+    public List<ClueData> clueDatas;
 
     //index
     public List<string> knownNpcsIds;
@@ -27,6 +27,7 @@ public class DialogueData
 {
     public string dialogueSoId;
     public List<AnswerSo> answerList;
+    public bool knownNpc;
 }
 
 [System.Serializable]
@@ -41,4 +42,11 @@ public class ChoresData
 {
     public string choreSoId;
     public bool choresDone;
+}
+
+[System.Serializable]
+public class ClueData
+{
+    public string clueSoId;
+    public bool clueNoted;
 }

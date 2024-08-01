@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Writer_SpeakAgain
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 4658e4331ac2a0a40a2bc13f7463e655, type: 2}
+  messages:
+  - actorId: 0
+    message: "Yes, I know\u2026 What if aliens have secretly taken over the sea?\u2026
+      It must be\u2026"
+    emotion: 0
+  answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  id: 92667c82-fa2b-4be5-9e4d-fa48c26c37f4

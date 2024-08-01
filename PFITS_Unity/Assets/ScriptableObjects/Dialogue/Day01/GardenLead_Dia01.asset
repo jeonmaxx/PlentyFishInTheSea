@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: GardenLead_Dia01
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 46c784e7597831a4e8818cef4f49a994, type: 2}
@@ -42,4 +42,11 @@ MonoBehaviour:
     message: And Evil
     emotion: 7
   answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: 4eacaf26-b0ab-40de-b0f0-ad7a22c80596

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public enum Emotions { Neutral, Happy, Angry, Sad, Disgust, Fear, Surprise, Evil, Excited }
 public class DialogueTrigger : MonoBehaviour
@@ -27,19 +28,62 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
+        ChooseDialogue();
+    }
+
+    private void ChooseDialogue()
+    {
+        DialogueSo selectedDialogue = null;
+        List<DialogueSo> prioritizedDialogues = new List<DialogueSo>();
+
         for (int i = 0; i < dialogueSo.Count; i++)
         {
-            if (dialogueSo[i].affinity == dialogueSo[i].characters[0].affinity && dayManager.dayList.days[dayManager.currentDayInt] == dialogueSo[i].day)
+            if (dayManager.dayList.days[dayManager.currentDayInt] == dialogueSo[i].day)
             {
-                currentDialogue = dialogueSo[i];
-                messages = currentDialogue.messages.ToArray();
-                actors = new Actor[currentDialogue.characters.Length];
-                for (int j = 0; j < currentDialogue.characters.Length; j++)
+                bool affinityMatched = false;
+                for (int j = 0; j < dialogueSo[i].characters.Length; j++)
                 {
-                    actors[j] = currentDialogue.characters[j].actor;
+                    if (dialogueSo[i].affinity.Contains(dialogueSo[i].characters[j].affinity))
+                    {
+                        affinityMatched = true;
+                        break;
+                    }
                 }
-                answers = new List<AnswerSo>(currentDialogue.answers);
+
+                if (affinityMatched)
+                {
+                    if (dialogueSo[i].firstTimeNpc && !dialogueSo[i].knownNpc)
+                    {
+                        selectedDialogue = dialogueSo[i];
+                        break;
+                    }
+                    else if (dialogueSo[i].neededClue != null && dialogue.clueManager.clues.Contains(dialogueSo[i].neededClue))
+                    {
+                        prioritizedDialogues.Add(dialogueSo[i]);
+                    }
+                    else if (dialogueSo[i].neededClue == null)
+                    {
+                        selectedDialogue = dialogueSo[i];
+                    }
+                }
             }
+        }
+
+        if (selectedDialogue == null && prioritizedDialogues.Count > 0)
+        {
+            selectedDialogue = prioritizedDialogues[0];
+        }
+
+        if (selectedDialogue != null)
+        {
+            currentDialogue = selectedDialogue;
+            messages = currentDialogue.messages.ToArray();
+            actors = new Actor[currentDialogue.characters.Length];
+            for (int k = 0; k < currentDialogue.characters.Length; k++)
+            {
+                actors[k] = currentDialogue.characters[k].actor;
+            }
+            answers = new List<AnswerSo>(currentDialogue.answers);
         }
     }
 
@@ -58,5 +102,13 @@ public class DialogueTrigger : MonoBehaviour
 
         dialogue.OpenDialogue(messages, actors, answers);
         dialogue.currentNpc = GetComponent<DialogueTrigger>();
+    }
+
+    public void SetKnownNpc()
+    {
+        if (currentDialogue != null && currentDialogue.firstTimeNpc)
+        {
+            currentDialogue.knownNpc = true;
+        }
     }
 }

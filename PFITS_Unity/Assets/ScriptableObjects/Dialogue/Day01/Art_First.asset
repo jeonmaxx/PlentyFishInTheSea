@@ -10,17 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: BookLead_Dia01
+  m_Name: Art_First
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: abe4bc5d122135f44bef4da94d886249, type: 2}
+  - {fileID: 11400000, guid: f22c26b3f83e4054690ebb45b2311171, type: 2}
   messages:
   - actorId: 0
-    message: Hey, nice to meet you.
+    message: This is the first time we meet!
     emotion: 0
   - actorId: 0
-    message: I love reading a good book to relax.
+    message: Very nice
     emotion: 0
   answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 1
+  knownNpc: 1
+  neededClue: {fileID: 0}
+  id: 258cf36d-df4e-41bb-b867-80cd17a9237e

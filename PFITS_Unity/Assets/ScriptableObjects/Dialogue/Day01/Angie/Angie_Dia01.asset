@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Angie_Dia01
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: cd1504eccf1b72d44899d5f1b8ac0fe6, type: 2}
+  messages:
+  - actorId: 0
+    message: 
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: 7417a5edc1c7bec4c938f65f4d5d8066, type: 2}
+  - {fileID: 11400000, guid: fb7cfe32a48f8dd4f924ade4fb391580, type: 2}
+  - {fileID: 11400000, guid: 35378b057f2a98a4291e8b9558de42af, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 1
+  knownNpc: 0
+  neededClue: {fileID: 0}
+  id: dc9ec74f-ef53-4622-ab06-eb786786745b

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: SportLead_Dia01
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: f592b686687764c4d92de2632e5713d5, type: 2}
@@ -24,4 +24,11 @@ MonoBehaviour:
     message: Here to train?
     emotion: 1
   answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: 4a0ae7c6-d618-4d4a-846c-d19138f743b6

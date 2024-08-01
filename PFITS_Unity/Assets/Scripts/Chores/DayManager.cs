@@ -164,7 +164,7 @@ public class DayManager : MonoBehaviour
                 if (article.clueArticle)
                 {
                     bool allCluesNoted = true;
-                    foreach (Clue clue in article.clues)
+                    foreach (ClueSo clue in article.clues)
                     {
                         if (!clue.clueNoted)
                         {

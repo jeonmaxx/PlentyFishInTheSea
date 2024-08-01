@@ -28,8 +28,7 @@ public class MouseOnDoor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("clicked on door");
+        rend.material.SetInt("_isOn", 0);
         roomManager.activeRoom = nextRoom;
-        Debug.Log(currentRoom.name);
     }
 }

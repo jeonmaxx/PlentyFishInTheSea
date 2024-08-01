@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Test02
   m_EditorClassIdentifier: 
-  affinity: 1
+  affinity: 01000000
   day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
@@ -23,5 +23,13 @@ MonoBehaviour:
   - actorId: 0
     message: Maybe I'll actually read your next article.
     emotion: 1
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: 6873acc78ee5b9a4b818860f6698411b, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: 63b48ed1-e0e0-4d88-a86b-67dd77e3961d

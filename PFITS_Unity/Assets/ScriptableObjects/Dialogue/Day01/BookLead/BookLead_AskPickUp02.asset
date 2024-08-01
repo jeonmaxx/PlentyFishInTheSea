@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: BookLead_AskPickUp02
+  m_EditorClassIdentifier: 
+  affinity: fcfffffffdfffffffeffffffffffffff0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: abe4bc5d122135f44bef4da94d886249, type: 2}
+  messages:
+  - actorId: 0
+    message: "Argh fine, just for you\u2026 Are you a fire alarm? Cause you\u2019re
+      fishin\u2019 annoying!"
+    emotion: 2
+  answers:
+  - {fileID: 11400000, guid: 9f1e71ca75ab5c8459545a64dc7d74d6, type: 2}
+  - {fileID: 11400000, guid: d19cddf2511b99e499905ef1484186b0, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
+  id: 43ef2e58-22b3-4d59-a93e-c9f5d2bf1f59

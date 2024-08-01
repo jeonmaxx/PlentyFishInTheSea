@@ -9,7 +9,7 @@ public class Article
     public bool clueArticle;
     public string title;
     public string text;
-    public List<Clue> clues;
+    public List<ClueSo> clues;
     public List<NpcAffinity> npcAffinities;
 }
 

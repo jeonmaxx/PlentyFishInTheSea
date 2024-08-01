@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     //noch nicht eingebaut (ToDo)
     [SerializeField] private DayManager dayManager;
     [SerializeField] private IndexManager indexManager;
+    public ClueManager clueManager;
 
     [Header("Sound")]
 
@@ -204,13 +205,33 @@ public class DialogueManager : MonoBehaviour
 
             if (activeMessage == currentMessages.Length && currentAnswers.Count > 0)
             {
-                MakeAnswerButtons();
-                inAnswerScreen = true;
+                bool allAnswersClicked = true;
+                foreach (AnswerSo answer in currentAnswers)
+                {
+                    if (!answer.clicked)
+                    {
+                        allAnswersClicked = false;
+                        break;
+                    }
+                }
+
+                if (allAnswersClicked)
+                {
+                    currentNpc.SetKnownNpc();
+                    StartCoroutine(EndDialogue());
+                }
+                else
+                {
+                    currentNpc.SetKnownNpc();
+                    MakeAnswerButtons();
+                    inAnswerScreen = true;
+                }
             }
             else if (activeMessage >= currentMessages.Length)
             {
                 //source.clip = closeSound;
                 //source.Play();
+                currentNpc.SetKnownNpc();
                 StartCoroutine(EndDialogue());
             }
         }
@@ -222,13 +243,18 @@ public class DialogueManager : MonoBehaviour
         {
             if (!answer.clicked)
             {
-                GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
-                currentButton.GetComponentInChildren<TextMeshProUGUI>().text = answer.answerText;
-                currentButton.GetComponent<AnswerButton>().answer = answer;
-                currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
-                if (answer.questAnswer)
+                bool shouldDisplay = answer.neededClue == null || (answer.neededClue.clueNoted && !answer.notIfClueIsThere) || (!answer.neededClue.clueNoted && answer.notIfClueIsThere);
+
+                if (shouldDisplay)
                 {
-                    currentButton.GetComponent<Image>().color = Color.yellow;
+                    GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
+                    currentButton.GetComponentInChildren<TextMeshProUGUI>().text = answer.answerText;
+                    currentButton.GetComponent<AnswerButton>().answer = answer;
+                    currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
+                    if (answer.questAnswer)
+                    {
+                        currentButton.GetComponent<Image>().color = Color.yellow;
+                    }
                 }
             }
         }

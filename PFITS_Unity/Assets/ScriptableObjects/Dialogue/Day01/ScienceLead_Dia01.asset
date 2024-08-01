@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: ScienceLead_Dia01
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
@@ -23,5 +23,13 @@ MonoBehaviour:
   - actorId: 0
     message: Sick! Don't forget your safety goggles when you're doing experiments!
     emotion: 0
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: 306b2c36e12de674195f64ac0d8d12c4, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: 0a2dae42-6eca-4569-8e5f-fd865ab3adb4

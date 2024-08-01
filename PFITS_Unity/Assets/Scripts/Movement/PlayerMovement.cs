@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField]
     private float speed = 5;
-    [HideInInspector] public Animator animator;
     DialogueManager dialogueManager;
     public InputActionReference actionRef;
     private InputAction m_MoveAction;
@@ -19,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     {
         m_MoveAction = actionRef.action;
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
@@ -35,18 +33,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 m_PlayerMovement = new Vector2(0, 0);
             }
-
-            //if (m_PlayerMovement.x != 0 || m_PlayerMovement.y != 0)
-            //{
-            //    animator.SetFloat("X", m_PlayerMovement.x);
-            //    animator.SetFloat("Y", m_PlayerMovement.y);
-
-            //    animator.SetBool("IsWalking", true);
-            //}
-            //else
-            //{
-            //    animator.SetBool("IsWalking", false);
-            //}
         }
     }
 

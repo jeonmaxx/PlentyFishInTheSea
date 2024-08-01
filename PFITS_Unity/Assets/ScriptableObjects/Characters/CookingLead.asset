@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CookingLead
   m_EditorClassIdentifier: 
   actor:
-    name: Name <alpha=#80><size=70%>[Cooking Club Leader]
+    name: Tahm <alpha=#80><size=70%>[Cooking Club Leader]
     indexSprite: {fileID: 21300000, guid: 4329bd1f89a46cc478aecfa9559cb593, type: 3}
     sprite: {fileID: 21300000, guid: 4329bd1f89a46cc478aecfa9559cb593, type: 3}
     happySprite: {fileID: 0}

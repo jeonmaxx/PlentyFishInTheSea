@@ -352,7 +352,7 @@ MonoBehaviour:
   dayManager: {fileID: 1788680137}
   dialogueSo:
   - {fileID: 11400000, guid: b7cd74cbad0cca74baba3512afea6951, type: 2}
-  - {fileID: 11400000, guid: e4d8c26187f20454e9ecb13d7a36f372, type: 2}
+  - {fileID: 11400000, guid: 0f27273513e60374ea43220ddab28e08, type: 2}
   currentDialogue: {fileID: 11400000, guid: b7cd74cbad0cca74baba3512afea6951, type: 2}
   useSpecialSound: 0
   specialSound: []
@@ -1769,6 +1769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 331427981}
+  - component: {fileID: 331427982}
   m_Layer: 0
   m_Name: Hallway02
   m_TagString: Untagged
@@ -1796,6 +1797,19 @@ Transform:
   - {fileID: 1991993595}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331427982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331427980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 5
 --- !u!1 &331437987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +1903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335419359}
+  - component: {fileID: 335419360}
   m_Layer: 0
   m_Name: Outdoor
   m_TagString: Untagged
@@ -1918,6 +1933,19 @@ Transform:
   - {fileID: 144461483}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335419360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335419358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 1
 --- !u!1 &343668082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,6 +2088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 344728691}
+  - component: {fileID: 344728692}
   m_Layer: 0
   m_Name: ScienceRoom
   m_TagString: Untagged
@@ -2087,6 +2116,19 @@ Transform:
   - {fileID: 463370827}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &344728692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344728690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 9
 --- !u!1 &371136238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,6 +4305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608130020}
+  - component: {fileID: 608130021}
   m_Layer: 0
   m_Name: Hallway01
   m_TagString: Untagged
@@ -4292,6 +4335,19 @@ Transform:
   - {fileID: 916387019}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &608130021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608130019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 4
 --- !u!1 &613178116
 GameObject:
   m_ObjectHideFlags: 0
@@ -6530,6 +6586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 851307776}
+  - component: {fileID: 851307777}
   m_Layer: 0
   m_Name: GardenRoom
   m_TagString: Untagged
@@ -6556,6 +6613,19 @@ Transform:
   - {fileID: 907538161}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &851307777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851307775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 6
 --- !u!1 &882282655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6623,6 +6693,7 @@ MonoBehaviour:
   currentAnswers: []
   dayManager: {fileID: 1788680137}
   indexManager: {fileID: 1357120912}
+  clueManager: {fileID: 0}
   stopAudio: 1
   makePredictable: 1
   nDialogueTypingSounds: []
@@ -6666,7 +6737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: 3858621.5}
+  m_AnchoredPosition: {x: 5, y: 4280680}
   m_SizeDelta: {x: 1036, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &895891867
@@ -7992,7 +8063,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3620673.5}
+  m_AnchoredPosition: {x: 0, y: 4016596.5}
   m_SizeDelta: {x: 1100, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1062781690
@@ -8052,6 +8123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077892945}
+  - component: {fileID: 1077892946}
   m_Layer: 0
   m_Name: BookRoom
   m_TagString: Untagged
@@ -8078,6 +8150,19 @@ Transform:
   - {fileID: 56406954}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1077892946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077892944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 2
 --- !u!1 &1081065889
 GameObject:
   m_ObjectHideFlags: 0
@@ -10047,13 +10132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dda435488f4e2644792840f691734e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  day: 4
+  clue: {fileID: 11400000, guid: 25b024f1251e3224198a8430b05d915e, type: 2}
   clueText: {fileID: 5918304637569111172, guid: 3b608fe3e0dbd2949b4eff101a97b181, type: 3}
   clueNotebook: {fileID: 895891864}
   itemImage: {fileID: 1676245954}
-  description: Woah I found glasses! Wait.. are those mine?
-  pickUpItem: 1
-  clueNoted: 0
   dayManager: {fileID: 1788680137}
 --- !u!114 &1338696472
 MonoBehaviour:
@@ -11032,6 +11114,7 @@ MonoBehaviour:
     maxPitch: 3
   dayManager: {fileID: 1788680137}
   dialogueSo:
+  - {fileID: 11400000, guid: 3997095c0858cd645a06f241b57df5de, type: 2}
   - {fileID: 11400000, guid: 9d0b7b8e8081f59439dc61d5f8a8e474, type: 2}
   - {fileID: 11400000, guid: dd997ba6b21bd2f4fa6015cda896b913, type: 2}
   currentDialogue: {fileID: 11400000, guid: 9d0b7b8e8081f59439dc61d5f8a8e474, type: 2}
@@ -16316,6 +16399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1541895057}
+  - component: {fileID: 1541895058}
   m_Layer: 0
   m_Name: KitchenRoom
   m_TagString: Untagged
@@ -16342,6 +16426,19 @@ Transform:
   - {fileID: 1371437381}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541895058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541895056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 7
 --- !u!1 &1552448372
 GameObject:
   m_ObjectHideFlags: 0
@@ -16426,6 +16523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1561650088}
+  - component: {fileID: 1561650089}
   m_Layer: 0
   m_Name: WritingRoom
   m_TagString: Untagged
@@ -16451,6 +16549,19 @@ Transform:
   - {fileID: 1972195077}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1561650089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561650087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 8
 --- !u!1 &1571358427
 GameObject:
   m_ObjectHideFlags: 0
@@ -18039,6 +18150,7 @@ GameObject:
   - component: {fileID: 1788680138}
   - component: {fileID: 1788680139}
   - component: {fileID: 1788680140}
+  - component: {fileID: 1788680141}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -18158,7 +18270,7 @@ MonoBehaviour:
       knows who it belongs to, leaving the university puzzled. The student now hopes
       to find the owner and solve the mystery.
     clues:
-    - {fileID: 1888555452}
+    - {fileID: 11400000, guid: 3b393a425e95cc54fbe96746cfa3df57, type: 2}
     npcAffinities: []
   - day: 1
     clueArticle: 0
@@ -18259,8 +18371,23 @@ MonoBehaviour:
     dialogueDatas: []
     characterDatas: []
     choreDatas: []
-    cluesNoted: 
+    clueDatas: []
     knownNpcsIds: []
+--- !u!114 &1788680141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788680132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911af2edc05928046a7bcb39cca89cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clues:
+  - {fileID: 11400000, guid: 3b393a425e95cc54fbe96746cfa3df57, type: 2}
+  - {fileID: 11400000, guid: 25b024f1251e3224198a8430b05d915e, type: 2}
 --- !u!1 &1792885307
 GameObject:
   m_ObjectHideFlags: 0
@@ -18977,13 +19104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dda435488f4e2644792840f691734e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  day: 1
+  clue: {fileID: 11400000, guid: 3b393a425e95cc54fbe96746cfa3df57, type: 2}
   clueText: {fileID: 5918304637569111172, guid: 3b608fe3e0dbd2949b4eff101a97b181, type: 3}
   clueNotebook: {fileID: 895891864}
   itemImage: {fileID: 1676245954}
-  description: This is an old sock. (What could that mean?)
-  pickUpItem: 0
-  clueNoted: 0
   dayManager: {fileID: 1788680137}
 --- !u!114 &1888555453
 MonoBehaviour:
@@ -20800,6 +20924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2088260972}
+  - component: {fileID: 2088260973}
   m_Layer: 0
   m_Name: ArtRoom
   m_TagString: Untagged
@@ -20826,6 +20951,19 @@ Transform:
   - {fileID: 1509839071}
   m_Father: {fileID: 136089506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2088260973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088260971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01a1657005087488bf7eab40ea493b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: 0
 --- !u!1 &2121836344
 GameObject:
   m_ObjectHideFlags: 0

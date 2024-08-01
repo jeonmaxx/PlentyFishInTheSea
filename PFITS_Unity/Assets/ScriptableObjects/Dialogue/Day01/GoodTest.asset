@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: GoodTest
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
@@ -24,3 +24,11 @@ MonoBehaviour:
     message: I am happy to tell you EVERYTHING! [very long monologue]
     emotion: 1
   answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
+  id: 4015aa40-4522-4e7e-b946-3f8a897b6f81

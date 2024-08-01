@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: WeatherAnswe_Science
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
@@ -27,3 +27,11 @@ MonoBehaviour:
       levels.
     emotion: 0
   answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
+  id: a7b46d7d-d4d2-466e-8c90-95ddc9310efc

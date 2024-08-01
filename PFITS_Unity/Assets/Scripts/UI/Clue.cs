@@ -7,24 +7,21 @@ using UnityEngine.UI;
 
 public class Clue : MonoBehaviour, IPointerDownHandler
 {
-    public int day;
+    public ClueSo clue;
     public GameObject clueText;
     public GameObject clueNotebook;
     public GameObject itemImage;
-    public string description;
-    public bool pickUpItem;
-    public bool clueNoted;
     public DayManager dayManager;
 
     private void Start()
     {
-        if(clueNoted)
+        if(clue.clueNoted)
         {
             GameObject newClue = Instantiate(clueText, clueNotebook.transform);
-            newClue.GetComponent<TextMeshProUGUI>().text = description;
+            newClue.GetComponent<TextMeshProUGUI>().text = clue.description;
         }
 
-        if ((pickUpItem && clueNoted) || dayManager.dayList.days[dayManager.currentDayInt] != day)
+        if ((clue.pickUpItem && clue.clueNoted) || dayManager.dayList.days[dayManager.currentDayInt] != clue.day)
         {
             transform.localScale = Vector3.zero;
         }
@@ -35,13 +32,13 @@ public class Clue : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!clueNoted)
+        if (!clue.clueNoted)
         {
             GameObject newClue = Instantiate(clueText, clueNotebook.transform);
-            newClue.GetComponent<TextMeshProUGUI>().text = description;
+            newClue.GetComponent<TextMeshProUGUI>().text = clue.description;
         }
 
-        if (pickUpItem)
+        if (clue.pickUpItem)
             gameObject.SetActive(false);
         else
         {
@@ -49,6 +46,6 @@ public class Clue : MonoBehaviour, IPointerDownHandler
             parentObject.SetActive(true);
             itemImage.GetComponent<Image>().sprite = GetComponent<SpriteRenderer>().sprite;
         }
-        clueNoted = true;
+        clue.clueNoted = true;
     }
 }

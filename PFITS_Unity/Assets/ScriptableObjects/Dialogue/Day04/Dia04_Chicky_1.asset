@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Dia04_Chicky_1
   m_EditorClassIdentifier: 
-  affinity: 1
+  affinity: 01000000
   day: 4
   characters:
   - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
@@ -26,5 +26,13 @@ MonoBehaviour:
   - actorId: 0
     message: Okay maybe next time.
     emotion: 0
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: 6873acc78ee5b9a4b818860f6698411b, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: f80387f3-25d1-4a2e-befc-a773c2af3d4e

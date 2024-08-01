@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: CookingLead_Dia01
   m_EditorClassIdentifier: 
-  affinity: 0
+  affinity: 00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: cd8416f12d222124a8eeb8200795d668, type: 2}
@@ -24,4 +24,11 @@ MonoBehaviour:
     message: Who doesnt love food?
     emotion: 0
   answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  neededClue: {fileID: 0}
   id: 7aa15bcb-c141-42c3-86c1-a9defe398a94
