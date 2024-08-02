@@ -6,4 +6,5 @@ public enum Rooms { Art, Outside, Book, Community, Hallway01, Hallway02, Garden,
 public class RoomDefinition : MonoBehaviour
 {
     public Rooms room;
+    public string roomName;
 }
