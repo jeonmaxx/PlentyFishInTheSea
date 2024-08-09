@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ChoreType { InterviewOne, InterviewNumber, ObjectSearch}
+public enum ChorePriority { Main, Side}
 [CreateAssetMenu]
 public class ChoreSo : ScriptableObject
 {
@@ -9,6 +10,7 @@ public class ChoreSo : ScriptableObject
     public int day;
     public bool done;
     public string description;
+    public ChorePriority priority;
     public ChoreType type;
     public int npcsToInterview;
     public int currentInterviewed;

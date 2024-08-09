@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private IndexManager indexManager;
     public ClueManager clueManager;
     private NpcManager npcManager;
+    private RoomManager roomManager;
 
     [Header("Sound")]
 
@@ -70,6 +71,7 @@ public class DialogueManager : MonoBehaviour
         source = this.gameObject.AddComponent<AudioSource>();
         volume.weight = 0;
         npcManager = FindObjectOfType<NpcManager>();
+        roomManager = FindObjectOfType<RoomManager>();
     }
 
     public void Update()
@@ -231,7 +233,7 @@ public class DialogueManager : MonoBehaviour
                         (answer.neededClue == null || 
                         (answer.neededClue.clueNoted && !answer.notIfClueIsThere) || 
                         (!answer.neededClue.clueNoted && answer.notIfClueIsThere)) && 
-                        ((answer.isChore != null && 
+                        ((answer.isChore != null && dayManager.chores.Contains(answer.isChore) &&
                         (!answer.isChore.done || answer.isChore.type != ChoreType.InterviewNumber)) || 
                         answer.isChore == null))
                     {
@@ -273,24 +275,26 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (AnswerSo answer in currentAnswers)
         {
-            if (!answer.clicked)
+            if (!answer.clicked &&
+                (answer.neededClue == null ||
+                (answer.neededClue.clueNoted && !answer.notIfClueIsThere) ||
+                (!answer.neededClue.clueNoted && answer.notIfClueIsThere)) &&
+                ((answer.isChore != null && dayManager.chores.Contains(answer.isChore) &&
+                (!answer.isChore.done || answer.isChore.type != ChoreType.InterviewNumber)) ||
+                answer.isChore == null))
             {
-                bool shouldDisplay = answer.neededClue == null || (answer.neededClue.clueNoted && !answer.notIfClueIsThere) || (!answer.neededClue.clueNoted && answer.notIfClueIsThere);
-
-                if (shouldDisplay)
+                GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
+                currentButton.GetComponentInChildren<TextMeshProUGUI>().text = answer.answerText;
+                currentButton.GetComponent<AnswerButton>().answer = answer;
+                currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
+                if (answer.isChore != null)
                 {
-                    GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
-                    currentButton.GetComponentInChildren<TextMeshProUGUI>().text = answer.answerText;
-                    currentButton.GetComponent<AnswerButton>().answer = answer;
-                    currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
-                    if (answer.isChore != null)
-                    {
-                        currentButton.GetComponent<Image>().color = Color.green;
-                    }
+                    currentButton.GetComponent<Image>().color = Color.green;
                 }
             }
         }
     }
+    
 
     public void AnswerButton(Message[] messages, Actor[] actors, List<AnswerSo> answers)
     {
@@ -349,6 +353,8 @@ public class DialogueManager : MonoBehaviour
         }
         foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
         {
+            RoomDefinition currentRoom = roomManager.activeRoom.GetComponent<RoomDefinition>();
+            characterSo.lastRoom = currentRoom.roomName;
             indexManager.AddIndex(characterSo);
         }
         isActive = true;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IndexManager : MonoBehaviour
 {
-    [HideInInspector] public List<CharacterSo> knownNpcs = new List<CharacterSo>();
+    public List<CharacterSo> knownNpcs = new List<CharacterSo>();
     public GameObject indexPrefab;
     public Transform indexHolder;
 

@@ -18,9 +18,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3393f1b88a3c90b4783b84b1ff3ed9bc, type: 2}
   messages:
   - actorId: 0
-    message: "Hmm \u2026 oh it's you again. Got news for me?"
+    message: "Hmm \u2026 oh it's you again. "
     emotion: 0
   answers:
+  - {fileID: 11400000, guid: 2b1cf3622a10e5548ad95528390fa65c, type: 2}
   - {fileID: 11400000, guid: 23edb1bbe76fb854aa877e2f665be51f, type: 2}
   selfTalk: 0
   roomTalk: 0
@@ -28,6 +29,7 @@ MonoBehaviour:
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
   clueToAdd: {fileID: 0}
@@ -36,4 +38,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
-  id: 
+  setChoreDone: {fileID: 0}
+  id: 631feded-6b39-4293-8cef-632002ca3498

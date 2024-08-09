@@ -22,6 +22,7 @@ public class ChoreSoEditor : Editor
         chore.done = EditorGUILayout.Toggle("Done", chore.done);
         chore.description = EditorGUILayout.TextField("Description", chore.description);
 
+        chore.priority = (ChorePriority)EditorGUILayout.EnumPopup("Chore Priority", chore.priority);
         chore.type = (ChoreType)EditorGUILayout.EnumPopup("Chore Type", chore.type);
 
         if (chore.type == ChoreType.InterviewNumber)

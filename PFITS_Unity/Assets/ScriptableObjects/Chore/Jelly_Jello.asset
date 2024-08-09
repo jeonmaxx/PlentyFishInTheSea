@@ -17,6 +17,7 @@ MonoBehaviour:
   done: 0
   description: Find a jello recipe for <b>Jelly</b>. Maybe the <b>book club</b> can
     help?
+  priority: 1
   type: 2
   npcsToInterview: 0
   currentInterviewed: 0

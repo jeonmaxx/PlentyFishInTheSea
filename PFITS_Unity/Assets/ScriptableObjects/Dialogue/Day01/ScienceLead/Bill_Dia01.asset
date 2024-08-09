@@ -33,11 +33,14 @@ MonoBehaviour:
   knownRoom: 0
   firstTimeNpc: 1
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 437b47b8-f2cc-462d-a365-87c827467c59

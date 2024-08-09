@@ -10,28 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: Test01
+  m_Name: Gary_PickUp
   m_EditorClassIdentifier: 
   affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
+  - {fileID: 11400000, guid: 7e6fd7e36c3ff204e9a65144ec6d20a5, type: 2}
   messages:
   - actorId: 0
-    message: Hey, you must be the new journalist, right?
+    message: Hmm, a pickup line, huh? Let me think...
     emotion: 0
   - actorId: 0
-    message: What are you doing here?
+    message: '*stares up in the air thinking*'
+    emotion: 0
+  - actorId: 0
+    message: ...
+    emotion: 0
+  - actorId: 0
+    message: '*still staring*'
     emotion: 0
   answers:
-  - {fileID: 11400000, guid: bcfec42d0da0b0b44ade37c46e22b8c2, type: 2}
-  - {fileID: 11400000, guid: 3b9c97395692cbe428813706c03b48f4, type: 2}
-  - {fileID: 11400000, guid: 6873acc78ee5b9a4b818860f6698411b, type: 2}
+  - {fileID: 11400000, guid: 66e90f748c7377845bf88aa5d67a0757, type: 2}
   selfTalk: 0
   roomTalk: 0
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
-  id: 4707d256-34f7-498d-8a24-3f4e76f491c2
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 

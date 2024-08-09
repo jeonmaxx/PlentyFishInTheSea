@@ -10,25 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: GoodTest
+  m_Name: ArtLead_PickUp
   m_EditorClassIdentifier: 
   affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
+  - {fileID: 11400000, guid: f22c26b3f83e4054690ebb45b2311171, type: 2}
   messages:
   - actorId: 0
-    message: You want to know more about me?
+    message: Oh... let me think...
     emotion: 0
   - actorId: 0
-    message: I am happy to tell you EVERYTHING! [very long monologue]
+    message: Are you an artist? Because every time I look at you, I see a masterpiece.
     emotion: 1
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: e83c7cfb2c0989a4a94d7aa735bda5ec, type: 2}
   selfTalk: 0
   roomTalk: 0
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
-  id: 4015aa40-4522-4e7e-b946-3f8a897b6f81
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 

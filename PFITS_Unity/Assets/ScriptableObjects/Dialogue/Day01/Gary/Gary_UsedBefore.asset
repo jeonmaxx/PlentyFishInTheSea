@@ -10,25 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: ArtLead_Dia01
+  m_Name: Gary_UsedBefore
   m_EditorClassIdentifier: 
   affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: f22c26b3f83e4054690ebb45b2311171, type: 2}
+  - {fileID: 11400000, guid: 7e6fd7e36c3ff204e9a65144ec6d20a5, type: 2}
   messages:
   - actorId: 0
-    message: Hey.
+    message: Oh, I got one!
     emotion: 0
   - actorId: 0
-    message: Don't touch the wet paintings... please.
+    message: "\u2018Are you a magician? Because whenever I look at you, everyone
+      else disappears.\u2019"
     emotion: 0
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: 91ec1f14f4cd07740960b2216a57aee9, type: 2}
   selfTalk: 0
   roomTalk: 0
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
-  id: c315a2c0-f812-4b94-8c28-138d02b16449
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 

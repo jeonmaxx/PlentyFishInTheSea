@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: BadTest
+  m_Name: Gary_SpeakAgain
   m_EditorClassIdentifier: 
   affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
+  - {fileID: 11400000, guid: 7e6fd7e36c3ff204e9a65144ec6d20a5, type: 2}
   messages:
   - actorId: 0
-    message: You want what?! What the ****
-    emotion: 2
+    message: I'm gonna be famous!
+    emotion: 0
   answers: []
   selfTalk: 0
   roomTalk: 0
@@ -27,5 +27,14 @@ MonoBehaviour:
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
-  id: feb74b48-c9cb-4178-a66d-0b9936704478
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 

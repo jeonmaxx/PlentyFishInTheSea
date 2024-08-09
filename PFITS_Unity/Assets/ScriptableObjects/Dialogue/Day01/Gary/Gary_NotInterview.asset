@@ -10,26 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: Test02
+  m_Name: Gary_NotInterview
   m_EditorClassIdentifier: 
-  affinity: 01000000
+  affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
+  - {fileID: 11400000, guid: 7e6fd7e36c3ff204e9a65144ec6d20a5, type: 2}
   messages:
   - actorId: 0
-    message: You seem like a really nice guy!
+    message: Oh wow, my first interview!? What is it?
     emotion: 0
-  - actorId: 0
-    message: Maybe I'll actually read your next article.
-    emotion: 1
   answers:
-  - {fileID: 11400000, guid: 6873acc78ee5b9a4b818860f6698411b, type: 2}
+  - {fileID: 11400000, guid: 73af521a4d30f35449729fae2cbe896c, type: 2}
+  - {fileID: 11400000, guid: 91ec1f14f4cd07740960b2216a57aee9, type: 2}
   selfTalk: 0
   roomTalk: 0
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
-  id: 63b48ed1-e0e0-4d88-a86b-67dd77e3961d
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 

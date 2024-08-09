@@ -16,6 +16,7 @@ MonoBehaviour:
   day: 1
   done: 0
   description: Ask <b>Violetta</b> about her relationship with <b>Steve</b>
+  priority: 1
   type: 2
   npcsToInterview: 0
   currentInterviewed: 0

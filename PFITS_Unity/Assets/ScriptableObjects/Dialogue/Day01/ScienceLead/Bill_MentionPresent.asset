@@ -16,7 +16,7 @@ MonoBehaviour:
   day: 1
   characters:
   - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
-  - {fileID: 11400000, guid: f592b686687764c4d92de2632e5713d5, type: 2}
+  - {fileID: 11400000, guid: 3d189b1b27d33d947a51e3e1d000b625, type: 2}
   messages:
   - actorId: 0
     message: "Uhm, I actually wanted to give you your present later. I\u2019m not

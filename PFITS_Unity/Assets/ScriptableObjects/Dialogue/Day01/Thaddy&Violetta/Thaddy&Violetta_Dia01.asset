@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Thaddy&Violetta_Dia01
   m_EditorClassIdentifier: 
-  affinity: 00000000
+  affinity: feffffffffffffff00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 83adb617ff250ca42a1afb46ce9fdacf, type: 2}
@@ -59,4 +59,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 13e9fdb2-92d8-474f-bd0f-1a274049baa0

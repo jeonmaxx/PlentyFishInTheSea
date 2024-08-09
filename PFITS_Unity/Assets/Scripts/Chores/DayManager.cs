@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -16,7 +15,8 @@ public class DayManager : MonoBehaviour
     public List<ChoreSo> chores;
     public List<ChoreSo> choresOfToday;
 
-    public GameObject choreHolder;
+    public GameObject mainChoreHolder;
+    public GameObject sideChoreHolder;
     public GameObject chorePrefab;
 
     public GameObject stillToDoScreen;
@@ -36,9 +36,16 @@ public class DayManager : MonoBehaviour
 
     public void AddChores()
     {
-        if(choreHolder.transform.childCount != 0)
+        if(mainChoreHolder.transform.childCount != 0)
         {
-            foreach (Transform child in choreHolder.transform)
+            foreach (Transform child in mainChoreHolder.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        if (sideChoreHolder.transform.childCount != 0)
+        {
+            foreach (Transform child in sideChoreHolder.transform)
             {
                 Destroy(child.gameObject);
             }
@@ -48,7 +55,17 @@ public class DayManager : MonoBehaviour
         {
             if (chore.day == dayList.days[currentDayInt])
             {
-                GameObject refChore = Instantiate(chorePrefab, choreHolder.transform);
+                Transform holderTransform = null;
+
+                if (chore.priority == ChorePriority.Main)
+                {
+                    holderTransform = mainChoreHolder.transform;
+                }
+                else
+                {
+                    holderTransform = sideChoreHolder.transform;
+                }
+                GameObject refChore = Instantiate(chorePrefab, holderTransform);
                 refChore.GetComponent<ChoreManager>().toggle.isOn = chore.done;
                 if (chore.type == ChoreType.InterviewNumber)
                 {
@@ -129,9 +146,13 @@ public class DayManager : MonoBehaviour
     public void ChoseArticle()
     {
         choresOfToday = new List<ChoreSo>();
-        foreach (Transform child in choreHolder.transform)
+        foreach (Transform child in mainChoreHolder.transform)
         {
             Destroy(child.gameObject);
+        }
+        foreach(Transform child in sideChoreHolder.transform) 
+        { 
+            Destroy(child.gameObject); 
         }
         currentDayInt++;
         dayText.text = "Day: " + dayList.days[currentDayInt];

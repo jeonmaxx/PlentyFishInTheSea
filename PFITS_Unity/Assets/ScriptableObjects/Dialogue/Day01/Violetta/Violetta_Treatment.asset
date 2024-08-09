@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Violetta_Treatment
   m_EditorClassIdentifier: 
-  affinity: 00000000
+  affinity: feffffffffffffff00000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 83adb617ff250ca42a1afb46ce9fdacf, type: 2}

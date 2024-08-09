@@ -16,6 +16,7 @@ MonoBehaviour:
   day: 1
   done: 0
   description: Find a violet for <b>Lukas</b>. Maybe the <b>garden club</b> can help?
+  priority: 1
   type: 2
   npcsToInterview: 0
   currentInterviewed: 0

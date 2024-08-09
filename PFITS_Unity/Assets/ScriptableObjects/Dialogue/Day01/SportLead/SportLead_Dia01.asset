@@ -10,25 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: WeatherAnswer_Chicky
+  m_Name: SportLead_Dia01
   m_EditorClassIdentifier: 
   affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: f8aae4621bcd76d46950079ea74606aa, type: 2}
+  - {fileID: 11400000, guid: f592b686687764c4d92de2632e5713d5, type: 2}
   messages:
   - actorId: 0
-    message: Are you blind? Just look outside!
-    emotion: 2
-  - actorId: 0
-    message: <i>What are dumb journalist..</i>
+    message: Hey buddie. Here to train?
     emotion: 0
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: 5aa50cd2083636849ab7fbc4e5a1e036, type: 2}
   selfTalk: 0
   roomTalk: 0
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
-  id: f77378bf-6b0a-4e67-9527-62465d13fd6d
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 4a0ae7c6-d618-4d4a-846c-d19138f743b6

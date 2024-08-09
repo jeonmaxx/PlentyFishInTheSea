@@ -10,25 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
-  m_Name: CookingLead_Dia01
+  m_Name: ArtLead_Dia01
   m_EditorClassIdentifier: 
   affinity: 00000000
   day: 1
   characters:
-  - {fileID: 11400000, guid: cd8416f12d222124a8eeb8200795d668, type: 2}
+  - {fileID: 11400000, guid: f22c26b3f83e4054690ebb45b2311171, type: 2}
   messages:
   - actorId: 0
-    message: Wanna Cook something?
+    message: Don't touch the wet paintings... please.
     emotion: 0
-  - actorId: 0
-    message: Who doesnt love food?
-    emotion: 0
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: e83c7cfb2c0989a4a94d7aa735bda5ec, type: 2}
   selfTalk: 0
   roomTalk: 0
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
-  id: 7aa15bcb-c141-42c3-86c1-a9defe398a94
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: c315a2c0-f812-4b94-8c28-138d02b16449
