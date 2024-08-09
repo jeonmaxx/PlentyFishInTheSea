@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Jello
   m_EditorClassIdentifier: 
   day: 1
-  description: I finally have a good jello recipe!
+  description: I finally have the jello recipe. Jelly will be happy!
   pickUpItem: 0
   clueNoted: 0
-  id: 
+  id: 179686ce-62b9-47ae-b19f-b379001f5e21
+  clueSprite: {fileID: 0}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Lukas_NoViolet
+  m_EditorClassIdentifier: 
+  affinity: ffffffff0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: a227da1bbab4aff4fa942948e7771870, type: 2}
+  messages:
+  - actorId: 0
+    message: "You\u2018re not having the violet with you\u2026 Is there something
+      else I can do for you then?"
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: 80331545dfe15ef4592f104c2c79cd2f, type: 2}
+  - {fileID: 11400000, guid: 7157e3fa0aa58814798001a293e7aa0a, type: 2}
+  - {fileID: 11400000, guid: 35ee2b034d3f79d42adc5f35f75d060a, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  neededClue: {fileID: 11400000, guid: b55bf2d02c8971b44bca51d4acec8b06, type: 2}
+  dialogueIfNoClue: 1
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 35a2bdd8-100f-407b-8fcc-5b2279bda367

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Jordan_What
+  m_EditorClassIdentifier: 
+  affinity: 0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 089579686867b3543a07d04afbef0a14, type: 2}
+  messages:
+  - actorId: 0
+    message: WHAT DID Y ...
+    emotion: 2
+  - actorId: 0
+    message: Oh you're not the sous chef. - Where are my manners? How may I serve
+      you?
+    emotion: 1
+  answers:
+  - {fileID: 11400000, guid: 509478bbcfe85064d958e76e89054a98, type: 2}
+  - {fileID: 11400000, guid: 395b97ba71607c14d9c9d6566be0a4ef, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 87d3b5a4-da98-4ef8-a43a-4f4986cf5d56

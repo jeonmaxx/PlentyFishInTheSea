@@ -9,12 +9,16 @@ public class DayManager : MonoBehaviour
 {
     public DaysSo dayList;
     public int currentDayInt;
+
     public Light2D lightObj;
+
     public TextMeshProUGUI dayText;
     public List<ChoreSo> chores;
     public List<ChoreSo> choresOfToday;
+
     public GameObject choreHolder;
     public GameObject chorePrefab;
+
     public GameObject stillToDoScreen;
     public GameObject demoEndScreen;
     private NpcManager npcManager;
@@ -30,31 +34,32 @@ public class DayManager : MonoBehaviour
         AddChores();
     }
 
-    private void AddChores()
+    public void AddChores()
     {
+        if(choreHolder.transform.childCount != 0)
+        {
+            foreach (Transform child in choreHolder.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        choresOfToday = new List<ChoreSo>();
         foreach (ChoreSo chore in chores)
         {
             if (chore.day == dayList.days[currentDayInt])
             {
                 GameObject refChore = Instantiate(chorePrefab, choreHolder.transform);
                 refChore.GetComponent<ChoreManager>().toggle.isOn = chore.done;
-                refChore.GetComponent<ChoreManager>().description.text = chore.description;
+                if (chore.type == ChoreType.InterviewNumber)
+                {
+                    refChore.GetComponent<ChoreManager>().description.text = chore.description + " (" + chore.currentInterviewed + "/" + chore.npcsToInterview + ")";
+                }
+                else
+                {
+                    refChore.GetComponent<ChoreManager>().description.text = chore.description;
+                }
                 chore.choreHolder = refChore;
                 choresOfToday.Add(chore);
-
-                for (int i = 0; i < npcManager.npcObjects.Count; i++)
-                {
-                    if (npcManager.npcObjects[i].character == chore.interviewNpc && !chore.done)
-                    {
-                        foreach (DialogueSo dialogueSo in npcManager.npcObjects[i].characterObj.GetComponent<DialogueTrigger>().dialogueSo)
-                        {
-                            if (!CheckAnswer(chore.additionalAnswer, dialogueSo.answers))
-                            {
-                                dialogueSo.answers.Add(chore.additionalAnswer);
-                            }
-                        }
-                    }
-                }
             }
         }
     }

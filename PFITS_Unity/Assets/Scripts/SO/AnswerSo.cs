@@ -8,7 +8,6 @@ public class AnswerSo : ScriptableObject
     public DialogueSo nextDialogue;
     public int addedAffinity;
     public bool clicked;
-    public bool questAnswer;
     [Tooltip ("Only if its an chore answer!")]
     public ChoreSo isChore;
     [Tooltip("Only if you need a clue to have the answer!")]

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
+  m_Name: Jelly_DeepBreath
+  m_EditorClassIdentifier: 
+  answerText: Take a deep breath, Jelly. It must be nearby right?
+  nextDialogue: {fileID: 11400000, guid: 4ae6ced41f0b6fe478db0c2c0a77b814, type: 2}
+  addedAffinity: 2
+  clicked: 0
+  questAnswer: 0
+  isChore: {fileID: 0}
+  neededClue: {fileID: 0}
+  notIfClueIsThere: 0
+  id: d2da6c77-512a-4150-9cfa-cd70621b9915

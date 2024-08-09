@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Jelly_DeepBreath
+  m_EditorClassIdentifier: 
+  affinity: ffffffff000000000100000002000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: baa8c91cd7852a343a9dd4489b411a6b, type: 2}
+  messages:
+  - actorId: 0
+    message: 'Okay, okay. Breathing... *hectic panting slows down slightly* '
+    emotion: 0
+  - actorId: 0
+    message: "Let's see \u2026 I was carrying these pots\u2026 and then \u2026"
+    emotion: 0
+  - actorId: 0
+    message: Oh there it is. - Thank you, much appreciated
+    emotion: 1
+  - actorId: 0
+    message: "Now i got everything, well except \u2026 - I have no clue how to actually
+      make this jello-cake! Ahhh!"
+    emotion: 5
+  answers:
+  - {fileID: 11400000, guid: 6b60155ade2e11b41928067d29e7d5a1, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 20d54d26-6ee8-4e8c-97f4-5deb1a8565ef

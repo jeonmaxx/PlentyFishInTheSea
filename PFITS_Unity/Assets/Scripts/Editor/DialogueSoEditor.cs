@@ -52,11 +52,26 @@ public class DialogueSoEditor : Editor
 
         GUILayout.Space(10);
         EditorGUILayout.LabelField("ADDITIONAL INFO", EditorStyles.boldLabel);
+        dialogue.npcGoesAfter = EditorGUILayout.Toggle("Npc Goes After Dialogue", dialogue.npcGoesAfter);
+        dialogue.oneTimeDia = EditorGUILayout.Toggle("One Time Dialogue", dialogue.oneTimeDia);
+        if (dialogue.oneTimeDia)
+        {
+            dialogue.diaDone = EditorGUILayout.Toggle("Dialogue Is Done", dialogue.diaDone);
+        }
+        dialogue.clueToAdd = (ClueSo)EditorGUILayout.ObjectField("Clue To Add", dialogue.clueToAdd, typeof(ClueSo), false);
         dialogue.neededClue = (ClueSo)EditorGUILayout.ObjectField("Needed Clue", dialogue.neededClue, typeof(ClueSo), false);
         if(dialogue.neededClue != null)
         {
             dialogue.dialogueIfNoClue = EditorGUILayout.Toggle("Dialogue If No Clue", dialogue.dialogueIfNoClue);
         }
+
+        dialogue.choreToAdd = (ChoreSo)EditorGUILayout.ObjectField("Chore To Add", dialogue.choreToAdd, typeof(ChoreSo), false);
+        dialogue.neededChore = (ChoreSo)EditorGUILayout.ObjectField("Needed Chore", dialogue.neededChore, typeof(ChoreSo), false);
+        if (dialogue.neededChore != null)
+        {
+            dialogue.dialogueIfNotThere = EditorGUILayout.Toggle("Dialogue If Not There", dialogue.dialogueIfNotThere);
+        }
+        dialogue.setChoreDone = (ChoreSo)EditorGUILayout.ObjectField("Set Chore as Done", dialogue.setChoreDone, typeof(ChoreSo), false);
 
         dialogue.id = EditorGUILayout.TextField("ID", dialogue.id);
 

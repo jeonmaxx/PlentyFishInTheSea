@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor:
     name: Angie
-    indexSprite: {fileID: 0}
-    sprite: {fileID: 0}
+    indexSprite: {fileID: 21300000, guid: a4c3cbd977d5eb248af21ed1fc381e7f, type: 3}
+    sprite: {fileID: 21300000, guid: a4c3cbd977d5eb248af21ed1fc381e7f, type: 3}
     happySprite: {fileID: 0}
     angrySprite: {fileID: 0}
     sadSprite: {fileID: 0}
@@ -32,4 +32,4 @@ MonoBehaviour:
     minPitch: 0.5
     maxPitch: 1
   affinity: 0
-  id: 
+  id: 747f922f-c922-4159-bbcf-86b227bcd035

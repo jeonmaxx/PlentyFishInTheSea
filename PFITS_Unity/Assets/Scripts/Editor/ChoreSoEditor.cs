@@ -21,8 +21,15 @@ public class ChoreSoEditor : Editor
         }
         chore.done = EditorGUILayout.Toggle("Done", chore.done);
         chore.description = EditorGUILayout.TextField("Description", chore.description);
-        chore.interviewNpc = (CharacterSo)EditorGUILayout.ObjectField("Interview NPC", chore.interviewNpc, typeof(CharacterSo), false);
-        chore.additionalAnswer = (AnswerSo)EditorGUILayout.ObjectField("Additional AnswerSo", chore.additionalAnswer, typeof(AnswerSo), false);
+
+        chore.type = (ChoreType)EditorGUILayout.EnumPopup("Chore Type", chore.type);
+
+        if (chore.type == ChoreType.InterviewNumber)
+        {
+            chore.npcsToInterview = EditorGUILayout.IntField("Npc Number to Interview", chore.npcsToInterview);
+            chore.currentInterviewed = EditorGUILayout.IntField("Current Interviewed Npcs", chore.currentInterviewed);
+        }
+
         chore.id = EditorGUILayout.TextField("Id", chore.id);
         //chore.choreHolder = (GameObject)EditorGUILayout.ObjectField("Chore Holder", chore.choreHolder, typeof(GameObject), true);
 

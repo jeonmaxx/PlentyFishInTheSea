@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Thaddy&Violetta_Dia01
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 83adb617ff250ca42a1afb46ce9fdacf, type: 2}
+  - {fileID: 11400000, guid: 8d48c323452de5a45b56adf19f77ee20, type: 2}
+  messages:
+  - actorId: 1
+    message: "Oh baby, I could kiss your scaly lips all day\u2026 But you have called
+      it quits with Steve, right?"
+    emotion: 0
+  - actorId: 0
+    message: "Let\u2019s not talk about Steve right now, I don\u2019t care about
+      him\u2026"
+    emotion: 0
+  - actorId: 0
+    message: "Right now, I only care about you, taking me to\u2026 Wait, what was
+      that? Is someone there?"
+    emotion: 0
+  - actorId: 0
+    message: Ohh damn it, what are you doing here? How did you get in?
+    emotion: 0
+  - actorId: 0
+    message: "ROBERTO! YOU\u2019RE SUCH A FISH-FOR-NOTHING!"
+    emotion: 0
+  - actorId: 1
+    message: "Violetta, it\u2019s the one from the Writers Club! I\u2019m gonna get
+      famous!"
+    emotion: 0
+  - actorId: 1
+    message: "Come on, let\u2019s get out of here!"
+    emotion: 0
+  answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 1
+  knownNpc: 0
+  npcGoesAfter: 1
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 13e9fdb2-92d8-474f-bd0f-1a274049baa0

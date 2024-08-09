@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Bill_Hydrogen
+  m_EditorClassIdentifier: 
+  affinity: 00000000010000000200000003000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
+  messages:
+  - actorId: 0
+    message: 'Well, because hydrogen is the first element in the periodic system
+      and you will always be my number 1! '
+    emotion: 1
+  - actorId: 0
+    message: Speaking of, do you want to meet up later in the yard and watch the
+      sunset together?
+    emotion: 1
+  - actorId: 0
+    message: I might also have something special for you on this occasion.
+    emotion: 1
+  answers:
+  - {fileID: 11400000, guid: 5ded4f6c2f92c2742a4a6fd1e3be4b76, type: 2}
+  - {fileID: 11400000, guid: 6754562f8fea8144188d708da4b497b5, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 

@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd1504eccf1b72d44899d5f1b8ac0fe6, type: 2}
   messages:
   - actorId: 0
-    message: 
+    message: Hey.
     emotion: 0
   answers:
   - {fileID: 11400000, guid: 7417a5edc1c7bec4c938f65f4d5d8066, type: 2}
@@ -30,5 +30,12 @@ MonoBehaviour:
   knownRoom: 0
   firstTimeNpc: 1
   knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
   id: dc9ec74f-ef53-4622-ab06-eb786786745b

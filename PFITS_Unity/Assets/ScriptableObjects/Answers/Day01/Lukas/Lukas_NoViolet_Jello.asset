@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
+  m_Name: Lukas_NoViolet_Jello
+  m_EditorClassIdentifier: 
+  answerText: Ask for a jello recipe
+  nextDialogue: {fileID: 11400000, guid: 7aa1f853a9bfd6546bc289c2f06d0246, type: 2}
+  addedAffinity: 0
+  clicked: 0
+  isChore: {fileID: 11400000, guid: 3bc1feab325e66949912e4a559f010d1, type: 2}
+  neededClue: {fileID: 11400000, guid: b55bf2d02c8971b44bca51d4acec8b06, type: 2}
+  notIfClueIsThere: 1
+  id: ff1d4d6e-167b-4a4c-b3f5-798420515143

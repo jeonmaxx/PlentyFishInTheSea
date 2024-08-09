@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
+  m_Name: Jelly_DrinkNoRecipe
+  m_EditorClassIdentifier: 
+  answerText: Ask for drink
+  nextDialogue: {fileID: 11400000, guid: 2a0d977b1b7b4ab418760f32503ad981, type: 2}
+  addedAffinity: 0
+  clicked: 0
+  isChore: {fileID: 11400000, guid: 78fff59b35d9f614bbce79701df66b40, type: 2}
+  neededClue: {fileID: 11400000, guid: 85829cfc9e088224bbe98229f3308530, type: 2}
+  notIfClueIsThere: 1
+  id: 6b6bbbf1-d43b-43ba-9534-8c5ec6d0c2d3

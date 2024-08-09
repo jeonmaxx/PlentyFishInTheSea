@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
+  m_Name: Bill_WorkDone
+  m_EditorClassIdentifier: 
+  answerText: "I hope I can get my work done until then\u2026"
+  nextDialogue: {fileID: 11400000, guid: cb1ae6f517242164dbca2c0b5f0ee9c7, type: 2}
+  addedAffinity: 0
+  clicked: 0
+  questAnswer: 0
+  isChore: {fileID: 0}
+  neededClue: {fileID: 0}
+  notIfClueIsThere: 0
+  id: 6e6db683-ca40-4494-bb7b-87d7a4740c6b

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ChoreType { InterviewOne, InterviewNumber, ObjectSearch}
 [CreateAssetMenu]
 public class ChoreSo : ScriptableObject
 {
@@ -8,8 +9,9 @@ public class ChoreSo : ScriptableObject
     public int day;
     public bool done;
     public string description;
-    public CharacterSo interviewNpc;
-    public AnswerSo additionalAnswer;
+    public ChoreType type;
+    public int npcsToInterview;
+    public int currentInterviewed;
     [HideInInspector] public GameObject choreHolder;
     public string id;
 

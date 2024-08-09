@@ -8,6 +8,7 @@ public class NpcIndexInfo : MonoBehaviour
 {
     public Image portrait;
     public TextMeshProUGUI npcName;
+    public Slider affinityBar;
 
     public void CloseInfo()
     {

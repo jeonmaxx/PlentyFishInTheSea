@@ -16,63 +16,27 @@ public class DialogueTrigger : MonoBehaviour
     private AudioClip nOpenSound;
     private AudioClip nCloseSound;
     public List<AnswerSo> answers;
-
+    public List<DialogueSo> priorityList;
 
 
     private void Start()
     {
         dialogue = FindObjectOfType<DialogueManager>();
+        priorityList = GetPrioritizedDialogues();
+
         //nOpenSound = dialogue.openSound;
         //nCloseSound = dialogue.closeSound;   
     }
 
     private void Update()
     {
-        ChooseDialogue();
+        priorityList = GetPrioritizedDialogues();
     }
 
-    private void ChooseDialogue()
+    private void GetDialogue()
     {
         DialogueSo selectedDialogue = null;
-        List<DialogueSo> prioritizedDialogues = new List<DialogueSo>();
-
-        for (int i = 0; i < dialogueSo.Count; i++)
-        {
-            if (dayManager.dayList.days[dayManager.currentDayInt] == dialogueSo[i].day)
-            {
-                bool affinityMatched = false;
-                for (int j = 0; j < dialogueSo[i].characters.Length; j++)
-                {
-                    if (dialogueSo[i].affinity.Contains(dialogueSo[i].characters[j].affinity))
-                    {
-                        affinityMatched = true;
-                        break;
-                    }
-                }
-
-                if (affinityMatched)
-                {
-                    if (dialogueSo[i].firstTimeNpc && !dialogueSo[i].knownNpc)
-                    {
-                        selectedDialogue = dialogueSo[i];
-                        break;
-                    }
-                    else if (dialogueSo[i].neededClue != null && dialogue.clueManager.clues.Contains(dialogueSo[i].neededClue))
-                    {
-                        prioritizedDialogues.Add(dialogueSo[i]);
-                    }
-                    else if (dialogueSo[i].neededClue == null)
-                    {
-                        selectedDialogue = dialogueSo[i];
-                    }
-                }
-            }
-        }
-
-        if (selectedDialogue == null && prioritizedDialogues.Count > 0)
-        {
-            selectedDialogue = prioritizedDialogues[0];
-        }
+        selectedDialogue = priorityList[0];
 
         if (selectedDialogue != null)
         {
@@ -99,8 +63,9 @@ public class DialogueTrigger : MonoBehaviour
         //    dialogue.openSound = nOpenSound;
         //    dialogue.closeSound = nCloseSound;
         //}
-
-        dialogue.OpenDialogue(messages, actors, answers);
+        GetDialogue();
+        dialogue.OpenDialogue(messages, actors, answers, currentDialogue);
+        Debug.Log("Start Dialogue wooooo");
         dialogue.currentNpc = GetComponent<DialogueTrigger>();
     }
 
@@ -110,5 +75,112 @@ public class DialogueTrigger : MonoBehaviour
         {
             currentDialogue.knownNpc = true;
         }
+        if (currentDialogue.oneTimeDia)
+        {
+            currentDialogue.diaDone = true;
+        }
+    }
+
+    private List<DialogueSo> GetPrioritizedDialogues()
+    {
+        List<PriorityDialogue> prioritizedDialogues = new List<PriorityDialogue>();
+
+        foreach (var current in dialogueSo)
+        {
+            if (current.oneTimeDia && current.diaDone)
+            {
+                continue;
+            }
+
+            if (dayManager.dayList.days[dayManager.currentDayInt] != current.day)
+            {
+                continue;
+            }
+
+            bool affinityMatched = current.characters.Any(character => current.affinity.Contains(character.affinity));
+            if (!affinityMatched)
+            {
+                continue;
+            }
+
+            if (current.firstTimeNpc && current.knownNpc)
+            {
+                continue;
+            }
+
+            int priorityLevel = int.MaxValue;
+
+            if (current.firstTimeNpc && !current.knownNpc)
+            {
+                if (current.neededClue == null && current.neededChore == null)
+                {
+                    priorityLevel = 1;
+                }
+                else if (current.neededClue != null)
+                {
+                    bool clueInList = dialogue.clueManager.foundClues.Contains(current.neededClue);
+                    if (current.dialogueIfNoClue && !clueInList)
+                    {
+                        priorityLevel = 2;
+                    }
+                    else if (!current.dialogueIfNoClue && clueInList)
+                    {
+                        continue;
+                    }
+                }
+                else if (current.neededChore != null)
+                {
+                    bool choreInList = dayManager.chores.Contains(current.neededChore);
+                    if (current.dialogueIfNotThere && !choreInList)
+                    {
+                        priorityLevel = 4;
+                    }
+                    else if (!current.dialogueIfNotThere && choreInList)
+                    {
+                        continue;
+                    }
+                }
+            }
+            else
+            {
+                if (current.neededClue != null && !current.firstTimeNpc)
+                {
+                    bool clueInList = dialogue.clueManager.foundClues.Contains(current.neededClue);
+                    if ((current.dialogueIfNoClue && !clueInList) || (!current.dialogueIfNoClue && clueInList))
+                    {
+                        priorityLevel = 6;
+                    }
+                    else if ((current.dialogueIfNoClue && clueInList) ||(!current.dialogueIfNoClue && !clueInList))
+                    {
+                        continue;
+                    }
+                }
+                else if (current.neededChore != null && !current.firstTimeNpc)
+                {
+                    bool choreInList = dayManager.chores.Contains(current.neededChore);
+                    if ((current.dialogueIfNotThere && !choreInList) || (!current.dialogueIfNotThere && choreInList))
+                    {
+                        priorityLevel = 8;
+                    }
+                    else if ((current.dialogueIfNotThere && choreInList) || (!current.dialogueIfNotThere && !choreInList))
+                    {
+                        continue;
+                    }
+                }
+                else
+                {
+                    priorityLevel = 10;
+                }
+            }
+
+            prioritizedDialogues.Add(new PriorityDialogue(current, priorityLevel));
+        }
+
+        var sortedDialogues = prioritizedDialogues.OrderBy(p => p.PriorityLevel)
+                                                  .ThenByDescending(p => p.Dialogue.oneTimeDia)
+                                                  .Select(p => p.Dialogue)
+                                                  .ToList();
+
+        return sortedDialogues;
     }
 }

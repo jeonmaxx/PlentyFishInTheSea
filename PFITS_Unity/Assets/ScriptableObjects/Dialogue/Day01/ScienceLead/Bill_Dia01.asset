@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Bill_Dia01
+  m_EditorClassIdentifier: 
+  affinity: 00000000010000000200000003000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
+  messages:
+  - actorId: 0
+    message: "Hey there, hydrogen. Happy Valentine\u2019s Day!"
+    emotion: 0
+  - actorId: 0
+    message: I see you're being productive. How are you feeling?
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: 8ae85370853b5dd419dcd9dc41764c72, type: 2}
+  - {fileID: 11400000, guid: 51f48355ef01cd34888a7c5e114967f2, type: 2}
+  - {fileID: 11400000, guid: ca0a41abc15bb3e4cadcf57fed393dc3, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 1
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 437b47b8-f2cc-462d-a365-87c827467c59

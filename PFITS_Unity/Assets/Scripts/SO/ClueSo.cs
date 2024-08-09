@@ -9,6 +9,7 @@ public class ClueSo : ScriptableObject
     public bool pickUpItem;
     public bool clueNoted;
     public string id;
+    public Sprite clueSprite;
 
     private void OnEnable()
     {

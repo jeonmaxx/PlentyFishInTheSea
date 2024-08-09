@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueIcon;
     public bool isActive = false;
     public DialogueTrigger currentNpc;
+    public Volume volume;
 
     [SerializeField] private float typingSpeed = 0.04f;
 
@@ -25,12 +27,13 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public Actor[] currentActors;
     [HideInInspector] public int activeMessage = 0;
     [HideInInspector] public List<AnswerSo> currentAnswers = new List<AnswerSo>();
+    public DialogueSo currentDialogue;
 
     [Header("Manager")]
-    //noch nicht eingebaut (ToDo)
     [SerializeField] private DayManager dayManager;
     [SerializeField] private IndexManager indexManager;
     public ClueManager clueManager;
+    private NpcManager npcManager;
 
     [Header("Sound")]
 
@@ -65,6 +68,8 @@ public class DialogueManager : MonoBehaviour
     {
         action = inputAction.action;
         source = this.gameObject.AddComponent<AudioSource>();
+        volume.weight = 0;
+        npcManager = FindObjectOfType<NpcManager>();
     }
 
     public void Update()
@@ -81,15 +86,17 @@ public class DialogueManager : MonoBehaviour
         }     
     }
 
-    public void OpenDialogue(Message[] messages, Actor[] actors, List<AnswerSo> answers)
+    public void OpenDialogue(Message[] messages, Actor[] actors, List<AnswerSo> answers, DialogueSo dialogueSo)
     {
         if (!isActive)
         {
             //source.clip = openSound;
             //source.Play();
+            volume.weight = 1f;
             currentMessages = messages;
             currentActors = actors;
             currentAnswers = answers;
+            currentDialogue = dialogueSo;
             activeMessage = 0;                    
             DisplayMessage();
             StartCoroutine(StartDialogue());
@@ -203,36 +210,61 @@ public class DialogueManager : MonoBehaviour
                 DisplayMessage();
             }
 
-            if (activeMessage == currentMessages.Length && currentAnswers.Count > 0)
+            if (currentDialogue.setChoreDone != null)
             {
-                bool allAnswersClicked = true;
+                foreach (ChoreSo chore in dayManager.chores)
+                {
+                    if (chore == currentDialogue.setChoreDone)
+                    {
+                        chore.done = true;
+                    }
+                }
+            }
+
+            if (activeMessage >= currentMessages.Length)
+            {
+                // Überprüfen, ob gültige Antworten zum Anzeigen vorhanden sind
+                bool hasValidAnswers = false;
                 foreach (AnswerSo answer in currentAnswers)
                 {
-                    if (!answer.clicked)
+                    if (!answer.clicked && 
+                        (answer.neededClue == null || 
+                        (answer.neededClue.clueNoted && !answer.notIfClueIsThere) || 
+                        (!answer.neededClue.clueNoted && answer.notIfClueIsThere)) && 
+                        ((answer.isChore != null && 
+                        (!answer.isChore.done || answer.isChore.type != ChoreType.InterviewNumber)) || 
+                        answer.isChore == null))
                     {
-                        allAnswersClicked = false;
+                        hasValidAnswers = true;
                         break;
                     }
                 }
 
-                if (allAnswersClicked)
+                if (currentDialogue.clueToAdd != null && !clueManager.foundClues.Contains(currentDialogue.clueToAdd))
                 {
-                    currentNpc.SetKnownNpc();
-                    StartCoroutine(EndDialogue());
+                    clueManager.AddClue(currentDialogue.clueToAdd, null);
                 }
-                else
+
+                if (currentDialogue.choreToAdd != null && !dayManager.chores.Contains(currentDialogue.choreToAdd))
                 {
+                    dayManager.chores.Add(currentDialogue.choreToAdd);
+                    dayManager.AddChores();
+                }
+
+                if (hasValidAnswers)
+                {
+                    // Zeige die Antwort-Buttons, wenn es gültige Antworten gibt
                     currentNpc.SetKnownNpc();
                     MakeAnswerButtons();
                     inAnswerScreen = true;
                 }
-            }
-            else if (activeMessage >= currentMessages.Length)
-            {
-                //source.clip = closeSound;
-                //source.Play();
-                currentNpc.SetKnownNpc();
-                StartCoroutine(EndDialogue());
+                else
+                {
+                    // Beende den Dialog sofort, wenn keine gültigen Antworten vorhanden sind
+                    currentNpc.SetKnownNpc();
+                    StartCoroutine(EndDialogue());
+                }
+
             }
         }
     }
@@ -251,9 +283,9 @@ public class DialogueManager : MonoBehaviour
                     currentButton.GetComponentInChildren<TextMeshProUGUI>().text = answer.answerText;
                     currentButton.GetComponent<AnswerButton>().answer = answer;
                     currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
-                    if (answer.questAnswer)
+                    if (answer.isChore != null)
                     {
-                        currentButton.GetComponent<Image>().color = Color.yellow;
+                        currentButton.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
@@ -280,6 +312,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         transform.localScale = Vector3.zero;
         currentNpc.transform.localScale = npcScale;
+        volume.weight = 0;
         isActive = false;
         foreach(Transform child in buttonSpawner.transform)
         {
@@ -288,6 +321,21 @@ public class DialogueManager : MonoBehaviour
         currentActors = null;
         currentMessages = null;
         skipToEnd = false;
+
+        if(currentDialogue.npcGoesAfter)
+        {
+            foreach(CharacterSo character in currentDialogue.characters)
+            {
+                for (int i = 0; i < npcManager.npcObjects.Count; i++)
+                {
+                    if (character.id == npcManager.npcObjects[i].character.id)
+                    {
+                        npcManager.npcObjects[i].characterObj.SetActive(false);
+                        break;
+                    }
+                }
+            }
+        }
         StopCoroutine(EndDialogue());
     }
 

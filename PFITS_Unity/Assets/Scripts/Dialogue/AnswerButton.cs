@@ -8,6 +8,7 @@ public class AnswerButton : MonoBehaviour
     private Actor[] nextActors;
     public DialogueSo currentDialogue;
     private NpcManager npcManager;
+    private DayManager dayManager;
 
     private void Update()
     {
@@ -20,10 +21,17 @@ public class AnswerButton : MonoBehaviour
         {
             npcManager = FindObjectOfType<NpcManager>();
         }
+
+        if(dayManager == null)
+        {
+            dayManager = FindObjectOfType<DayManager>();
+        }
     }
 
     public void AnswerClick()
     {
+        manager.currentDialogue = answer.nextDialogue;
+        Debug.Log("current Dialogue should be changed");
         nextActors = new Actor[answer.nextDialogue.characters.Length];
         for (int i = 0; i < answer.nextDialogue.characters.Length; i++)
         {
@@ -31,28 +39,32 @@ public class AnswerButton : MonoBehaviour
         }
         answer.clicked = true;
         manager.AnswerButton(answer.nextDialogue.messages.ToArray(), nextActors, answer.nextDialogue.answers);
-        //manager.currentNpc.currentAffinity += answer.addedAffinity;
+
         answer.nextDialogue.characters[0].affinity += answer.addedAffinity;
 
-        if (answer.isChore != null && answer.questAnswer)
+        if (answer.isChore != null)
         {
             SetChoreAsDone(answer);
-        }
-        else if(answer.isChore == null && answer.questAnswer)
-        {
-            Debug.LogWarning("No chore found!");
         }
     }
 
     private void SetChoreAsDone(AnswerSo answer)
     {
-        foreach (var npc in npcManager.npcObjects)
+        if(answer.isChore != null)
         {
-            if (npc.character == answer.isChore.interviewNpc)
+            if(answer.isChore.type == ChoreType.InterviewOne)
             {
-                RemoveAnswerFromDialogue(npc.characterObj, answer);
                 answer.isChore.done = true;
-                break;
+            }
+
+            if(answer.isChore.type == ChoreType.InterviewNumber)
+            {
+                answer.isChore.currentInterviewed++;
+                if(answer.isChore.currentInterviewed >= answer.isChore.npcsToInterview)
+                {
+                    answer.isChore.done = true;
+                }
+                dayManager.AddChores();
             }
         }
     }

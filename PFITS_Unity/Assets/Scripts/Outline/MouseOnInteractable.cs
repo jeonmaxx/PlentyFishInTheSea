@@ -28,7 +28,7 @@ public class MouseOnInteractable : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerDown(PointerEventData eventData) 
     {
-        if(isPerson)
+        if(isPerson && trigger != null)
         {
             dialogueWindow.transform.localScale = Vector3.one;
             trigger.StartDialogue();

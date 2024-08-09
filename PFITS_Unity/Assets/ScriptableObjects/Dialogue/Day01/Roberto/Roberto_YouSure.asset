@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Roberto_YouSure
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: cdf6d061451d8544587da95cd8a02370, type: 2}
+  messages:
+  - actorId: 0
+    message: "Hmmm, I am really thirsty for\u2026 Okay fine, fetch me my special
+      edition milkshake from the cooking club and I might think about letting you
+      through."
+    emotion: 0
+  - actorId: 0
+    message: "Just tell them, Roberto send you. They\u2019ll know what I want."
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: bcf2cb4cc7c1870469442df64ea0a906, type: 2}
+  - {fileID: 11400000, guid: 2de333fc12daa034a91c16a6a26b7574, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 11400000, guid: 78fff59b35d9f614bbce79701df66b40, type: 2}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 

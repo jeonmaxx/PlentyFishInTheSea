@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
+  m_Name: Jelly_PickUp
+  m_EditorClassIdentifier: 
+  answerText: Ask for Pick-up Line
+  nextDialogue: {fileID: 11400000, guid: 08356b34a2d8b1b42a60d49fdd923b37, type: 2}
+  addedAffinity: 0
+  clicked: 0
+  isChore: {fileID: 11400000, guid: f587b98fe6de684499ad8b90504045d9, type: 2}
+  neededClue: {fileID: 0}
+  notIfClueIsThere: 0
+  id: 43b366f2-f882-4d06-a8fc-0290c67898dc

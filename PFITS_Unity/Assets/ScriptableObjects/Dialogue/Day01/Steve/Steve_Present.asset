@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Steve_Present
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 3393f1b88a3c90b4783b84b1ff3ed9bc, type: 2}
+  messages:
+  - actorId: 0
+    message: What a beautiful present.
+    emotion: 0
+  - actorId: 0
+    message: Oh and these gotta be our flowers, they are quite rare.
+    emotion: 0
+  - actorId: 0
+    message: We only had very few in stock and I believe they were all pre ordered.
+    emotion: 0
+  - actorId: 0
+    message: "I guess I could give you the list. Should be somewhere \u2026 ah there
+      it is."
+    emotion: 0
+  - actorId: 0
+    message: If anyone asks, you don't have that from me.
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: 2b1cf3622a10e5548ad95528390fa65c, type: 2}
+  - {fileID: 11400000, guid: 93144e0928f799346b3f89cf4d1adeab, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 

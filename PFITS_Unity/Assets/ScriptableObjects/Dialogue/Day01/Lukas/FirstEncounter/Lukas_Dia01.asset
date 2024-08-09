@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Lukas_Dia01
+  m_EditorClassIdentifier: 
+  affinity: ffffffff0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: a227da1bbab4aff4fa942948e7771870, type: 2}
+  messages:
+  - actorId: 0
+    message: Hey you! Could you tell me what kind of color violets have?
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: e9461bdd26726ff46828d912beddd246, type: 2}
+  - {fileID: 11400000, guid: de695254893b9ca45bbc77978e3bb728, type: 2}
+  - {fileID: 11400000, guid: 0ea0b20804bdb7e4fa787086bdcf4433, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 1
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: bfd24065-484c-4f03-ba54-ab4bd3f8ba9a

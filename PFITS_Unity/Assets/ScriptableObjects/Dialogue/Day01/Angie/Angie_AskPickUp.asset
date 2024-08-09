@@ -24,12 +24,21 @@ MonoBehaviour:
   - actorId: 0
     message: When I look at you I feel like I have lost myself in the romance section.
     emotion: 0
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: 35378b057f2a98a4291e8b9558de42af, type: 2}
+  - {fileID: 11400000, guid: 7417a5edc1c7bec4c938f65f4d5d8066, type: 2}
   selfTalk: 0
   roomTalk: 0
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
   id: 89eff075-0170-48f9-ab82-860272ec7b05

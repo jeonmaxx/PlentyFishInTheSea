@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Lukas_DontKnow
+  m_EditorClassIdentifier: 
+  affinity: ffffffff0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: a227da1bbab4aff4fa942948e7771870, type: 2}
+  messages:
+  - actorId: 0
+    message: "What a pity\u2026 Would you do me a favor and show me a violet from
+      the college's garden to check?"
+    emotion: 0
+  answers: []
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 11400000, guid: b1c58a35ba6acff48a4d4c4148c6190d, type: 2}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 8d710af5-b306-4089-b549-8084f3c9c7ea

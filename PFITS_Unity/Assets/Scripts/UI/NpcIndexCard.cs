@@ -17,5 +17,6 @@ public class NpcIndexCard : MonoBehaviour
         indexInfo.transform.SetAsLastSibling();
         indexInfo.portrait.sprite = pictureHolder.sprite;
         indexInfo.npcName.text = currentNpc.actor.name;
+        indexInfo.affinityBar.value = currentNpc.affinity;
     }
 }

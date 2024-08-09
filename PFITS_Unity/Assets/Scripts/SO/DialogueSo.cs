@@ -20,8 +20,16 @@ public class DialogueSo : ScriptableObject
     public bool firstTimeNpc;
     public bool knownNpc;
 
+    public bool npcGoesAfter;
+    public bool oneTimeDia;
+    public bool diaDone;
+    public ClueSo clueToAdd;
     public ClueSo neededClue;
     public bool dialogueIfNoClue;
+    public ChoreSo choreToAdd;
+    public ChoreSo neededChore;
+    public bool dialogueIfNotThere;
+    public ChoreSo setChoreDone;
     public string id;
     
     private void OnEnable()

@@ -16,8 +16,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 11400000, guid: ac257e260608bcd43ae910b0e062384a, type: 2}
   addedAffinity: 0
   clicked: 0
-  questAnswer: 0
-  isChore: {fileID: 0}
+  isChore: {fileID: 11400000, guid: 3930acc1e3037314e90185912a31d527, type: 2}
   neededClue: {fileID: 11400000, guid: c4429f58a3a550d49b2f503410b705f0, type: 2}
   notIfClueIsThere: 0
   id: 2f72f2af-8e46-466f-9f15-6b5f2333b57f

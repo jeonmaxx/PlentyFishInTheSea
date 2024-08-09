@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor:
     name: Jelly
-    indexSprite: {fileID: 0}
-    sprite: {fileID: 0}
-    happySprite: {fileID: 0}
-    angrySprite: {fileID: 0}
-    sadSprite: {fileID: 0}
-    disgustSprite: {fileID: 0}
-    fearSprite: {fileID: 0}
-    surpriseSprite: {fileID: 0}
-    evilSprite: {fileID: 0}
-    excitedSprite: {fileID: 0}
+    indexSprite: {fileID: 21300000, guid: daadc78ba4f2d0d469ece0b10b8b9a7b, type: 3}
+    sprite: {fileID: 21300000, guid: daadc78ba4f2d0d469ece0b10b8b9a7b, type: 3}
+    happySprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
+    angrySprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
+    sadSprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
+    disgustSprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
+    fearSprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
+    surpriseSprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
+    evilSprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
+    excitedSprite: {fileID: 21300000, guid: a3b8a644a72de8741af76ed6f8fcf283, type: 3}
     dialogueTypingSounds:
     - {fileID: 8300000, guid: 8c0cffa363b239546ab7de1a424ec554, type: 3}
     - {fileID: 8300000, guid: 990a195820c59f74d93c0b88548fc9ca, type: 3}
@@ -32,4 +32,4 @@ MonoBehaviour:
     minPitch: 0.5
     maxPitch: 1
   affinity: 0
-  id: 
+  id: 91f3a1ed-b58d-4b95-9386-1ac533493fa8

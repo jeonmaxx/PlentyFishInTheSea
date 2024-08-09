@@ -18,4 +18,6 @@ MonoBehaviour:
   clicked: 0
   questAnswer: 0
   isChore: {fileID: 0}
+  neededClue: {fileID: 0}
+  notIfClueIsThere: 0
   id: a63ae88b-f7af-4386-881e-eae182b44541

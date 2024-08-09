@@ -21,7 +21,7 @@ MonoBehaviour:
     message: 'The letter is obviously written in French, '
     emotion: 0
   - actorId: 0
-    message: "but Frenchy would be a better contact for that since he\u2019s a native."
+    message: "but Jacque would be a better contact for that since he\u2019s a native."
     emotion: 0
   answers:
   - {fileID: 11400000, guid: ced66dfb5ec00fe408c4d3a61c287e7c, type: 2}
@@ -32,5 +32,12 @@ MonoBehaviour:
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
   id: 2f5a67e6-9922-4384-94d4-1662e709af60

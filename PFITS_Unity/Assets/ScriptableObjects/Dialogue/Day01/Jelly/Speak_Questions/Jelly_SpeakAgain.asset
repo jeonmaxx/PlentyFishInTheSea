@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Jelly_SpeakAgain
+  m_EditorClassIdentifier: 
+  affinity: ffffffff000000000100000002000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: baa8c91cd7852a343a9dd4489b411a6b, type: 2}
+  messages:
+  - actorId: 0
+    message: I get so overwhelmed sometimes. Anything I can help you with?
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: e0e9f8345f7615e49adf3de9eb147a73, type: 2}
+  - {fileID: 11400000, guid: 6da89351f772cdd41b2c3aa49dde2fb5, type: 2}
+  - {fileID: 11400000, guid: 9d985d5c77be4dd45b8c59be2d3d2b55, type: 2}
+  - {fileID: 11400000, guid: a501a3b4d6d949c4eb379e852c6bcc0a, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 11400000, guid: 913b1514ac13821408b3baf9ec1fc7f3, type: 2}
+  dialogueIfNoClue: 1
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 9bc3649f-e9eb-45d0-ae3d-39f2f7ff17d5

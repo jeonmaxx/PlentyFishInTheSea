@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Steve_PickUp
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 3393f1b88a3c90b4783b84b1ff3ed9bc, type: 2}
+  messages:
+  - actorId: 0
+    message: "Hmm \u2026 \u2018If you were a flower, you'd be a sunflower, because
+      you brighten up my day.\u2019 How's that?"
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: 2b1cf3622a10e5548ad95528390fa65c, type: 2}
+  - {fileID: 11400000, guid: 8416c55a193ee744b96b1159b7005ca1, type: 2}
+  selfTalk: 0
+  roomTalk: 0
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  id: 
