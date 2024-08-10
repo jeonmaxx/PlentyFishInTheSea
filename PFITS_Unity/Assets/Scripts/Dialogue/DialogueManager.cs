@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueIcon;
     public bool isActive = false;
     public DialogueTrigger currentNpc;
+    public DialogueRoom dialogueRoom;
     public Volume volume;
 
     [SerializeField] private float typingSpeed = 0.04f;
@@ -256,14 +257,20 @@ public class DialogueManager : MonoBehaviour
                 if (hasValidAnswers)
                 {
                     // Zeige die Antwort-Buttons, wenn es gültige Antworten gibt
-                    currentNpc.SetKnownNpc();
+                    if (currentNpc != null)
+                    {
+                        currentNpc.SetKnownNpc();
+                    }
                     MakeAnswerButtons();
                     inAnswerScreen = true;
                 }
                 else
                 {
                     // Beende den Dialog sofort, wenn keine gültigen Antworten vorhanden sind
-                    currentNpc.SetKnownNpc();
+                    if (currentNpc != null)
+                    {
+                        currentNpc.SetKnownNpc();
+                    }
                     StartCoroutine(EndDialogue());
                 }
 
@@ -286,7 +293,14 @@ public class DialogueManager : MonoBehaviour
                 GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);
                 currentButton.GetComponentInChildren<TextMeshProUGUI>().text = answer.answerText;
                 currentButton.GetComponent<AnswerButton>().answer = answer;
-                currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
+                if (currentNpc != null)
+                {
+                    currentButton.GetComponent<AnswerButton>().currentDialogue = currentNpc.currentDialogue;
+                }
+                if (dialogueRoom != null)
+                {
+                    currentButton.GetComponent<AnswerButton>().currentDialogue = dialogueRoom.currentDialogue;
+                }
                 if (answer.isChore != null)
                 {
                     currentButton.GetComponent<Image>().color = Color.green;
@@ -295,7 +309,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-
     public void AnswerButton(Message[] messages, Actor[] actors, List<AnswerSo> answers)
     {
         inAnswerScreen = false;
@@ -315,7 +328,10 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         transform.localScale = Vector3.zero;
-        currentNpc.transform.localScale = npcScale;
+        if (currentNpc != null)
+        {
+            currentNpc.transform.localScale = npcScale;
+        }
         volume.weight = 0;
         isActive = false;
         foreach(Transform child in buttonSpawner.transform)
@@ -324,6 +340,8 @@ public class DialogueManager : MonoBehaviour
         }
         currentActors = null;
         currentMessages = null;
+        currentNpc = null;
+        dialogueRoom = null;
         skipToEnd = false;
 
         if(currentDialogue.npcGoesAfter)
@@ -346,16 +364,20 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator StartDialogue()
     {
         yield return new WaitForEndOfFrame();
-        if (currentNpc.transform.localScale.x != 0)
+        transform.localScale = Vector3.one;
+        if (currentNpc != null)
         {
-            npcScale = currentNpc.transform.localScale;
-            currentNpc.transform.localScale = Vector3.zero;
-        }
-        foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
-        {
-            RoomDefinition currentRoom = roomManager.activeRoom.GetComponent<RoomDefinition>();
-            characterSo.lastRoom = currentRoom.roomName;
-            indexManager.AddIndex(characterSo);
+            if (currentNpc.transform.localScale.x != 0)
+            {
+                npcScale = currentNpc.transform.localScale;
+                currentNpc.transform.localScale = Vector3.zero;
+            }
+            foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
+            {
+                RoomDefinition currentRoom = roomManager.activeRoom.GetComponent<RoomDefinition>();
+                characterSo.lastRoom = currentRoom.roomName;
+                indexManager.AddIndex(characterSo);
+            }
         }
         isActive = true;
         StopCoroutine(StartDialogue());

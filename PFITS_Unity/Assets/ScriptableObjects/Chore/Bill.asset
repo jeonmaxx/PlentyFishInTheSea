@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14a0da522df8c6549aacf1f87ce7eead, type: 3}
-  m_Name: Present
+  m_Name: Bill
   m_EditorClassIdentifier: 
   possibleDays: {fileID: 11400000, guid: 728bf6e9d401bd74db352416d1f97986, type: 2}
   day: 1
   done: 0
-  description: Find out who the <b>present</b>  is from
-  priority: 1
-  type: 2
+  description: Speak with your partner, <b>Bill</b>. They should be in the <b>Science
+    Club</b>!
+  priority: 0
+  type: 0
   npcsToInterview: 0
   currentInterviewed: 0
   choreHolder: {fileID: 0}
-  id: 607bd3e7-f5ee-4bc6-97c3-304da02357e5
+  id: 0d1f94ce-92d6-43fd-a3c3-d9cd702893a2

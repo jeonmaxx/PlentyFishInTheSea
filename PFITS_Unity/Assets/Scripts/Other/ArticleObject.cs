@@ -17,6 +17,6 @@ public class ArticleObject : MonoBehaviour
     public void OnButton()
     {
         dayManager.ChoseArticle();
-        gameObject.transform.parent.gameObject.SetActive(false);
+        gameObject.transform.parent.parent.gameObject.SetActive(false);
     }
 }

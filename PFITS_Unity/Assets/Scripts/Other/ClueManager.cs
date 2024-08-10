@@ -20,6 +20,11 @@ public class ClueManager : MonoBehaviour
         {
             GameObject newClue = Instantiate(clueText, clueNotebook.transform);
             newClue.GetComponent<TextMeshProUGUI>().text = clue.description;
+            if (clue.bookSprite != null)
+            {
+                Transform picHolder = newClue.transform.GetChild(0);
+                Instantiate(clue.bookSprite, picHolder);
+            }
         }
 
         if (clueObject != null)

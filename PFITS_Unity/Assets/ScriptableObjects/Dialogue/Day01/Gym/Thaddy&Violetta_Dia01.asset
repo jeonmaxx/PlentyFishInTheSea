@@ -40,20 +40,21 @@ MonoBehaviour:
     message: "Violetta, it\u2019s the one from the Writers Club! I\u2019m gonna get
       famous!"
     emotion: 0
-  - actorId: 1
+  - actorId: 0
     message: "Come on, let\u2019s get out of here!"
     emotion: 0
   answers: []
-  selfTalk: 0
-  roomTalk: 0
-  room: 0
+  roomTalk: 1
+  entersRoom: 1
+  clueToLeave: {fileID: 0}
+  room: 10
   knownRoom: 0
-  firstTimeNpc: 1
+  firstTimeNpc: 0
   knownNpc: 0
-  npcGoesAfter: 1
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
-  clueToAdd: {fileID: 0}
+  clueToAdd: {fileID: 11400000, guid: 06020075786640f47b3b875ce4a50197, type: 2}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}

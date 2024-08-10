@@ -11,7 +11,7 @@ public class MouseOnInteractable : MonoBehaviour, IPointerEnterHandler, IPointer
 
     private void Start()
     {
-        rend.material.SetColor("_BorderColor", Color.blue);
+        rend.material.SetColor("_BorderColor", Color.white);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -30,7 +30,7 @@ public class MouseOnInteractable : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if(isPerson && trigger != null)
         {
-            dialogueWindow.transform.localScale = Vector3.one;
+            //dialogueWindow.transform.localScale = Vector3.one;
             trigger.StartDialogue();
         }
     }

@@ -9,13 +9,21 @@ public class Clue : MonoBehaviour, IPointerDownHandler
 {
     public ClueSo clue;
     public ClueManager clueManager;
+    private Vector3 size;
 
     private void Start()
     {
+        size = transform.localScale;
+
         if(clue.clueNoted)
         {
             GameObject newClue = Instantiate(clueManager.clueText, clueManager.clueNotebook.transform);
             newClue.GetComponent<TextMeshProUGUI>().text = clue.description;
+            if (clue.bookSprite != null)
+            {
+                Transform picHolder = newClue.transform.GetChild(0);
+                Instantiate(clue.bookSprite, picHolder);
+            }
         }
 
         if ((clue.pickUpItem && clue.clueNoted) || clueManager.dayManager.dayList.days[clueManager.dayManager.currentDayInt] != clue.day)
@@ -23,7 +31,7 @@ public class Clue : MonoBehaviour, IPointerDownHandler
             transform.localScale = Vector3.zero;
         }
         else
-            transform.localScale = Vector3.one;
+            transform.localScale = size;
 
     }
 

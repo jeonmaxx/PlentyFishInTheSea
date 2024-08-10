@@ -12,8 +12,9 @@ public class DialogueSo : ScriptableObject
     public List<Message> messages;
     public List<AnswerSo> answers;
 
-    public bool selfTalk;
     public bool roomTalk;
+    public bool entersRoom;
+    public ClueSo clueToLeave;
     public Rooms room;
     public bool knownRoom;
 

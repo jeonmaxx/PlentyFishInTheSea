@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Present
   m_EditorClassIdentifier: 
   day: 1
+  bookSprite: {fileID: 9013837990879898995, guid: 315b33f9c8a7fc34f9c5ff167b56424f, type: 3}
   description: This is a very nice present. I wounder who gave it to me?
   pickUpItem: 1
   clueNoted: 0

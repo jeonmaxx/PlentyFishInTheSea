@@ -40,11 +40,21 @@ MonoBehaviour:
     message: "Why don\u2019t you interview about 10 people and pick your favorites?"
     emotion: 0
   answers: []
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 1
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 11400000, guid: 9ede0a7d71e62cb4d87babe75609892a, type: 2}
   neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 92667c82-fa2b-4be5-9e4d-fa48c26c37f4

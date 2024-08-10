@@ -59,7 +59,7 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     - _MouseOn: 0
-    - _Thickness: 0.02
+    - _Thickness: 0.008
     - _isOn: 0
     m_Colors:
     - _BorderColor: {r: 1, g: 1, b: 1, a: 1}

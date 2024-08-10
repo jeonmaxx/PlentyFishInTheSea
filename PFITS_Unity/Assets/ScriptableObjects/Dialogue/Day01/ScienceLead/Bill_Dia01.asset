@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Bill_Dia01
   m_EditorClassIdentifier: 
-  affinity: 00000000010000000200000003000000
+  affinity: 06000000070000000800000009000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
@@ -27,8 +27,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ae85370853b5dd419dcd9dc41764c72, type: 2}
   - {fileID: 11400000, guid: 51f48355ef01cd34888a7c5e114967f2, type: 2}
   - {fileID: 11400000, guid: ca0a41abc15bb3e4cadcf57fed393dc3, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 1
@@ -42,5 +43,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
-  setChoreDone: {fileID: 0}
+  setChoreDone: {fileID: 11400000, guid: 2bdf9dce64441914a8167f7c7910de21, type: 2}
   id: 437b47b8-f2cc-462d-a365-87c827467c59

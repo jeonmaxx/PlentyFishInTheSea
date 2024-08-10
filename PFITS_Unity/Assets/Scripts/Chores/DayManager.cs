@@ -22,6 +22,7 @@ public class DayManager : MonoBehaviour
     public GameObject stillToDoScreen;
     public GameObject demoEndScreen;
     private NpcManager npcManager;
+    public GameObject articleScreen;
     public GameObject articleHolder;
     public GameObject articlePrefab;
     public float fadeDuration = 1;
@@ -181,7 +182,7 @@ public class DayManager : MonoBehaviour
 
     private void ShowArticles()
     {
-        articleHolder.SetActive(true);
+        articleScreen.SetActive(true);
 
         foreach (Article article in articles)
         {

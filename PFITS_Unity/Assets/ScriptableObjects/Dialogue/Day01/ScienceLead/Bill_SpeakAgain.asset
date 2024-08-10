@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Bill_SpeakAgain
   m_EditorClassIdentifier: 
-  affinity: 00000000010000000200000003000000
+  affinity: 06000000070000000800000009000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
@@ -28,11 +28,14 @@ MonoBehaviour:
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: cdcdda61-4cbe-4048-90ec-330e4c0bb6df

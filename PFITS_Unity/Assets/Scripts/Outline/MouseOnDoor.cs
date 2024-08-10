@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,6 +12,7 @@ public class MouseOnDoor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public RoomManager roomManager;
     public Texture2D cursor;
     public GameObject roomNameObj;
+    public bool cantLeave = false;
 
     private void Start()
     {
@@ -36,8 +38,22 @@ public class MouseOnDoor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        rend.material.SetInt("_isOn", 0);
-        roomNameObj.SetActive(false);
-        roomManager.activeRoom = nextRoom;
+        StartCoroutine(EndFrame());
+    }
+
+    public void Leaving()
+    {
+        if (!cantLeave)
+        {
+            rend.material.SetInt("_isOn", 0);
+            roomNameObj.SetActive(false);
+            roomManager.activeRoom = nextRoom;
+        }
+    }
+
+    private IEnumerator EndFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        Leaving();
     }
 }

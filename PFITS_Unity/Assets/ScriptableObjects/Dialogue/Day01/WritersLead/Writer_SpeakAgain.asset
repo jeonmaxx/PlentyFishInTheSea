@@ -22,12 +22,21 @@ MonoBehaviour:
       It must be\u2026"
     emotion: 0
   answers: []
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 92667c82-fa2b-4be5-9e4d-fa48c26c37f4

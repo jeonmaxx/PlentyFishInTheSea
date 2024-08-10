@@ -28,17 +28,21 @@ public class DialogueSoEditor : Editor
         EditorGUILayout.PropertyField(answersProperty, new GUIContent("Answers"), true);
 
         GUILayout.Space(10);
-        EditorGUILayout.LabelField("PLAYER TALKS TO THEMSELVES", EditorStyles.boldLabel);
-        dialogue.selfTalk = EditorGUILayout.Toggle("Self Talk", dialogue.selfTalk);
+        EditorGUILayout.LabelField("ROOM SPECIFIC", EditorStyles.boldLabel);
 
-        if (dialogue.selfTalk)
+        dialogue.roomTalk = EditorGUILayout.Toggle("Room Talk", dialogue.roomTalk);
+        if (dialogue.roomTalk)
         {
-            dialogue.roomTalk = EditorGUILayout.Toggle("Room Talk", dialogue.roomTalk);
-            if(dialogue.roomTalk)
+            dialogue.entersRoom = EditorGUILayout.Toggle("Enters Room (not leaves)", dialogue.entersRoom);
+            if (!dialogue.entersRoom)
             {
-                dialogue.room = (Rooms)EditorGUILayout.EnumPopup("Room", dialogue.room);
+                dialogue.clueToLeave = (ClueSo)EditorGUILayout.ObjectField("Clue To Leave", dialogue.clueToLeave, typeof(ClueSo), false);
+            }
+            if (dialogue.entersRoom)
+            {
+                dialogue.room = (Rooms)EditorGUILayout.EnumPopup("Room Type", dialogue.room);
                 dialogue.knownRoom = EditorGUILayout.Toggle("Known Room", dialogue.knownRoom);
-            }       
+            }
         }
 
         GUILayout.Space(10);

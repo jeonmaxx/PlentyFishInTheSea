@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Drink
   m_EditorClassIdentifier: 
   day: 1
-  description: A nice drink
+  bookSprite: {fileID: 3729420755395775280, guid: 7a7b59b683d34b3458755d41e6f1fb15, type: 3}
+  description: A milshake! Now <b>Roberto</b> must let me inside the <b>Gym</b>!
   pickUpItem: 0
   clueNoted: 0
   id: 56e0cf90-c37f-42a7-a236-b0cc75d06602

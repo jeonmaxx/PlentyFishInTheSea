@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Outside_Jaque
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: f22c26b3f83e4054690ebb45b2311171, type: 2}
+  messages:
+  - actorId: 0
+    message: Hey! Watch out!
+    emotion: 6
+  - actorId: 0
+    message: '*BONK*'
+    emotion: 6
+  - actorId: 0
+    message: "Sacre \u2026 ouch my head"
+    emotion: 4
+  answers:
+  - {fileID: 11400000, guid: 440fc2ea7d8c2a04889f619981be202f, type: 2}
+  roomTalk: 1
+  entersRoom: 1
+  clueToLeave: {fileID: 0}
+  room: 1
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: ff698a92-24ef-4e61-bb12-3e843c64cbad

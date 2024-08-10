@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e25cf1fe0074d44980b79b62d712092, type: 3}
-  m_Name: Test02
+  m_Name: Elvis
   m_EditorClassIdentifier: 
-  day: 4
-  description: These are glasses... Wait are those mine?
-  pickUpItem: 1
+  day: 1
+  bookSprite: {fileID: 7494700416291623825, guid: b25a6a3f99baead49b80d2279052c301, type: 3}
+  description: <b>Elvis</b> is my club leader. I should do his task.
+  pickUpItem: 0
   clueNoted: 0
-  id: bc287f70-c775-4ec1-884e-3d1464ce81e9
-  clueSprite: {fileID: 21300000, guid: 8c9f7f2d7c8c0314e83019b18e87eaa7, type: 3}
+  id: 679d793b-155a-4f56-8c66-a8a167ce20f4
+  clueSprite: {fileID: 0}

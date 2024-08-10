@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Violet
   m_EditorClassIdentifier: 
   day: 1
-  description: Wow a violet! What a nice colour.
+  bookSprite: {fileID: 1139784606683972062, guid: d32a737320f44db48b6eabe4233a5ef4, type: 3}
+  description: Wow a violet! Now I can bring it to <b>Lukas</b>.
   pickUpItem: 1
   clueNoted: 0
   id: 8452a2d6-2848-459f-a266-d94a62845569

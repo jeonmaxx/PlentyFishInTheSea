@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClueSo : ScriptableObject
 {
     public int day;
+    public GameObject bookSprite;
     public string description;
     public bool pickUpItem;
     public bool clueNoted;

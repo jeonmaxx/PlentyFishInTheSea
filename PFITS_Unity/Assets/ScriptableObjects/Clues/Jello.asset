@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Jello
   m_EditorClassIdentifier: 
   day: 1
-  description: I finally have the jello recipe. Jelly will be happy!
+  bookSprite: {fileID: 5251360609677986205, guid: 7fd0e399cf12186478524402f8e4e3ff, type: 3}
+  description: I finally have the jello recipe. <b>Jelly</b> will be happy!
   pickUpItem: 0
   clueNoted: 0
   id: 179686ce-62b9-47ae-b19f-b379001f5e21
