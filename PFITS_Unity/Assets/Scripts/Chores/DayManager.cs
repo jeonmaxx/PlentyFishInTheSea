@@ -18,26 +18,34 @@ public class DayManager : MonoBehaviour
     public GameObject mainChoreHolder;
     public GameObject sideChoreHolder;
     public GameObject chorePrefab;
+    public GameObject popUp;
+    public float popUpDuration;
+    public float openDuration;
 
     public GameObject stillToDoScreen;
     public GameObject demoEndScreen;
     private NpcManager npcManager;
+    public RoomManager roomManager;
     public GameObject articleScreen;
     public GameObject articleHolder;
     public GameObject articlePrefab;
     public float fadeDuration = 1;
     public List<Article> articles;
 
+    private DateManager dateManager;
+
     void Start()
     {
         dayText.text = "Day: " + dayList.days[currentDayInt];
         npcManager = GetComponent<NpcManager>();
+        dateManager = FindAnyObjectByType<DateManager>();
         AddChores();
     }
 
     public void AddChores()
     {
-        if(mainChoreHolder.transform.childCount != 0)
+        StartCoroutine(PopUpCoroutine());
+        if (mainChoreHolder.transform.childCount != 0)
         {
             foreach (Transform child in mainChoreHolder.transform)
             {
@@ -109,6 +117,12 @@ public class DayManager : MonoBehaviour
                 chore.choreHolder.GetComponent<ChoreManager>().toggle.isOn = chore.done;
             }
         }
+
+        if (!dateManager.dateInProgress && dateManager.endScreen)
+        {
+            StartNextDay();
+            dateManager.endScreen = false;
+        }
     }
 
     public void EndDayButton()
@@ -123,7 +137,8 @@ public class DayManager : MonoBehaviour
 
         if(choresDone.Count == choresOfToday.Count)
         {
-            StartNextDay();
+            roomManager.activeRoom = dateManager.dateRoom;
+            dateManager.StartDialogue();
         }
         else
         {
@@ -133,39 +148,20 @@ public class DayManager : MonoBehaviour
 
     public void StartNextDay()
     {
-        if (currentDayInt < dayList.days.Count-1)
-        {
-            StartCoroutine(FadeToIntensity(0, fadeDuration)); 
-            ShowArticles();
-        }
-        else
-        {
-            demoEndScreen.SetActive(true);
-        }
+        StartCoroutine(FadeToIntensity(0, fadeDuration));
+        ShowArticles();
     }
 
     public void ChoseArticle()
     {
-        choresOfToday = new List<ChoreSo>();
-        foreach (Transform child in mainChoreHolder.transform)
-        {
-            Destroy(child.gameObject);
-        }
-        foreach(Transform child in sideChoreHolder.transform) 
-        { 
-            Destroy(child.gameObject); 
-        }
-        currentDayInt++;
-        dayText.text = "Day: " + dayList.days[currentDayInt];
-        AddChores();
-        StartCoroutine(FadeToIntensity(1, fadeDuration));
         foreach(Transform transform in articleHolder.transform)
         {
             Destroy(transform.gameObject);
         }
+        demoEndScreen.SetActive(true);
     }
 
-    private IEnumerator FadeToIntensity(float targetIntensity, float duration)
+    public IEnumerator FadeToIntensity(float targetIntensity, float duration)
     {
         float startIntensity = lightObj.intensity;
         float time = 0;
@@ -209,8 +205,37 @@ public class DayManager : MonoBehaviour
                 GameObject articleObjInstance = Instantiate(articlePrefab, articleHolder.transform);
                 ArticleObject articleObj = articleObjInstance.GetComponent<ArticleObject>();
                 articleObj.title.text = article.title;
-                articleObj.content.text = article.text;
             }
         }
+    }
+
+    private IEnumerator PopUpCoroutine()
+    {
+        popUp.transform.localScale = Vector3.zero;
+        popUp.GetComponentInChildren<TextMeshProUGUI>().text = "[ESC] CHORE UPDATE";
+
+        float elapsedTime = 0f;
+        while (elapsedTime < popUpDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float scale = Mathf.Clamp01(elapsedTime / popUpDuration);
+            popUp.transform.localScale = new Vector3(scale, scale, scale);
+            yield return null;
+        }
+
+        popUp.transform.localScale = Vector3.one;
+
+        yield return new WaitForSeconds(openDuration);
+
+        elapsedTime = 0f;
+        while (elapsedTime < popUpDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float scale = Mathf.Clamp01(1f - (elapsedTime / popUpDuration));
+            popUp.transform.localScale = new Vector3(scale, scale, scale);
+            yield return null;
+        }
+
+        popUp.transform.localScale = Vector3.zero;
     }
 }

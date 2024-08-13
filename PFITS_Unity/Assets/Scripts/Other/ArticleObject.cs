@@ -7,7 +7,6 @@ public class ArticleObject : MonoBehaviour
 {
     public DayManager dayManager;
     public TextMeshProUGUI title;
-    public TextMeshProUGUI content;
 
     private void Start()
     {

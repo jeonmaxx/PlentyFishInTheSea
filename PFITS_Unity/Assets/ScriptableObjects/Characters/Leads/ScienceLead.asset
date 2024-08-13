@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64ad22540e1e514b96e57605033cfdd, type: 3}
+  m_Name: ScienceLead
+  m_EditorClassIdentifier: 
+  actor:
+    name: Ash <alpha=#80><size=70%>[Science Club Leader]
+    indexSprite: {fileID: 21300000, guid: 2a56025f374b33e4eb817d4047b74efc, type: 3}
+    sprite: {fileID: 21300000, guid: 2a56025f374b33e4eb817d4047b74efc, type: 3}
+    happySprite: {fileID: 21300000, guid: 5368c560a3515fc4b9df401ecad6ff99, type: 3}
+    angrySprite: {fileID: 21300000, guid: 388952681a428544496ea36a236d9b58, type: 3}
+    sadSprite: {fileID: 21300000, guid: ef1032656b9c9bb4998ace02f345fc0d, type: 3}
+    disgustSprite: {fileID: 21300000, guid: ec685ec2f18161245b7eb18b3ca83b6a, type: 3}
+    fearSprite: {fileID: 21300000, guid: 9b69719b803afae46854dfdb8a38565b, type: 3}
+    surpriseSprite: {fileID: 21300000, guid: d6f45016f657a5a4b8a96b46d0300e0b, type: 3}
+    evilSprite: {fileID: 0}
+    excitedSprite: {fileID: 21300000, guid: 18d086c6140273942b60cdbae3030098, type: 3}
+    dialogueTypingSounds:
+    - {fileID: 8300000, guid: 8c0cffa363b239546ab7de1a424ec554, type: 3}
+    - {fileID: 8300000, guid: 990a195820c59f74d93c0b88548fc9ca, type: 3}
+    - {fileID: 8300000, guid: 86879bb5072c0214eb28fced2f3d8a2b, type: 3}
+    frequenzyLevel: 1
+    minPitch: -1.5
+    maxPitch: 0.5
+  affinity: 6
+  lastRoom: Science Club
+  id: 10be656d-87a1-4b50-a603-72be7f347d49

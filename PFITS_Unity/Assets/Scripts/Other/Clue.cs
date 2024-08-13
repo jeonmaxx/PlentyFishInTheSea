@@ -10,6 +10,7 @@ public class Clue : MonoBehaviour, IPointerDownHandler
     public ClueSo clue;
     public ClueManager clueManager;
     private Vector3 size;
+    public GameObject clueObject;
 
     private void Start()
     {

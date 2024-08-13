@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Steve_SpeakAgain_End
   m_EditorClassIdentifier: 
-  affinity: 00000000
+  affinity: 000000000100000002000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 3393f1b88a3c90b4783b84b1ff3ed9bc, type: 2}
@@ -21,12 +21,14 @@ MonoBehaviour:
     message: What a day, can't wait till I get to bed
     emotion: 0
   answers: []
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
   clueToAdd: {fileID: 0}
@@ -35,4 +37,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
-  id: 
+  setChoreDone: {fileID: 0}
+  id: e0db57a1-50a4-482c-8fc8-93da2e323f75

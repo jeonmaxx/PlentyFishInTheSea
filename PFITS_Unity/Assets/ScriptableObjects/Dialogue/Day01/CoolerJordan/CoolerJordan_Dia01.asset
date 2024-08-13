@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: CoolerJordan_Dia01
+  m_EditorClassIdentifier: 
+  affinity: 00000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: bc560474ebf118c4d918402653e84ef8, type: 2}
+  messages:
+  - actorId: 0
+    message: "You know what? I\u2019ve been thinking, and I\u2019m convinced Valentine\u2019s
+      Day is a total scam. I mean, seriously, it\u2019s not about love\u2014no, it\u2019s
+      about control!"
+    emotion: 0
+  - actorId: 0
+    message: "Think about it: every year, we\u2019re pressured to buy overpriced
+      flowers, chocolates, and those ridiculous cards."
+    emotion: 0
+  - actorId: 0
+    message: "But who\u2019s really benefiting here? It\u2019s not us. No way. It\u2019s
+      the big corporations!"
+    emotion: 0
+  - actorId: 0
+    message: "And the worst part? They\u2019ve got us all so wrapped up in it that
+      even when we see through the charade, we still participate!"
+    emotion: 0
+  - actorId: 0
+    message: "Because who wants to be that person who ignores Valentine\u2019s Day
+      and ends up in the snail house? It\u2019s genius, really."
+    emotion: 0
+  - actorId: 0
+    message: "They\u2019ve turned love into a commodity and made us all slaves to
+      it. But not me\u2014not anymore."
+    emotion: 0
+  - actorId: 0
+    message: "I\u2019m onto them. This year, I\u2019m breaking free from the Valentine\u2019s
+      Day conspiracy, and I\u2019m not buying into their lies!"
+    emotion: 0
+  - actorId: 0
+    message: "Anyways, that's the reason why I\u2019m alone in the science club"
+    emotion: 0
+  answers: []
+  roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 

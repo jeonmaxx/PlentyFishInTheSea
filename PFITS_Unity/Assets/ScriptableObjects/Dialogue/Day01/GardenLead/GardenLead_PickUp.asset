@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: GardenLead_PickUp
+  m_EditorClassIdentifier: 
+  affinity: feffffffffffffff0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 46c784e7597831a4e8818cef4f49a994, type: 2}
+  messages:
+  - actorId: 0
+    message: "'Can you lend me a kiss? I promise I\u2019ll give it back.'"
+    emotion: 0
+  answers:
+  - {fileID: 11400000, guid: 3c872971eceda5b409b79e6dc3aee887, type: 2}
+  roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: ac2671cf-e02a-4809-a7b2-e6895c59cb2c

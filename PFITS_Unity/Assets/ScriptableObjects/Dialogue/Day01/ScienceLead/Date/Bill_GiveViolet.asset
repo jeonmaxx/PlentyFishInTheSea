@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Bill_GiveViolet
+  m_EditorClassIdentifier: 
+  affinity: 05000000060000000700000008000000090000000a0000000b0000000c000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
+  messages:
+  - actorId: 0
+    message: Oh wow, this is perfect for my current research on the emotional impact
+      of flowers on different types of people.
+    emotion: 8
+  - actorId: 0
+    message: "Thank you, my love. You seem to always know what makes me happy\u2026"
+    emotion: 1
+  - actorId: 0
+    message: "Now, let\u2019s go find a place to watch the sunset, before we miss
+      it."
+    emotion: 1
+  answers:
+  - {fileID: 11400000, guid: 00d8fe8be7cbde04e94cc56b9021e1ab, type: 2}
+  roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: 04bf3035-2238-4bf6-af55-414ec7006fbd

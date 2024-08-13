@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: Bill_WatchSunset
+  m_EditorClassIdentifier: 
+  affinity: 05000000060000000700000008000000090000000a0000000b0000000c000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 04548e3eda0e1bf4389778131d15a5a0, type: 2}
+  messages:
+  - actorId: 0
+    message: "What a beautiful view. It just feels different at this time of the
+      day\u2026"
+    emotion: 1
+  - actorId: 0
+    message: I wish this moment with you would never end...
+    emotion: 0
+  - actorId: 0
+    message: "... We should head back soon. I\u2019m already excited to read your
+      article tomorrow."
+    emotion: 1
+  answers:
+  - {fileID: 11400000, guid: e9cd77a59efc0054091354b18bcbc0c5, type: 2}
+  roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: aa6d4b2f-d5ba-45b9-9cc3-efe958ebf4e9

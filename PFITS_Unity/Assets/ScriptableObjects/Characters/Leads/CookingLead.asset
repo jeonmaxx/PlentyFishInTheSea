@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64ad22540e1e514b96e57605033cfdd, type: 3}
+  m_Name: CookingLead
+  m_EditorClassIdentifier: 
+  actor:
+    name: Kahm <alpha=#80><size=70%>[Cooking Club Leader]
+    indexSprite: {fileID: 21300000, guid: 9e6e66661d615ed45a51576f50e4b040, type: 3}
+    sprite: {fileID: 21300000, guid: bcdbe3aded043394e834faf39724d4fd, type: 3}
+    happySprite: {fileID: 21300000, guid: 8867065ce96eb84479df954f8195c810, type: 3}
+    angrySprite: {fileID: 21300000, guid: 95ddd08a6f8c4cf40b91fec82fd513ba, type: 3}
+    sadSprite: {fileID: 0}
+    disgustSprite: {fileID: 0}
+    fearSprite: {fileID: 0}
+    surpriseSprite: {fileID: 21300000, guid: 7693bf53beccb6d45bd7a8bf7e8dd163, type: 3}
+    evilSprite: {fileID: 0}
+    excitedSprite: {fileID: 0}
+    dialogueTypingSounds:
+    - {fileID: 8300000, guid: 8c0cffa363b239546ab7de1a424ec554, type: 3}
+    - {fileID: 8300000, guid: 990a195820c59f74d93c0b88548fc9ca, type: 3}
+    - {fileID: 8300000, guid: 86879bb5072c0214eb28fced2f3d8a2b, type: 3}
+    frequenzyLevel: 1
+    minPitch: -1.5
+    maxPitch: 0.5
+  affinity: 0
+  lastRoom: 
+  id: 1fb938e5-17b1-4620-8e57-c359ce9ae1aa

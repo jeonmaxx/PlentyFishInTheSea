@@ -15,7 +15,7 @@ MonoBehaviour:
   possibleDays: {fileID: 11400000, guid: 728bf6e9d401bd74db352416d1f97986, type: 2}
   day: 1
   done: 0
-  description: Speak with your partner, <b>Bill</b>. They should be in the <b>Science
+  description: Speak with your partner, <b>Ash</b>. They should be in the <b>Science
     Club</b>!
   priority: 0
   type: 0

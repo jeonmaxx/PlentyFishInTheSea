@@ -235,7 +235,7 @@ public class DialogueManager : MonoBehaviour
                         (answer.neededClue.clueNoted && !answer.notIfClueIsThere) || 
                         (!answer.neededClue.clueNoted && answer.notIfClueIsThere)) && 
                         ((answer.isChore != null && dayManager.chores.Contains(answer.isChore) &&
-                        (!answer.isChore.done || answer.isChore.type != ChoreType.InterviewNumber)) || 
+                        (!answer.isChore.done || answer.isChore.type == ChoreType.InterviewNumber)) || 
                         answer.isChore == null))
                     {
                         hasValidAnswers = true;
@@ -256,7 +256,6 @@ public class DialogueManager : MonoBehaviour
 
                 if (hasValidAnswers)
                 {
-                    // Zeige die Antwort-Buttons, wenn es gültige Antworten gibt
                     if (currentNpc != null)
                     {
                         currentNpc.SetKnownNpc();
@@ -266,7 +265,6 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    // Beende den Dialog sofort, wenn keine gültigen Antworten vorhanden sind
                     if (currentNpc != null)
                     {
                         currentNpc.SetKnownNpc();
@@ -287,7 +285,7 @@ public class DialogueManager : MonoBehaviour
                 (answer.neededClue.clueNoted && !answer.notIfClueIsThere) ||
                 (!answer.neededClue.clueNoted && answer.notIfClueIsThere)) &&
                 ((answer.isChore != null && dayManager.chores.Contains(answer.isChore) &&
-                (!answer.isChore.done || answer.isChore.type != ChoreType.InterviewNumber)) ||
+                (!answer.isChore.done || answer.isChore.type == ChoreType.InterviewNumber)) ||
                 answer.isChore == null))
             {
                 GameObject currentButton = Instantiate(buttonPrefab, buttonSpawner.transform);

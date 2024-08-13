@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: Steve_PickUp
   m_EditorClassIdentifier: 
-  affinity: 00000000
+  affinity: 000000000100000002000000
   day: 1
   characters:
   - {fileID: 11400000, guid: 3393f1b88a3c90b4783b84b1ff3ed9bc, type: 2}
@@ -24,12 +24,14 @@ MonoBehaviour:
   answers:
   - {fileID: 11400000, guid: 2b1cf3622a10e5548ad95528390fa65c, type: 2}
   - {fileID: 11400000, guid: 8416c55a193ee744b96b1159b7005ca1, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
   clueToAdd: {fileID: 0}
@@ -38,4 +40,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
-  id: 
+  setChoreDone: {fileID: 0}
+  id: d5b35e30-a159-4c4d-aef2-0b07aded434a

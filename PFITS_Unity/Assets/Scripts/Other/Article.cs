@@ -8,7 +8,6 @@ public class Article
     public int day;
     public bool clueArticle;
     public string title;
-    public string text;
     public List<ClueSo> clues;
     public List<NpcAffinity> npcAffinities;
 }

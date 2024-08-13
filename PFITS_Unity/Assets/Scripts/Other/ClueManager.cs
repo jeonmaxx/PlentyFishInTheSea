@@ -10,6 +10,9 @@ public class ClueManager : MonoBehaviour
     public GameObject clueNotebook;
     public GameObject itemImage;
     public DayManager dayManager;
+    public GameObject popUp;
+    public float popUpDuration;
+    public float openDuration;
 
     public List<ClueSo> allClues;
     public List<ClueSo> foundClues;
@@ -18,6 +21,7 @@ public class ClueManager : MonoBehaviour
     {
         if (!clue.clueNoted)
         {
+            StartCoroutine(PopUpCoroutine());
             GameObject newClue = Instantiate(clueText, clueNotebook.transform);
             newClue.GetComponent<TextMeshProUGUI>().text = clue.description;
             if (clue.bookSprite != null)
@@ -31,7 +35,8 @@ public class ClueManager : MonoBehaviour
         {
             if (clue.pickUpItem)
                 clueObject.SetActive(false);
-
+            else if (!clue.pickUpItem && clueObject.GetComponent<Clue>().clueObject != null)
+                clueObject.GetComponent<Clue>().clueObject.SetActive(true);
             else
             {
                 GameObject parentObject = itemImage.transform.parent.gameObject;
@@ -41,5 +46,35 @@ public class ClueManager : MonoBehaviour
         }
         clue.clueNoted = true;
         foundClues.Add(clue);
+    }
+
+    private IEnumerator PopUpCoroutine()
+    {
+        popUp.transform.localScale = Vector3.zero;
+        popUp.GetComponentInChildren<TextMeshProUGUI>().text = "[ESC] CLUE UPDATE";
+
+        float elapsedTime = 0f;
+        while (elapsedTime < popUpDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float scale = Mathf.Clamp01(elapsedTime / popUpDuration);
+            popUp.transform.localScale = new Vector3(scale, scale, scale);
+            yield return null;
+        }
+
+        popUp.transform.localScale = Vector3.one;
+
+        yield return new WaitForSeconds(openDuration);
+
+        elapsedTime = 0f;
+        while (elapsedTime < popUpDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float scale = Mathf.Clamp01(1f - (elapsedTime / popUpDuration));
+            popUp.transform.localScale = new Vector3(scale, scale, scale);
+            yield return null;
+        }
+
+        popUp.transform.localScale = Vector3.zero;
     }
 }

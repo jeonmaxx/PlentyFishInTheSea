@@ -17,6 +17,6 @@ MonoBehaviour:
   addedAffinity: 0
   clicked: 0
   isChore: {fileID: 11400000, guid: 3930acc1e3037314e90185912a31d527, type: 2}
-  neededClue: {fileID: 0}
+  neededClue: {fileID: 11400000, guid: c4429f58a3a550d49b2f503410b705f0, type: 2}
   notIfClueIsThere: 0
-  id: 
+  id: e4afa32a-3501-4ee9-9049-cf2281693c5d

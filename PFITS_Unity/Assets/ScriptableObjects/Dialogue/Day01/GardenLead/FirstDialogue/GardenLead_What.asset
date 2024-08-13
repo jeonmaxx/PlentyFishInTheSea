@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: GardenLead_What
+  m_EditorClassIdentifier: 
+  affinity: feffffffffffffff0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 46c784e7597831a4e8818cef4f49a994, type: 2}
+  messages:
+  - actorId: 0
+    message: I feel already stupid for telling you this much.
+    emotion: 6
+  - actorId: 0
+    message: Do you know that we Axolotls can regrow our limbs?
+    emotion: 4
+  - actorId: 0
+    message: When i tried that recipe something was just missing, it didn't nearly
+      taste as good
+    emotion: 4
+  - actorId: 0
+    message: "And then I broke my ankle last month so I ... well I figured \u2018why
+      not? why not give it a try?\u2019 "
+    emotion: 4
+  - actorId: 0
+    message: Well and they turned out delicious
+    emotion: 1
+  answers:
+  - {fileID: 11400000, guid: 3e2a9967149e9474f8f01865e3ab9eb8, type: 2}
+  - {fileID: 11400000, guid: a12f2bb1aaae6024ab8e405fba781006, type: 2}
+  - {fileID: 11400000, guid: c964b6339dfb641499e2f2054def9c17, type: 2}
+  roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: ade94ae1-4302-4405-b774-89a3399da01d

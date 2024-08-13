@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
+  m_Name: GardenLead_Promise
+  m_EditorClassIdentifier: 
+  affinity: feffffffffffffff0000000001000000
+  day: 1
+  characters:
+  - {fileID: 11400000, guid: 46c784e7597831a4e8818cef4f49a994, type: 2}
+  messages:
+  - actorId: 0
+    message: I'm serious I could lose my position at the gardening club
+    emotion: 4
+  - actorId: 0
+    message: "\u2026 the special ingredient is \u2026"
+    emotion: 4
+  - actorId: 0
+    message: "\u2026 the special ingredient is \u2026"
+    emotion: 4
+  - actorId: 0
+    message: It is ... well how do i put it ... me?
+    emotion: 4
+  answers:
+  - {fileID: 11400000, guid: d95377f2b85822b4494d6b5ca72759c5, type: 2}
+  roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
+  room: 0
+  knownRoom: 0
+  firstTimeNpc: 0
+  knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
+  neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
+  id: a6974476-884f-464d-988f-e4dff189764d

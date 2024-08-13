@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
+  m_Name: GardenLead_GoodIGuess
+  m_EditorClassIdentifier: 
+  answerText: When you ignore the fact it's... someone else ... it's surprisingly
+    good i guess
+  nextDialogue: {fileID: 11400000, guid: 344eb4d3e6f5ee840acf90953f6ba57a, type: 2}
+  addedAffinity: 1
+  clicked: 0
+  isChore: {fileID: 0}
+  neededClue: {fileID: 0}
+  notIfClueIsThere: 0
+  id: 
