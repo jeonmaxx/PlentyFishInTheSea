@@ -46,7 +46,7 @@ MonoBehaviour:
   npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
-  clueToAdd: {fileID: 0}
+  clueToAdd: {fileID: 11400000, guid: 386f0fd131b1ab841b7d208c04f4c037, type: 2}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}

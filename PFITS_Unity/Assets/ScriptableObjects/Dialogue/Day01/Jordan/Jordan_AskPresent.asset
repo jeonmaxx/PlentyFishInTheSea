@@ -18,24 +18,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 089579686867b3543a07d04afbef0a14, type: 2}
   messages:
   - actorId: 0
-    message: What do we have here? Haven't made (pastries) in years.
+    message: What do we have here? Haven't made Croissant in years.
     emotion: 0
   - actorId: 0
     message: "These are tout \xE0 fait exquis"
     emotion: 1
   answers:
   - {fileID: 11400000, guid: 210a466cd7a09b44fbc8bd83c6f9a82e, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 5619959f-49b7-4089-b095-e437d89fe908

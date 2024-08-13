@@ -18,23 +18,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: baa8c91cd7852a343a9dd4489b411a6b, type: 2}
   messages:
   - actorId: 0
-    message: "Well we do have a couple of drinks in the fridge \u2026 but those are
-      staff only, sorry"
+    message: "Well we do have a couple of valentines milkshakes in the fridge \u2026
+      but those are staff only, sorry"
     emotion: 0
   answers:
   - {fileID: 11400000, guid: 9d985d5c77be4dd45b8c59be2d3d2b55, type: 2}
   - {fileID: 11400000, guid: a501a3b4d6d949c4eb379e852c6bcc0a, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
-  id: 
+  setChoreDone: {fileID: 0}
+  id: 12fae1c1-aa7b-49ba-a6e7-963fe3b43ea0

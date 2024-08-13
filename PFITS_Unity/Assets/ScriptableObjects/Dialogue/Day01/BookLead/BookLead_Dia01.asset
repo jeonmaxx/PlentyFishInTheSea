@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1491ef941c7936449b4dc690011128ad, type: 3}
   m_Name: BookLead_Dia01
   m_EditorClassIdentifier: 
-  affinity: fcfffffffdfffffffeffffffffffffff0000000001000000
+  affinity: fbfffffffcfffffffdfffffffeffffffffffffff000000000100000002000000
   day: 1
   characters:
   - {fileID: 11400000, guid: abe4bc5d122135f44bef4da94d886249, type: 2}
@@ -24,17 +24,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64210ce6363e56340a80820e1149a025, type: 2}
   - {fileID: 11400000, guid: c647250de2143974193abffd6b7acbba, type: 2}
   - {fileID: 11400000, guid: 1da4cf2b2b2b41446ba80a6190e443d3, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 1
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 40118d1d-25dd-4a00-9307-7cfd2490c610
