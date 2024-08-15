@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 1
   bookSprite: {fileID: 7494700416291623825, guid: 53bae8d9610b7b34f9685804f02da9f1, type: 3}
-  description: WIP
+  description: Violetta just dumped Steve. How should I tell him that?
   pickUpItem: 0
   clueNoted: 0
   id: e909fe4b-398a-4912-9145-82a9f38750a6

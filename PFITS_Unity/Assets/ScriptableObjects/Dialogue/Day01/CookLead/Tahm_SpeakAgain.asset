@@ -21,13 +21,17 @@ MonoBehaviour:
     message: Love and passion, my friend. Without those, even the finest ingredients
       fall flat.
     emotion: 0
-  answers: []
-  selfTalk: 0
+  answers:
+  - {fileID: 11400000, guid: 2c54876cd9de27149b622561fb7803e2, type: 2}
+  - {fileID: 11400000, guid: 7efcb2ac13957c4408a812c03a43b9c5, type: 2}
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
   clueToAdd: {fileID: 0}
@@ -36,4 +40,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
-  id: 
+  setChoreDone: {fileID: 0}
+  id: 8372b44a-c9fe-4853-ad9c-fe383bdeabc6

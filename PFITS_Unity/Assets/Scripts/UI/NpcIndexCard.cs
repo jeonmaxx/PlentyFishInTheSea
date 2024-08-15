@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NpcIndexCard : MonoBehaviour
 {
     public Image pictureHolder;
+    public TextMeshProUGUI npcName;
     public CharacterSo currentNpc;
     private NpcIndexInfo indexInfo;
 

@@ -346,8 +346,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is a very long answer to test if long answers look good on this.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 69251de06170fd842aebfb99649ca3e5, type: 2}
+  m_sharedMaterial: {fileID: 2868768217732590460, guid: 69251de06170fd842aebfb99649ca3e5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.85
+  m_fontSize: 34
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

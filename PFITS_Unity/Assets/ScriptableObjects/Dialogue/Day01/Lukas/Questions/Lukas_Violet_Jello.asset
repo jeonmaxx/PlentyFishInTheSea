@@ -21,17 +21,19 @@ MonoBehaviour:
     message: "Since you\u2019ve helped me before I suppose I could do you this favor.."
     emotion: 0
   - actorId: 0
-    message: ' Have a look at this recipe book, it should be a perfect match!'
+    message: Have a look at this recipe book, it should be a perfect match!
     emotion: 0
   answers:
   - {fileID: 11400000, guid: 7157e3fa0aa58814798001a293e7aa0a, type: 2}
   - {fileID: 11400000, guid: 35ee2b034d3f79d42adc5f35f75d060a, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
   clueToAdd: {fileID: 11400000, guid: 85829cfc9e088224bbe98229f3308530, type: 2}
@@ -40,4 +42,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: f93cde36-e508-417f-a928-334939930a7d

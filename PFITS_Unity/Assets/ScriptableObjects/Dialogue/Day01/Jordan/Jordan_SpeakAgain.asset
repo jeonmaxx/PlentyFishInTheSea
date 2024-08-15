@@ -20,18 +20,24 @@ MonoBehaviour:
   - actorId: 0
     message: "I\u2019m kinda in the middle of something. Maybe later?"
     emotion: 0
-  answers: []
-  selfTalk: 0
+  answers:
+  - {fileID: 11400000, guid: 509478bbcfe85064d958e76e89054a98, type: 2}
+  - {fileID: 11400000, guid: 395b97ba71607c14d9c9d6566be0a4ef, type: 2}
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 3cbdaaf9-d2b0-42d0-981b-d07f99f912a3

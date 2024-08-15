@@ -20,7 +20,9 @@ MonoBehaviour:
   - actorId: 0
     message: I'm gonna be famous!
     emotion: 0
-  answers: []
+  answers:
+  - {fileID: 11400000, guid: 73af521a4d30f35449729fae2cbe896c, type: 2}
+  - {fileID: 11400000, guid: 91ec1f14f4cd07740960b2216a57aee9, type: 2}
   roomTalk: 0
   entersRoom: 0
   clueToLeave: {fileID: 0}

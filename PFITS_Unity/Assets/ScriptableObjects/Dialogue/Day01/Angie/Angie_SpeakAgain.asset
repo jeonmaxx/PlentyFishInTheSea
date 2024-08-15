@@ -20,12 +20,25 @@ MonoBehaviour:
   - actorId: 0
     message: Sorry for blinding you with my light.
     emotion: 0
-  answers: []
-  selfTalk: 0
+  answers:
+  - {fileID: 11400000, guid: 7417a5edc1c7bec4c938f65f4d5d8066, type: 2}
+  - {fileID: 11400000, guid: fb7cfe32a48f8dd4f924ade4fb391580, type: 2}
+  - {fileID: 11400000, guid: 35378b057f2a98a4291e8b9558de42af, type: 2}
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
+  oneTimeDia: 0
+  diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
+  dialogueIfNoClue: 0
+  choreToAdd: {fileID: 0}
+  neededChore: {fileID: 0}
+  dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 89eff075-0170-48f9-ab82-860272ec7b05

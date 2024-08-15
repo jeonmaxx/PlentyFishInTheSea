@@ -22,8 +22,11 @@ MonoBehaviour:
     emotion: 0
   answers:
   - {fileID: 11400000, guid: 9ae1c80e47218d34bb4893bc75ae1719, type: 2}
-  selfTalk: 0
+  - {fileID: 11400000, guid: 59798bdfe3282d94b9105024de498879, type: 2}
+  - {fileID: 11400000, guid: 1b183427ad65af549895bf9dd8134b59, type: 2}
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0

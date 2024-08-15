@@ -15,6 +15,7 @@ public class IndexManager : MonoBehaviour
         {
             GameObject newIndex = Instantiate(indexPrefab, indexHolder);
             newIndex.GetComponent<NpcIndexCard>().pictureHolder.sprite = newNpc.actor.indexSprite;
+            newIndex.GetComponent<NpcIndexCard>().npcName.text = newNpc.actor.name;
             newIndex.GetComponent<NpcIndexCard>().currentNpc = newNpc;
             knownNpcs.Add(newNpc);
         }   
@@ -26,6 +27,7 @@ public class IndexManager : MonoBehaviour
         {
             GameObject newIndex = Instantiate(indexPrefab, indexHolder);
             newIndex.GetComponent<NpcIndexCard>().pictureHolder.sprite = newNpc.actor.indexSprite;
+            newIndex.GetComponent<NpcIndexCard>().npcName.text = newNpc.actor.name;
             newIndex.GetComponent<NpcIndexCard>().currentNpc = newNpc;
         }
     }

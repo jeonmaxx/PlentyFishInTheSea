@@ -20,9 +20,12 @@ MonoBehaviour:
   - actorId: 0
     message: What is it?
     emotion: 0
-  answers: []
-  selfTalk: 0
+  answers:
+  - {fileID: 11400000, guid: bcf2cb4cc7c1870469442df64ea0a906, type: 2}
+  - {fileID: 11400000, guid: 2de333fc12daa034a91c16a6a26b7574, type: 2}
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
