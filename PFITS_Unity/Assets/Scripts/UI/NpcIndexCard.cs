@@ -18,6 +18,7 @@ public class NpcIndexCard : MonoBehaviour
         indexInfo.portrait.sprite = pictureHolder.sprite;
         indexInfo.npcName.text = currentNpc.actor.name;
         indexInfo.affinityBar.value = currentNpc.affinity;
+        indexInfo.clubMember.text = currentNpc.clubMember;
         indexInfo.lastLocation.text = currentNpc.lastRoom;
     }
 }

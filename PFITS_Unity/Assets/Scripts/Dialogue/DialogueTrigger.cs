@@ -11,10 +11,6 @@ public class DialogueTrigger : MonoBehaviour
     public List<DialogueSo> dialogueSo;
     public DialogueSo currentDialogue;
     private DialogueManager dialogue;
-    public bool useSpecialSound;
-    public AudioClip[] specialSound;
-    private AudioClip nOpenSound;
-    private AudioClip nCloseSound;
     public List<AnswerSo> answers;
     public List<DialogueSo> priorityList;
 
@@ -22,10 +18,7 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         dialogue = FindObjectOfType<DialogueManager>();
-        priorityList = GetPrioritizedDialogues();
-
-        //nOpenSound = dialogue.openSound;
-        //nCloseSound = dialogue.closeSound;   
+        priorityList = GetPrioritizedDialogues();  
     }
 
     private void Update()
@@ -53,19 +46,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void StartDialogue()
     {
-        //if (useSpecialSound)
-        //{
-        //    dialogue.openSound = specialSound[0];
-        //    dialogue.closeSound = specialSound[1];
-        //}
-        //else
-        //{
-        //    dialogue.openSound = nOpenSound;
-        //    dialogue.closeSound = nCloseSound;
-        //}
         GetDialogue();
         dialogue.OpenDialogue(messages, actors, answers, currentDialogue);
-        Debug.Log("Start Dialogue wooooo");
         dialogue.currentNpc = GetComponent<DialogueTrigger>();
     }
 

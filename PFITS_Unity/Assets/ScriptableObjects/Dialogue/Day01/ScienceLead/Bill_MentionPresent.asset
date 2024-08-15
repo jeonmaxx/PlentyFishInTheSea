@@ -23,14 +23,15 @@ MonoBehaviour:
       sure where this could come from\u2026"
     emotion: 0
   - actorId: 1
-    message: HEY Bill, we need you back here!
+    message: HEY Ash, we need you back here!
     emotion: 0
   - actorId: 0
     message: Sorry, I gotta go. See you later in the yard!
     emotion: 3
   answers: []
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0

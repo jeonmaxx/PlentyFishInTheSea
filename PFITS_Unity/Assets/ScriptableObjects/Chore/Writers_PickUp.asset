@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleDays: {fileID: 11400000, guid: 728bf6e9d401bd74db352416d1f97986, type: 2}
   day: 1
+  noted: 1
   done: 0
   description: Interview <b>10 people</b> about their favourite <b>pick-up lines</b>.
   priority: 0

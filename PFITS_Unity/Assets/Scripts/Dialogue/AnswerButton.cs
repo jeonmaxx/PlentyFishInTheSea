@@ -50,7 +50,7 @@ public class AnswerButton : MonoBehaviour
 
     private void SetChoreAsDone(AnswerSo answer)
     {
-        if(answer.isChore != null)
+        if(answer.isChore != null && answer.isChore.noted)
         {
             if(answer.isChore.type == ChoreType.InterviewOne)
             {

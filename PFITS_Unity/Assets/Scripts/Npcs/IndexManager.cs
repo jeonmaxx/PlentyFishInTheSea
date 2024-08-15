@@ -7,10 +7,11 @@ public class IndexManager : MonoBehaviour
     public List<CharacterSo> knownNpcs = new List<CharacterSo>();
     public GameObject indexPrefab;
     public Transform indexHolder;
+    public CharacterSo player;
 
     public void AddIndex(CharacterSo newNpc)
     {
-        if (!CheckNewIndex(newNpc))
+        if (!CheckNewIndex(newNpc) && newNpc != player)
         {
             GameObject newIndex = Instantiate(indexPrefab, indexHolder);
             newIndex.GetComponent<NpcIndexCard>().pictureHolder.sprite = newNpc.actor.indexSprite;

@@ -33,4 +33,5 @@ MonoBehaviour:
     maxPitch: 1
   affinity: 0
   lastRoom: 
-  id: 
+  clubMember: Music Club
+  id: 2fad4fa5-218e-4409-ac82-99b9216c1e65

@@ -33,4 +33,5 @@ MonoBehaviour:
     maxPitch: 0.5
   affinity: 6
   lastRoom: Science Club
+  clubMember: Science Club
   id: 10be656d-87a1-4b50-a603-72be7f347d49

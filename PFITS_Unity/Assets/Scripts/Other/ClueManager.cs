@@ -11,11 +11,30 @@ public class ClueManager : MonoBehaviour
     public GameObject itemImage;
     public DayManager dayManager;
     public GameObject popUp;
+    public RandomSound sounds;
     public float popUpDuration;
     public float openDuration;
 
     public List<ClueSo> allClues;
     public List<ClueSo> foundClues;
+
+    public void Start()
+    {
+        foreach (ClueSo clue in allClues)
+        {
+            if (clue.clueNoted)
+            {
+                GameObject newClue = Instantiate(clueText, clueNotebook.transform);
+                newClue.GetComponent<TextMeshProUGUI>().text = clue.description;
+                foundClues.Add(clue);
+                if (clue.bookSprite != null)
+                {
+                    Transform picHolder = newClue.transform.GetChild(0);
+                    Instantiate(clue.bookSprite, picHolder);
+                }
+            }  
+        }
+    }
 
     public void AddClue(ClueSo clue, GameObject clueObject)
     {
@@ -52,7 +71,7 @@ public class ClueManager : MonoBehaviour
     {
         popUp.transform.localScale = Vector3.zero;
         popUp.GetComponentInChildren<TextMeshProUGUI>().text = "[ESC] CLUE UPDATE";
-
+        sounds.PlaySound();
         float elapsedTime = 0f;
         while (elapsedTime < popUpDuration)
         {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Maximus
   m_EditorClassIdentifier: 
   actor:
-    name: Maximus
+    name: Professor Maximus
     indexSprite: {fileID: 21300000, guid: 65e3514131f231f4fac80299a8be9fbe, type: 3}
     sprite: {fileID: 21300000, guid: 65e3514131f231f4fac80299a8be9fbe, type: 3}
     happySprite: {fileID: 0}
@@ -32,4 +32,6 @@ MonoBehaviour:
     minPitch: 0.15
     maxPitch: 1
   affinity: 0
+  lastRoom: 
+  clubMember: Professor
   id: 24865edf-32ea-42aa-b20f-28b5e3400ff3

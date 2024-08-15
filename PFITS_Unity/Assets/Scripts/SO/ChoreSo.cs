@@ -8,6 +8,7 @@ public class ChoreSo : ScriptableObject
 {
     public DaysSo possibleDays;
     public int day;
+    public bool noted;
     public bool done;
     public string description;
     public ChorePriority priority;

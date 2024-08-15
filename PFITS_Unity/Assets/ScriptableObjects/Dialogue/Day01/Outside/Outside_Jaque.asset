@@ -31,7 +31,7 @@ MonoBehaviour:
   roomTalk: 1
   entersRoom: 1
   clueToLeave: {fileID: 0}
-  room: 1
+  room: 2
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
@@ -45,4 +45,4 @@ MonoBehaviour:
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
   setChoreDone: {fileID: 0}
-  id: ff698a92-24ef-4e61-bb12-3e843c64cbad
+  id: 60540afd-3a06-481e-b0a6-1835596e0350

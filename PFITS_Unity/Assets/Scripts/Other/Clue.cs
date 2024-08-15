@@ -16,17 +16,6 @@ public class Clue : MonoBehaviour, IPointerDownHandler
     {
         size = transform.localScale;
 
-        if(clue.clueNoted)
-        {
-            GameObject newClue = Instantiate(clueManager.clueText, clueManager.clueNotebook.transform);
-            newClue.GetComponent<TextMeshProUGUI>().text = clue.description;
-            if (clue.bookSprite != null)
-            {
-                Transform picHolder = newClue.transform.GetChild(0);
-                Instantiate(clue.bookSprite, picHolder);
-            }
-        }
-
         if ((clue.pickUpItem && clue.clueNoted) || clueManager.dayManager.dayList.days[clueManager.dayManager.currentDayInt] != clue.day)
         {
             transform.localScale = Vector3.zero;

@@ -9,6 +9,7 @@ public class MouseOnDoor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject nextRoom;
     private RoomDefinition roomDefinition;
     public Renderer rend;
+    public RandomSound sound;
     public RoomManager roomManager;
     public Texture2D cursor;
     public GameObject roomNameObj;
@@ -45,6 +46,8 @@ public class MouseOnDoor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (!cantLeave)
         {
+            sound.PlaySound();
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             rend.material.SetInt("_isOn", 0);
             roomNameObj.SetActive(false);
             roomManager.activeRoom = nextRoom;

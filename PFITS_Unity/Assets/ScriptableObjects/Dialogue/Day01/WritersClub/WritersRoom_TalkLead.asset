@@ -24,7 +24,8 @@ MonoBehaviour:
   roomTalk: 1
   entersRoom: 0
   clueToLeave: {fileID: 11400000, guid: 9ede0a7d71e62cb4d87babe75609892a, type: 2}
-  knownRoom: 0
+  room: 0
+  knownRoom: 1
   firstTimeNpc: 0
   knownNpc: 0
   npcGoesAfter: 0

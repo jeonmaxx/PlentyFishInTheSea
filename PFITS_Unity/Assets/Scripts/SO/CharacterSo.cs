@@ -8,6 +8,7 @@ public class CharacterSo : ScriptableObject
     public Actor actor;
     public int affinity;
     [HideInInspector] public string lastRoom;
+    public string clubMember;
     public string id;
     private void OnEnable()
     {

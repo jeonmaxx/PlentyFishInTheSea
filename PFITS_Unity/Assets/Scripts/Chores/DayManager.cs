@@ -18,6 +18,7 @@ public class DayManager : MonoBehaviour
     public GameObject mainChoreHolder;
     public GameObject sideChoreHolder;
     public GameObject chorePrefab;
+    public RandomSound sound;
     public GameObject popUp;
     public float popUpDuration;
     public float openDuration;
@@ -62,7 +63,7 @@ public class DayManager : MonoBehaviour
         choresOfToday = new List<ChoreSo>();
         foreach (ChoreSo chore in chores)
         {
-            if (chore.day == dayList.days[currentDayInt])
+            if (chore.day == dayList.days[currentDayInt] && chore.noted)
             {
                 Transform holderTransform = null;
 
@@ -112,7 +113,7 @@ public class DayManager : MonoBehaviour
     {
         foreach(ChoreSo chore in chores)
         {
-            if (chore.day == dayList.days[currentDayInt])
+            if (chore.day == dayList.days[currentDayInt] && chore.noted)
             {
                 chore.choreHolder.GetComponent<ChoreManager>().toggle.isOn = chore.done;
             }
@@ -179,7 +180,6 @@ public class DayManager : MonoBehaviour
     private void ShowArticles()
     {
         articleScreen.SetActive(true);
-
         foreach (Article article in articles)
         {
             if (article.day == dayList.days[currentDayInt])
@@ -213,6 +213,7 @@ public class DayManager : MonoBehaviour
     {
         popUp.transform.localScale = Vector3.zero;
         popUp.GetComponentInChildren<TextMeshProUGUI>().text = "[ESC] CHORE UPDATE";
+        sound.PlaySound();
 
         float elapsedTime = 0f;
         while (elapsedTime < popUpDuration)

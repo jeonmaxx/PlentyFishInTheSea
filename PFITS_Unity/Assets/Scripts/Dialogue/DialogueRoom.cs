@@ -30,9 +30,8 @@ public class DialogueRoom : MonoBehaviour, IPointerDownHandler
     {
         foreach (DialogueSo dialogue in dialogueSo)
         {
-            if (roomManager.activeRoom.GetComponent<RoomDefinition>().room == dialogue.room && !dialogue.knownRoom && dialogue.roomTalk)
+            if (roomManager.activeRoom.GetComponent<RoomDefinition>().room == dialogue.room && dialogue.entersRoom && !dialogue.knownRoom && dialogue.roomTalk)
             {
-                Debug.Log("fitting Dialogue found");
                 StartDialogue(false);
             }
         }

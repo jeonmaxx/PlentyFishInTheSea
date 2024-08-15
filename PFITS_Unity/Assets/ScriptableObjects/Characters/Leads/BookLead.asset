@@ -32,4 +32,6 @@ MonoBehaviour:
     minPitch: 0.1
     maxPitch: 1
   affinity: 0
+  lastRoom: 
+  clubMember: Book Club
   id: 258baee8-d429-4d43-948d-8d19e3ad4ca6

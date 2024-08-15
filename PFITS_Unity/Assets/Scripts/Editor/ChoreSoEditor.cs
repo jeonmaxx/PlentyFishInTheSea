@@ -19,6 +19,7 @@ public class ChoreSoEditor : Editor
         {
             EditorGUILayout.HelpBox("Please assign a valid DaysSo with at least one day.", MessageType.Warning);
         }
+        chore.noted = EditorGUILayout.Toggle("Noted", chore.noted);
         chore.done = EditorGUILayout.Toggle("Done", chore.done);
         chore.description = EditorGUILayout.TextField("Description", chore.description);
 

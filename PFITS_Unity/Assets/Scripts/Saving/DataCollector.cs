@@ -11,8 +11,10 @@ public class DataCollector : MonoBehaviour
     public List<DialogueSo> dialogues;
     public List<CharacterSo> characters;
     public List<ChoreSo> chores;
-    public List<Clue> clues;
+    public List<ClueSo> clues;
+    public List<AnswerSo> answers;
     public IndexManager indexManager;
+    public RoomManager roomManager;
 
     [Header("Saved Data")]
     public DataToSave data;
@@ -31,6 +33,7 @@ public class DataCollector : MonoBehaviour
         }
         else
         {
+            data.activeRoom = Rooms.Writing;
             data.saveFileInt = 1;
             SaveData();
         }
@@ -43,7 +46,9 @@ public class DataCollector : MonoBehaviour
             data.choreDatas = chores.Select(chore => new ChoresData
             {
                 choreSoId = chore.id,
-                choresDone = chore.done
+                choresDone = chore.done,
+                currentInterviewed = chore.currentInterviewed,
+                noted = chore.noted
             }).ToList();
 
             data.characterDatas = characters.Select(character => new CharacterData
@@ -55,17 +60,26 @@ public class DataCollector : MonoBehaviour
             data.dialogueDatas = dialogues.Select(dialogue => new DialogueData
             {
                 dialogueSoId = dialogue.id,
-                answerList = new List<AnswerSo>(dialogue.answers),
-                knownNpc = dialogue.knownNpc
+                knownRoom = dialogue.knownRoom,
+                knownNpc = dialogue.knownNpc,
+                diaDone = dialogue.diaDone
             }).ToList();
 
             data.clueDatas = clues.Select(clue => new ClueData
             {
-                clueSoId = clue.clue.id,
-                clueNoted = clue.clue.clueNoted
+                clueSoId = clue.id,
+                clueNoted = clue.clueNoted
+            }).ToList();
+
+            data.answerDatas = answers.Select(answer => new AnswerData
+            {
+                answerSoId = answer.id,
+                clicked = answer.clicked
             }).ToList();
 
             data.knownNpcsIds = indexManager.knownNpcs.Select(npc => npc.id).ToList();
+
+            data.activeRoom = roomManager.activeRoom.GetComponent<RoomDefinition>().room;
 
             SaveGameManager.SaveToJSON<DataToSave>(data, "pfits_" + data.saveFileInt + ".json");
         }
@@ -81,7 +95,17 @@ public class DataCollector : MonoBehaviour
         LoadChoreData(dataToLoad.choreDatas);
         LoadCharacterData(dataToLoad.characterDatas);
         LoadClueData(dataToLoad.clueDatas);
+        LoadAnswerData(dataToLoad.answerDatas);
         LoadKnownNpcsData(dataToLoad.knownNpcsIds);
+
+        foreach(GameObject room in roomManager.rooms)
+        {
+            Rooms toCheck = room.GetComponent<RoomDefinition>().room;
+            if(toCheck == dataToLoad.activeRoom && dataToLoad.activeRoom != 0)
+            {
+                roomManager.activeRoom = room;
+            }
+        }
     }
 
     private void LoadDialogueData(List<DialogueData> dialogueDatas)
@@ -93,10 +117,10 @@ public class DataCollector : MonoBehaviour
             var dialogue = dialogues.FirstOrDefault(d => d.id == loadedDialogue.dialogueSoId);
             if (dialogue != null)
             {
-                dialogue.answers = new List<AnswerSo>(loadedDialogue.answerList);
+                dialogue.knownRoom = loadedDialogue.knownRoom;
+                dialogue.knownNpc = loadedDialogue.knownNpc;
+                dialogue.diaDone = loadedDialogue.diaDone;
             }
-            dialogue.knownNpc = loadedDialogue.knownNpc;
-
         }
     }
 
@@ -110,6 +134,8 @@ public class DataCollector : MonoBehaviour
             if (chore != null)
             {
                 chore.done = loadedChore.choresDone;
+                chore.currentInterviewed = loadedChore.currentInterviewed;
+                chore.noted = loadedChore.noted;
             }
         }
     }
@@ -134,10 +160,24 @@ public class DataCollector : MonoBehaviour
 
         foreach (var clueData in clueDatas)
         {
-            var clue = clues.FirstOrDefault(c => c.clue.id == clueData.clueSoId);
+            var clue = clues.FirstOrDefault(c => c.id == clueData.clueSoId);
             if (clue != null)
             {
-                clue.clue.clueNoted = clueData.clueNoted;
+                clue.clueNoted = clueData.clueNoted;
+            }
+        }
+    }
+
+    private void LoadAnswerData(List<AnswerData> answerDatas)
+    {
+        if (answerDatas == null) return;
+
+        foreach (var loadedAnswer in answerDatas)
+        {
+            var answer = answers.FirstOrDefault(a => a.id == loadedAnswer.answerSoId);
+            if (answer != null)
+            {
+                answer.clicked = loadedAnswer.clicked;
             }
         }
     }

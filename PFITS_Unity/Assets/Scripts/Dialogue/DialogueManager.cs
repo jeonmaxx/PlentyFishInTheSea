@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
+using UnityEngine.TextCore.Text;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -46,9 +47,6 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public int nFrequenzyLevel = 3;
     [HideInInspector] public float nMinPitch = 0.5f;
     [HideInInspector] public float nMaxPitch = 3f;
-
-    //public AudioClip openSound;
-    //public AudioClip closeSound;
 
     private AudioSource source;
 
@@ -93,8 +91,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isActive)
         {
-            //source.clip = openSound;
-            //source.Play();
             volume.weight = 1f;
             currentMessages = messages;
             currentActors = actors;
@@ -234,7 +230,7 @@ public class DialogueManager : MonoBehaviour
                         (answer.neededClue == null || 
                         (answer.neededClue.clueNoted && !answer.notIfClueIsThere) || 
                         (!answer.neededClue.clueNoted && answer.notIfClueIsThere)) && 
-                        ((answer.isChore != null && dayManager.chores.Contains(answer.isChore) &&
+                        ((answer.isChore != null && dayManager.choresOfToday.Contains(answer.isChore) &&
                         (!answer.isChore.done || answer.isChore.type == ChoreType.InterviewNumber)) || 
                         answer.isChore == null))
                     {
@@ -248,9 +244,9 @@ public class DialogueManager : MonoBehaviour
                     clueManager.AddClue(currentDialogue.clueToAdd, null);
                 }
 
-                if (currentDialogue.choreToAdd != null && !dayManager.chores.Contains(currentDialogue.choreToAdd))
+                if (currentDialogue.choreToAdd != null && !dayManager.choresOfToday.Contains(currentDialogue.choreToAdd))
                 {
-                    dayManager.chores.Add(currentDialogue.choreToAdd);
+                    currentDialogue.choreToAdd.noted = true;
                     dayManager.AddChores();
                 }
 
@@ -284,7 +280,7 @@ public class DialogueManager : MonoBehaviour
                 (answer.neededClue == null ||
                 (answer.neededClue.clueNoted && !answer.notIfClueIsThere) ||
                 (!answer.neededClue.clueNoted && answer.notIfClueIsThere)) &&
-                ((answer.isChore != null && dayManager.chores.Contains(answer.isChore) &&
+                ((answer.isChore != null && dayManager.choresOfToday.Contains(answer.isChore) &&
                 (!answer.isChore.done || answer.isChore.type == ChoreType.InterviewNumber)) ||
                 answer.isChore == null))
             {
@@ -370,12 +366,12 @@ public class DialogueManager : MonoBehaviour
                 npcScale = currentNpc.transform.localScale;
                 currentNpc.transform.localScale = Vector3.zero;
             }
-            foreach (CharacterSo characterSo in currentNpc.currentDialogue.characters)
-            {
-                RoomDefinition currentRoom = roomManager.activeRoom.GetComponent<RoomDefinition>();
-                characterSo.lastRoom = currentRoom.roomName;
-                indexManager.AddIndex(characterSo);
-            }
+        }
+        foreach (CharacterSo currentCharacter in currentDialogue.characters)
+        {
+            RoomDefinition currentRoom = roomManager.activeRoom.GetComponent<RoomDefinition>();
+            currentCharacter.lastRoom = currentRoom.roomName;
+            indexManager.AddIndex(currentCharacter);
         }
         isActive = true;
         StopCoroutine(StartDialogue());
