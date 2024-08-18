@@ -21,7 +21,7 @@ MonoBehaviour:
     message: Well, looks like someone has an adoring fan. Such a beautiful arrangement.
     emotion: 0
   - actorId: 0
-    message: Ah and those Croissant are just perfect. After all french cuisine is
+    message: Ah and those croissant are just perfect. After all french cuisine is
       a really good fit for valentines day
     emotion: 0
   answers:

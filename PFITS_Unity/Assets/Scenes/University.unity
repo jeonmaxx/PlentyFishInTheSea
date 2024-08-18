@@ -1113,10 +1113,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!224 &69929754 stripped
 RectTransform:
@@ -7615,7 +7612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Until the Day of the Cook-off.\r\nAll the Chefs were there and presented
+  m_text: "Until the Day of the Cook-off.\r\nAll the chefs were there and presented
     their finest dishes.\r\nBut there was one mysterious entry nobody claimed to
     be theirs. Just a stacked plate with a tag: <b>'seafood tacos'\r</b>\nYou noticed
     a couple of recipe flyers littered around.\r\nFlyers in fancy calligraphy suggesting
@@ -10571,7 +10568,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f155e535c8cebdd4c9c632e0569dc57b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13306,7 +13303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: 1407251.9}
+  m_AnchoredPosition: {x: 5, y: 1557445.2}
   m_SizeDelta: {x: 1243.4, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &895891868
@@ -13737,7 +13734,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 07f7115d07d611d459aeba154d84d658, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15595,10 +15592,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!224 &1045252464 stripped
 RectTransform:
@@ -16331,7 +16325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1267199.4}
+  m_AnchoredPosition: {x: 0, y: 1402438.1}
   m_SizeDelta: {x: 508.39, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1062781690
@@ -19523,10 +19517,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &1278712004
 GameObject:
@@ -20683,7 +20674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The day of the Cooking Contest.
+  m_text: 'The day of the cooking contest.
 
     The survey clearly revealed the seafood
     tacos to be the actual winner.
@@ -21248,10 +21239,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &1345546627
 GameObject:
@@ -21470,10 +21458,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1001 &1353878221
 PrefabInstance:
@@ -21610,10 +21595,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!224 &1353878222 stripped
 RectTransform:
@@ -21756,10 +21738,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &1357120910
 GameObject:
@@ -30334,10 +30313,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &1552448372
 GameObject:
@@ -31836,7 +31812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Life at Coral Collage just seemed really harmonic.\nBut then <b>Finn</b>,
+  m_text: "Life at Coral College just seemed really harmonic.\nBut then <b>Finn</b>,
     one of the exchange students, went missing.\nAt his dorm you found a note proclaiming
     his desire to explore the ocean.\r\nNaturally you shrugged it off, just like
     everyone else.\r"
@@ -32131,10 +32107,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!224 &1648496799 stripped
 RectTransform:
@@ -32859,7 +32832,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'In your fresh fish year you joined up to the writers club, publicizing
-    and researching for the collages newspaper.
+    and researching for the colleges newspaper.
 
     Through your interviews you
     got to know a few of the other club members and made a couple of friends.
@@ -34036,10 +34009,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &1768821317
 GameObject:
@@ -34255,10 +34225,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1001 &1776966385
 PrefabInstance:
@@ -34399,10 +34366,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &1788668580
 GameObject:
@@ -35662,10 +35626,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &1800178935
 GameObject:
@@ -36444,7 +36405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1267199.4}
+  m_AnchoredPosition: {x: 0, y: 1402438.1}
   m_SizeDelta: {x: 508.39, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1849592950
@@ -39987,10 +39948,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6468280571455461553, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ed690b8d2ef364e953ca242d25af77, type: 3}
 --- !u!1 &2038873810
 GameObject:

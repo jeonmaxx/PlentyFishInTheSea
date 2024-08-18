@@ -21,22 +21,26 @@ MonoBehaviour:
     message: "Hey, no need to be rude \u2026 - but thanks anyway"
     emotion: 0
   - actorId: 0
-    message: "Now i got everything, well except \u2026 - I have no clue how to actually
+    message: "Now I got everything, well except \u2026 - I have no clue how to actually
       make this jello-cake! Ahhh!"
     emotion: 5
   answers:
   - {fileID: 11400000, guid: 6b60155ade2e11b41928067d29e7d5a1, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
+  clueToAdd: {fileID: 0}
   neededClue: {fileID: 0}
   dialogueIfNoClue: 0
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
+  setChoreDone: {fileID: 0}
   id: 2b69667d-9d2f-4fea-bdf0-f01ebed29cc1

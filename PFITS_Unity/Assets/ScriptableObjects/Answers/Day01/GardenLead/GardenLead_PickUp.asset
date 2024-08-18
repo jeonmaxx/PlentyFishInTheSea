@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
   m_Name: GardenLead_PickUp
   m_EditorClassIdentifier: 
-  answerText: Ask for Pick-up Line
+  answerText: Ask for pick-up line
   nextDialogue: {fileID: 11400000, guid: 755e90dd77b51964683681363e2b17ae, type: 2}
   addedAffinity: 0
   clicked: 0
   isChore: {fileID: 11400000, guid: f587b98fe6de684499ad8b90504045d9, type: 2}
   neededClue: {fileID: 0}
   notIfClueIsThere: 0
-  id: 
+  id: 981068cf-6673-4545-97e0-1876e615ec19

@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd8416f12d222124a8eeb8200795d668, type: 2}
   messages:
   - actorId: 0
-    message: Splendid. Since you are a Chef of your own I am quite curious about
+    message: Splendid. Since you are a chef of your own I am quite curious about
       your opinion.
     emotion: 1
   - actorId: 0
@@ -29,12 +29,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4533e241958124142b6508b6fcd77d1e, type: 2}
   - {fileID: 11400000, guid: ab1243064dd6f0749891e9b9279355c6, type: 2}
   - {fileID: 11400000, guid: 1bdc895c89f44014cadac1166305a8a2, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
   knownNpc: 0
+  npcGoesAfter: 0
   oneTimeDia: 0
   diaDone: 0
   clueToAdd: {fileID: 0}
@@ -43,4 +45,5 @@ MonoBehaviour:
   choreToAdd: {fileID: 0}
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
-  id: 
+  setChoreDone: {fileID: 0}
+  id: 4c7731cc-e0fb-42f1-92ac-6e4b1579b435

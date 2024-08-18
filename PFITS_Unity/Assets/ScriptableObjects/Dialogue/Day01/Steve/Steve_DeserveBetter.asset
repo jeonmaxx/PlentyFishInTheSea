@@ -31,8 +31,10 @@ MonoBehaviour:
       feels good"
     emotion: 0
   - actorId: 0
-    message: "I don't think i\u2019ll need this anymore, so please take it. *hands
-      over potted violet*"
+    message: "I don't think i\u2019ll need this anymore, so please take it."
+    emotion: 0
+  - actorId: 0
+    message: '*hands over potted violet*'
     emotion: 0
   answers: []
   roomTalk: 0
@@ -52,4 +54,4 @@ MonoBehaviour:
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
   setChoreDone: {fileID: 11400000, guid: 17fb34817c83c264c90c357e45075303, type: 2}
-  id: 
+  id: 77f131ed-bb73-4088-aed0-01413841c1ad

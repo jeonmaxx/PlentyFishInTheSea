@@ -18,11 +18,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f592b686687764c4d92de2632e5713d5, type: 2}
   messages:
   - actorId: 0
-    message: Are you a runner? Because you've been racing through my mind all day.
+    message: '''Are you a runner? Because you''ve been racing through my mind all
+      day.'''
     emotion: 0
   answers: []
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
@@ -37,4 +39,4 @@ MonoBehaviour:
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
   setChoreDone: {fileID: 0}
-  id: 
+  id: 9e78b711-2632-4708-b539-c72e2cf007b3

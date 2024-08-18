@@ -18,12 +18,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdf6d061451d8544587da95cd8a02370, type: 2}
   messages:
   - actorId: 0
-    message: Are you a treadmill? Because everytime I see you, my heart starts racing.
+    message: '''Are you a treadmill? Because everytime I see you, my heart starts
+      racing.'''
     emotion: 0
   answers:
   - {fileID: 11400000, guid: 2de333fc12daa034a91c16a6a26b7574, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
@@ -38,4 +40,4 @@ MonoBehaviour:
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
   setChoreDone: {fileID: 0}
-  id: 
+  id: 44494f6d-b4be-421d-8d2d-61c9756434fd

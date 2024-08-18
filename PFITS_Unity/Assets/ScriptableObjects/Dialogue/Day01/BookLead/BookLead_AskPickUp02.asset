@@ -18,8 +18,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: abe4bc5d122135f44bef4da94d886249, type: 2}
   messages:
   - actorId: 0
-    message: "Argh fine, just for you\u2026 Are you a fire alarm? Cause you\u2019re
-      fishin\u2019 annoying!"
+    message: "Argh fine, just for you\u2026 'Are you a fire alarm? Cause you\u2019re
+      fishin\u2019 annoying!'"
     emotion: 2
   answers:
   - {fileID: 11400000, guid: 9f1e71ca75ab5c8459545a64dc7d74d6, type: 2}

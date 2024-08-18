@@ -21,7 +21,7 @@ MonoBehaviour:
     message: I feel already stupid for telling you this much.
     emotion: 6
   - actorId: 0
-    message: Do you know that we Axolotls can regrow our limbs?
+    message: Do you know that we axolotls can regrow our limbs?
     emotion: 4
   - actorId: 0
     message: When i tried that recipe something was just missing, it didn't nearly
@@ -32,7 +32,7 @@ MonoBehaviour:
       not? why not give it a try?\u2019 "
     emotion: 4
   - actorId: 0
-    message: Well and they turned out delicious
+    message: Well and they turned out delicious.
     emotion: 1
   answers:
   - {fileID: 11400000, guid: 3e2a9967149e9474f8f01865e3ab9eb8, type: 2}

@@ -18,12 +18,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 83adb617ff250ca42a1afb46ce9fdacf, type: 2}
   messages:
   - actorId: 0
-    message: Well i do receive them, but i certainly don't know any
+    message: Well I do receive them, but I certainly don't know any
     emotion: 0
   answers:
   - {fileID: 11400000, guid: 09bb6a25886de0c44bd0ebe09d5d8ecb, type: 2}
-  selfTalk: 0
   roomTalk: 0
+  entersRoom: 0
+  clueToLeave: {fileID: 0}
   room: 0
   knownRoom: 0
   firstTimeNpc: 0
@@ -38,4 +39,4 @@ MonoBehaviour:
   neededChore: {fileID: 0}
   dialogueIfNotThere: 0
   setChoreDone: {fileID: 0}
-  id: 
+  id: caaabe7b-0a4e-4e12-bdf5-c6ba9bf0bb0f

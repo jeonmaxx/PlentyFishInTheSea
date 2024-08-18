@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
   m_Name: Gary_NotInterview
   m_EditorClassIdentifier: 
-  answerText: Well not really an interview, but i might have a question or two
+  answerText: Well not really an interview, but I might have a question or two
   nextDialogue: {fileID: 11400000, guid: 262c1735173f5c242bd2e29f9a572443, type: 2}
   addedAffinity: 0
   clicked: 0
   isChore: {fileID: 0}
   neededClue: {fileID: 0}
   notIfClueIsThere: 0
-  id: 
+  id: 9dc7e99e-73fe-4d06-a7ce-86bb4ca6640a

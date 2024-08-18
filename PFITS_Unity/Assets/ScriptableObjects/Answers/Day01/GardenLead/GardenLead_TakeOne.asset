@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
   m_Name: GardenLead_TakeOne
   m_EditorClassIdentifier: 
-  answerText: Yeah sure, i'll take one
+  answerText: Yeah sure, I'll take one
   nextDialogue: {fileID: 11400000, guid: f893ce824cc7f614aa6df3244488395e, type: 2}
   addedAffinity: 0
   clicked: 0
   isChore: {fileID: 0}
   neededClue: {fileID: 0}
   notIfClueIsThere: 0
-  id: 
+  id: fe7213ac-bd05-49c4-ad9d-8be64d4710de

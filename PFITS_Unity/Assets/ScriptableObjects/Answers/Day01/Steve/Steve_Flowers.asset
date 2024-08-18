@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
   m_Name: Steve_Flowers
   m_EditorClassIdentifier: 
-  answerText: Ask for Flowers
+  answerText: Ask for flowers
   nextDialogue: {fileID: 11400000, guid: 1ecd4e3a535f01e4d81d5172960ccd6d, type: 2}
   addedAffinity: 0
   clicked: 0

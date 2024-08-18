@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440f15a741331c344a25d5c6b45673e6, type: 3}
   m_Name: Tahm_PickUp
   m_EditorClassIdentifier: 
-  answerText: Ask for Pick-up Line
+  answerText: Ask for pick-up line
   nextDialogue: {fileID: 11400000, guid: 566066d41fc9e3c43a8b162dc4ef80b5, type: 2}
   addedAffinity: 0
   clicked: 0
